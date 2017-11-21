@@ -99,4 +99,33 @@ module load megahit
 ```
 module purge is needed to remove wrong Pyhton versions you might have loaded in earlier today.
 
+Assembly requires lot of memory and we need to do a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into twol files with cat
+
+```
+cat *R1_trimmed.fastq > all_R1_trimmed.fastq
+cat *R2_trimmed.fastq > all_R2_trimmed.fastq
+```
+Make a script called co_assembly.sh in a text editor
+```
+#!/bin/bash
+#SBATCH -J megahit
+#SBATCH -o megahit_out_%j.txt
+#SBATCH -e megahit_err_%j.txt
+#SBATCH -t 12:00:00
+#SBATCH -n 1
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64000
+#
+
+module load intel/16.0.0
+module load megahit
+
+megahit -1 all_R1_trim.fastq -2 all_R2_trim.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
+```
+
+# Mapping reads to contigs
+
+
+
 
