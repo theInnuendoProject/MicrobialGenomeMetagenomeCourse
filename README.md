@@ -12,13 +12,21 @@ Microbial genomics: QA/QC of the raw sequence data, cleaning and assembly; Gene-
 Inside the class room you can find both eduroam and Univ. Helsinki HUPnet. Instructions on how to connect in HelpDesk website
 ## Organizers
 Docent Jenni Hultman, University of Helsinki, Finland
+
 Associate Professor Mirko Rossi, University of Helsinki, Finland
 ## Teachers
 Docent Jenni Hultman, University of Helsinki, Finland
+
 Associate Professor Mirko Rossi, University of Helsinki, Finland
+
 Dr João Carriço, University of Lisbon, Portugal
+
 Bruno Gonçalves, University of Lisbon, Portugal
+
 Miguel Machado, University of Lisbon, Portugal
+
 Mickael Silva, University of Lisbon, Portugal 
+
 Dr Antti Karkman, University of Gothenburg, Sweden
+
 Dr Tom Delmont, University of Chigaco, USA
