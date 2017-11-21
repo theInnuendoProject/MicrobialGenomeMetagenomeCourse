@@ -1,6 +1,6 @@
 *Antti Karkman and Jenni Hultman*
 
-# Metagenome analysis for bird feces dataset
+# Metagenome analysis of bird feces dataset
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 # Data download
 First set up the course directory, make some folders and then download the data.  
