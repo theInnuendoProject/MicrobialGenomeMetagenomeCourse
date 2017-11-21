@@ -4,22 +4,21 @@ Microbial community structure and diversity, and population structure are fundam
 ## Schedule
 The course will be held at the Faculty of Veterinary Medicine, University of Helsinki. EE-talo (Mustialankatu 2) from Monday 11th to Friday 15th. 
 Monday to Wednesday morning will focus on genomics while Wednesday afternoon to Friday will focus on metagenomics.
-##Target group
+## Target group
 This course is targeted at PhD and MSc students who are interested in performing bacterial population analysis using whole-genome sequencing and/or using metagenomics for investigating microbial communities.
-##Learning outcomes
+## Learning outcomes
 Microbial genomics: QA/QC of the raw sequence data, cleaning and assembly; Gene-by-gene annotation; Genealogy reconstruction and population structure analysis; Visualization of data; GWAS and comparative analysis; Microbial metagenomics: quality control, filtering and assembly to taxonomic classification, clustering, functional assignment, analyses of microbial community composition and comparative metagenomics
-##Internet connection 
+## Internet connection 
 Inside the class room you can find both eduroam and Univ. Helsinki HUPnet. Instructions on how to connect in HelpDesk website
-##Organizers
+## Organizers
 •	Docent Jenni Hultman, University of Helsinki, Finland
 •	Associate Professor Mirko Rossi, University of Helsinki, Finland
-##Teachers
+## Teachers
 •	Docent Jenni Hultman, University of Helsinki, Finland
 •	Associate Professor Mirko Rossi, University of Helsinki, Finland
 •	Dr João Carriço, University of Lisbon, Portugal
 •	Bruno Gonçalves, University of Lisbon, Portugal
 •	Miguel Machado, University of Lisbon, Portugal
 •	Mickael Silva, University of Lisbon, Portugal 
-•	Federica Palma, University of Bologna, Italy
 •	Dr Antti Karkman, University of Gothenburg, Sweden
 •	Dr Tom Delmont, University of Chigaco, USA
