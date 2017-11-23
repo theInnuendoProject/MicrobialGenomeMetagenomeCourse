@@ -2,8 +2,8 @@
 
 ---
 
-**Note:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).
-
+**Note 1:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).
+**Note 2:** check the number of CPUs of your VM using `htop` (the CPUs available will be displayed at the top as dynamic horizontal bars, numbered sequentially).
 ---
 
 ## Connect to VM
@@ -46,6 +46,16 @@ _Yellow steps are optional steps. They serve to avoid introducing always 1-3 ste
 
 Edit `~/.bashrc` (using for example `nano ~/.bashrc`) and uncomment `force_color_prompt=yes` by removing the `#`. More information [here](https://askubuntu.com/questions/517677/how-to-get-a-colored-bash "Google search: get colored bash").
   * **Note:** After editing exit with `Ctrl + X`; type `y` to save changes; don't change the name file by only pressing `Enter`.
+
+### Control your VM
+
+Install `htop` to allow monitoring VM activity (CPUs and memory usage, proccesses running, etc.).
+
+<span style="color:grey">_In the VM_</span>  
+
+```
+sudo apt-get install -y htop
+```
 
 ### Organize your tools
 

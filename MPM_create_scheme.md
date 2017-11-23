@@ -3,7 +3,8 @@
 ---
 
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in _"Get HTS (High-throughput sequencing) data"_ `<IDs_separated_by_space>`, write the IDs you will select (something like `SRR494564 SRR497008 SRR628716`).  
-**Note 2:** do the steps bellow for the bacteria species of your choise. _Streptococcus agalactiae_ is used as example.
+**Note 2:** if the VM has 16 CPUs, use `16` in CPUs/threads instead of `8`.  
+**Note 3:** do the steps bellow for the bacteria species of your choise. _Streptococcus agalactiae_ is used as example.
 
 ---
 
