@@ -105,6 +105,10 @@ Assembly HTS data using INNUca
 
 <span style="color:grey">_In the VM_</span>  
 
+  *  Change the following options accordingly with the species chosen:
+    * `--speciesExpected` "Streptococcus agalactiae"
+    * `--genomeSizeExpectedMb` 2.1  
+
 ```
 # Run inside a screen
 screen -S create_scheme
@@ -120,4 +124,7 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/scheme_creation_data:/data/ ummido
 
 # Detatch the screen
 # Press Ctrl + A (release) and then D
+
+# With 8 CPUs and Streptococcus example
+# Runtime :0.0h:34.0m:45.3s
 ```
