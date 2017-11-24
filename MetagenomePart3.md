@@ -1,5 +1,5 @@
 ##Prepping files for Anvio
-Tom Delmont, Antti Karkman, Jenni Hultman
+*Tom Delmont, Antti Karkman, Jenni Hultman*
 
 Go to your co-assembly folder and make a new folder called ANVIO
 
@@ -26,7 +26,8 @@ anvi-run-hmms -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
 anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
-#EXPORT GENES
+#Export GENES
 ```
 anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
 ```
+#
