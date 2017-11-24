@@ -31,6 +31,11 @@ Let's test it
 source activate anvio3
 anvi-self-test --suite mini
 ```
+We will also need to install NCBIs COG databases and reformat them so they can be used later. The formatting step includes changing reorganizing information in raw files, serializing a very large text file into binary Python object for fast access while converting protein IDs to COGs, and finally generating BLAST and DIAMOND search databases.
+
+```
+anvi-setup-ncbi-cogs --num-threads 20
+```
 All should be good and we can close the virtual environment.  
 `source deactivate`  
 
