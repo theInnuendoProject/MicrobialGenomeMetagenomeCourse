@@ -1,4 +1,4 @@
-# Create wgMLST scheme
+# From reads to assembly: working with INNUca pipeline
 
 ---
 
