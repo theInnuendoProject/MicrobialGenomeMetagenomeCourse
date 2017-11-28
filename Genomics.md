@@ -23,7 +23,7 @@
 ## Wednesday
 | Time | Description |
 | --- | --- |
-| 08:30-10:45 | **Miguel Machado & Bruno Gonçalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY) and GWAS (*SCOARY*)|
+| 08:30-10:45 | **Miguel Machado & Bruno Gonçalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
 | 10:45-11:00 | **Mirko Rossi**: *INSTRUCTION FOR GROUP WORK* |
 | 11:00-12:30 | **_GROUP WORK_: working with your data** and **lunch** |
 | 12:30-14:30 | **Bruno Gonçalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
