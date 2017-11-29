@@ -6,7 +6,7 @@
 | 09:30-09:45 | *Genomics* **Mirko Rossi**: Basic usage of cPouta cloud computing service at CSC |
 | 09:45-10:45 | *Genomics* **Mirko Rossi**: [Prepare the Virtual Machine](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MPM_starting_VM.md) and introduction of docker|
 | 10:45-11:00 | *break* - Note: the coffee break is not included in the course |
-| 11:00-11:45 | *Genomics* **Jo„o CarriÁo**: Making Use of NGS Data: From Reads to Trees and Annotations |
+| 11:00-11:45 | *Genomics* **Jo√£o Carri√ßo**: Making Use of NGS Data: From Reads to Trees and Annotations |
 | 11:45-12:00 | *Genomics* **Mirko Rossi**: *INSTRUCTION FOR GROUP WORK* |
 | 12:00-13:30 | **Working with your data** and **lunch** |
 | 13:30-17:00 | *Genomics* **Miguel Machado**: [From reads to assemblies: working with INNUca pipeline](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MPM_workingwithINNUCA.md) |
@@ -24,10 +24,10 @@
 ## Wednesday - Viikki C building, lecture room 130 
 | Time | Description |
 | --- | --- |
-| 08:30-10:45 | *Genomics* **Miguel Machado & Bruno GonÁalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
+| 08:30-10:45 | *Genomics* **Miguel Machado & Bruno Gon√ßalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
 | 10:45-11:00 | *Genomics* **Mirko Rossi**: *INSTRUCTION FOR GROUP WORK* |
 | 11:00-12:30 | **Working with your data** and **lunch** |
-| 12:30-14:30 | *Genomics* **Bruno GonÁalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
+| 12:30-14:30 | *Genomics* **Bruno Gon√ßalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
 | 14:30-15:30 | *Metagenomics* **Antti Karkman**: Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)|
 | 15:30-17:00 | *Metagenomics* **Jenni Hultman**: Assembly (*MEGAHIT*) and installation of programs |
 
