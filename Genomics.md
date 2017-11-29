@@ -29,8 +29,8 @@
 | 11:00-12:30 | **Working with your data** and **lunch** |
 | 12:30-14:30 | **Bruno Gonçalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
 | 14:30-17:00 | **METAGENOMIC** |
-| 14:30-15:30 | **Antti Karkman** |Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)|
-| 15:30-17:00 | **Jenni Hultman** |Assembly (*MEGAHIT*) and installation of programs |
+| 14:30-15:30 | **Antti Karkman** Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)|
+| 15:30-17:00 | **Jenni Hultman** Assembly (*MEGAHIT*) and installation of programs |
 
 ## Thusday Lab building, lecture room 228
 | Time | Description |
