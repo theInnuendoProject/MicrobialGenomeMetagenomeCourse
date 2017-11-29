@@ -4,7 +4,7 @@ Microbial community structure and diversity, and population structure are fundam
 ## Schedule
 The course will be held at the Faculty of Veterinary Medicine, University of Helsinki. 
 * **Monday to Wednesday morning**: [bacterial genomics](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Genomics.md) 
-* **Wednesday afternoon to Friday**: [metagenomics](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetaGenomic.md)
+* **Wednesday afternoon to Friday**: [metagenomics](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Metagenomics.md)
 ## Place
 * Monday, Wednesday & Friday Viikki C building, lecture room 130 (Latokartanonkaari 5)
 * Tuesday Biocentre 3, lecture room 1402 (Viikinkaari 1)
