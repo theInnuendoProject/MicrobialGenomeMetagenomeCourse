@@ -32,9 +32,9 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   3. On _"Levels"_ options, only select _"Complete"_
   4. Take note of the average genome size using _"Size (Mb)"_ column. For _Streptococcus agalactiae_, **2.1 Mb** will be used.
   5. Choose between 4-6 complete genomes to download:
-    * For the selected genome, click on the green diamond under _"FTP"_ column
-    * Copy Link Location of the link ending with *"_genomic.fna.gz"* (ignore the one ending with *"_rna_from_genomic.fna.gz"*)
-    * <span style="color:grey">_In the VM_</span>:
+      * For the selected genome, click on the green diamond under _"FTP"_ column
+      * Copy Link Location of the link ending with *"_genomic.fna.gz"* (ignore the one ending with *"_rna_from_genomic.fna.gz"*)
+      * <span style="color:lightblue">In the VM</span>:
 
 ```
 # Change to directory where the data will be stored
@@ -67,11 +67,11 @@ In ENA (European Nucleotide Archive) [website](https://www.ebi.ac.uk/ena):
   1. Search _"Streptococcus agalactiae"_
   2. On the left list, bellow _"Read"_ section, click on _"Run"_
   3. Choose between 4-6 run accession IDs
-    * Select only _Illumina paired end_ data, but produced with different sequencers modules (try _HiSeq, MiSeq, NextSeq, Genome Analyzer II_)
-    * Try IDs from different pages
-    * Select _"WGS"_ (under _"Library Strategy"_ information) and _"GENOMIC"_ (under _"Library Source"_ information) produced sequencing data
-    * Select samples with a maximum estimated depth of coverage of 200x
-      * Divide the number of sequenced nucleotides (under _"Base Count"_ information) by the previously determined genome size in bp (for _Streptococcus agalactiae_, 2.1 Mb * 1000000)
+      * Select only _Illumina paired end_ data, but produced with different sequencers modules (try _HiSeq, MiSeq, NextSeq, Genome Analyzer II_)
+      * Try IDs from different pages
+      * Select _"WGS"_ (under _"Library Strategy"_ information) and _"GENOMIC"_ (under _"Library Source"_ information) produced sequencing data
+      * Select samples with a maximum estimated depth of coverage of 200x
+        * Divide the number of sequenced nucleotides (under _"Base Count"_ information) by the previously determined genome size in bp (for _Streptococcus agalactiae_, 2.1 Mb * 1000000)
 
 <span style="color:grey">_In the VM_</span>  
 
@@ -120,7 +120,6 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/scheme_creation_data:/data/ ummido
                  --genomeSizeExpectedMb 2.1 \
                  --outdir /data/innuca/ \
                  --threads 8 \
-                 --fastQCproceed
 
 # Detatch the screen
 # Press Ctrl + A (release) and then D

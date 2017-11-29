@@ -9,7 +9,7 @@
 
 ## Connect to VM
 
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">In your computer</span>  
 
   * **Note:** The SSH key was produced in Linux using `ssh-keygen -t rsa -f /home/cloud-user/mgmc.key`. More information [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2 "Google search: ssh key linux").
 
@@ -43,7 +43,7 @@ _Yellow steps are optional steps. They serve to avoid introducing always 1-3 ste
 
 ### Give colour to your terminal
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 Edit `~/.bashrc` (using for example `nano ~/.bashrc`) and uncomment `force_color_prompt=yes` by removing the `#`. More information [here](https://askubuntu.com/questions/517677/how-to-get-a-colored-bash "Google search: get colored bash").
   * **Note:** After editing exit with `Ctrl + X`; type `y` to save changes; don't change the name file by only pressing `Enter`.
@@ -52,7 +52,7 @@ Edit `~/.bashrc` (using for example `nano ~/.bashrc`) and uncomment `force_color
 
 Install `htop` to allow monitoring VM activity (CPUs and memory usage, proccesses running, etc.).
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 sudo apt-get install -y htop
@@ -62,7 +62,7 @@ sudo apt-get install -y htop
 
 Create a folder where all the tools to be used will be placed.
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 mkdir ~/NGStools
@@ -77,14 +77,14 @@ mkdir ~/NGStools
 <div style="text-align: right">From [here](https://www.linux.com/news/docker-shipping-container-linux-code).</div>
 
 **_Get Docker_**  
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">In your computer</span>  
 
 In Docker [webpage](https://www.docker.com/):
   * Get Docker > For Servers > [Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
 
 **Installation**
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 sudo apt-get remove -y docker docker-engine docker.io
@@ -125,13 +125,13 @@ docker run hello-world
 **Install dependencies**  
 
 _Aspera Connect_  
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">In your computer</span>  
 
 In the [webpage](http://downloads.asperasoft.com/connect2/):
   * See all installers > Linux > Linux - Select Version > Direct download
   * Copy Link Location (Direct download)
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 wget http://download.asperasoft.com/download/sw/connect/3.7.4/aspera-connect-3.7.4.147727-linux-64.tar.gz
@@ -145,13 +145,13 @@ echo "export PATH=$HOME/NGStools/aspera/connect/bin"':$PATH' >> ~/.profile
   * **Note:** More information on add path to PATH environmental variable [here](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path "Google search: add path to PATH linux")
 
 _NCBI SRA Toolkit_  
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">In your computer</span>  
 
 In the [webpage](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software):
   * Ubuntu Linux 64 bit architecture
   * Copy Link Location (Ubuntu Linux 64 bit architecture)
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-ubuntu64.tar.gz
@@ -161,15 +161,104 @@ mv sratoolkit.2.8.2-1-ubuntu64/ ~/NGStools/
 echo "export PATH=$HOME/NGStools/sratoolkit.2.8.2-1-ubuntu64/bin"':$PATH' >> ~/.profile
 ```
 
-**Get INNUca**  
+**Install getSeqENA**  
 
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">In your computer</span>  
+
+In the [webpage](https://github.com/B-UMMI/getSeqENA):
+  * Clone or download > Copy to clipboard
+
+<span style="color:lightblue">In the VM</span>  
+
+```
+git clone https://github.com/B-UMMI/getSeqENA.git
+mv getSeqENA/ ~/NGStools/
+echo "export PATH=$HOME/NGStools/getSeqENA"':$PATH' >> ~/.profile
+```
+
+### Get INNUca
+
+**_What is [INNUca](https://github.com/B-UMMI/INNUca)?_**  
+
+> INNUENDO quality control of reads, de novo assembly and contigs quality assessment, and possible contamination detection
+
+<span style="color:lightblue">In your computer</span>  
 
 In the [webpage](https://github.com/B-UMMI/INNUca):
   * Docker
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">In the VM</span>  
 
 ```
 docker pull ummidock/innuca:3.1
+```
+
+### Install ReMatCh
+
+**_What is [ReMatCh](https://github.com/B-UMMI/ReMatCh)?_**  
+
+> Reads mapping against target sequences, checking mapping and consensus sequences production
+
+<span style="color:lightblue">In your computer</span>  
+
+In the [webpage](https://github.com/B-UMMI/ReMatCh):
+  * Clone or download > Copy to clipboard
+
+<span style="color:lightblue">In the VM</span>  
+
+```
+git clone https://github.com/B-UMMI/ReMatCh.git
+mv ReMatCh/ ~/NGStools/
+echo "export PATH=$HOME/NGStools/ReMatCh"':$PATH' >> ~/.profile
+```
+
+### Get ABRicate
+
+**_What is [ABRicate](https://github.com/tseemann/abricate)?_**  
+
+> Mass screening of contigs for antimicrobial resistance or virulence genes. It comes bundled with seven databases: Resfinder, CARD, ARG-ANNOT, NCBI BARRGD, NCBI, EcOH, PlasmidFinder and VFDB.
+
+<span style="color:lightblue">In your computer</span>  
+
+In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/dashboard/):
+  * ummidock/abricate
+
+<span style="color:lightblue">In the VM</span>  
+
+```
+docker pull ummidock/abricate:latest
+```
+
+### Get Prokka
+
+**_What is [Prokka](https://github.com/tseemann/prokka)?_**  
+
+> Prokka is a software tool to annotate bacterial, archaeal and viral genomes quickly and produce standards-compliant output files
+
+<span style="color:lightblue">In your computer</span>  
+
+In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/):
+  * ummidock/prokka
+
+<span style="color:lightblue">In the VM</span>  
+
+```
+docker pull ummidock/prokka:1.12
+```
+
+### Get Roary
+
+**_What is [Roary](http://sanger-pathogens.github.io/Roary/)?_**  
+
+> Roary is a high speed stand alone pan genome pipeline, which takes annotated assemblies in GFF3 format (produced by Prokka (Seemann, 2014)) and calculates the pan genome
+
+<span style="color:lightblue">In your computer</span>  
+
+In Sanger Pathogens Docker Hub [webpage](https://hub.docker.com/u/sangerpathogens/):
+  * sangerpathogens/roary
+
+<span style="color:lightblue">In the VM</span>  
+
+```
+docker pull sangerpathogens/roary:latest
 ```
