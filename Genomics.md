@@ -1,5 +1,5 @@
 # Bacterial Genomics
-## Monday
+## Monday Viikki C building, lecture room 130 
 | Time | Description|
 | --- | --- |
 | 09:00-09:30 | **Jenni Hultman and Mirko Rossi**: Introduction (including general structure of the course and group work)|
@@ -11,7 +11,7 @@
 | 12:00-13:30 | **Working with your data** and **lunch** |
 | 13:30-17:00 | **Miguel Machado**: [From reads to assemblies: working with INNUca pipeline](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MPM_workingwithINNUCA.md) |
 
-## Tuesday
+## Tuesday Biocentre 3, lecture room 1402
 | Time | Description |
 | --- | --- |
 | 08:30-11:45 | **Miguel Machado**: *In silico* typing using ReMatCh and Abricate |
@@ -21,7 +21,7 @@
 | 16:00-16:10 | **Mirko Rossi**:*INSTRUCTION FOR GROUP WORK* |
 | 16:10-17:00 | **Working with your data** 
 
-## Wednesday
+## Wednesday Viikki C building, lecture room 130 
 | Time | Description |
 | --- | --- |
 | 08:30-10:45 | **Miguel Machado & Bruno Gonçalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
@@ -32,7 +32,7 @@
 | 14:30-15:30 | **Antti Karkman** |Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)|
 | 15:30-17:00 | **Jenni Hultman** |Assembly (*MEGAHIT*) and installation of programs |
 
-## Thusday
+## Thusday Lab building, lecture room 228
 | Time | Description |
 | --- | --- |
 | 08:00-10:00 | **Jenni Hultman**: Assembly check and mapping with (*BOWTIE2*) |
@@ -41,7 +41,7 @@
 | 14:00-17:00 | **Antti Karkman and Jenni Hultman** Prepping files for Anvio |
 
 
-## Friday
+## Friday Viikki C building, lecture room 130 
 | Time | Description |
 | --- | --- |
 | 09:00-10:00 | **Tom Delmont**: Introduction to Anvio NB. Room 2041 Biocenter 2 |
