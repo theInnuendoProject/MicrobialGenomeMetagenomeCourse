@@ -16,7 +16,7 @@ mkdir scripts
 Download the metagenomic data (takes few minutes)  
 ```
 cd raw_data
-wget https://filesender.funet.fi/download.php?vid=3f2d0511-8f32-2aa8-fbb2-00007ddc3254 -O course_metagenomes.tar.gz
+*detailes given on Wed
 tar -xzvf course_metagenomes.tar.gz
 ```
 
