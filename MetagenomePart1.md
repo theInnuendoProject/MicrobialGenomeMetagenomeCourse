@@ -16,7 +16,7 @@ mkdir scripts
 Download the metagenomic data (takes few minutes)  
 ```
 cd raw_data
-*detailes given on Wed
+*detailes given on Wed*
 tar -xzvf course_metagenomes.tar.gz
 ```
 
@@ -118,13 +118,13 @@ Make a script called co_assembly.sh in a text editor
 #SBATCH --mem=64000
 #
 
+module purge
 module load intel/16.0.0
 module load megahit
 
 megahit -1 all_R1_trim.fastq -2 all_R2_trim.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
 ```
 
-# Mapping reads to contigs
 
 
 
