@@ -111,7 +111,7 @@ Make a script called co_assembly.sh in a text editor
 #SBATCH -J megahit
 #SBATCH -o megahit_out_%j.txt
 #SBATCH -e megahit_err_%j.txt
-#SBATCH -t 12:00:00
+#SBATCH -t 6:00:00
 #SBATCH -n 1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
