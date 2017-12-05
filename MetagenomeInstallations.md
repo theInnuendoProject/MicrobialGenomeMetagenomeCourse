@@ -115,7 +115,7 @@ Then you can remove the results
 
 You can also add Metaxa2 to your PATH (go to --> `.bashrc`)  
 
-**DIAMOND parser**
+**DIAMOND parser**  
 Python script to parse the diamond output into a count table.  
 ```
 cd scripts
