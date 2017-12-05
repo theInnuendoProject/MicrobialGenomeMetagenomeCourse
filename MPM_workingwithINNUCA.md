@@ -58,7 +58,7 @@ gunzip *
 
 ### Get genomic information
 
-<p style="color:LightBlue"><i>In your computer</i></p>
+<p style="color:#ADD8E6"><i>In your computer</i></p>
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
