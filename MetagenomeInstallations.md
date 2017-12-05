@@ -5,7 +5,7 @@
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 
 **Anaconda2** (takes ~5 min)  
-Go to https://www.anaconda.com/download/#linux with your local browser and **COPY** the link address of the _**Python 2.7 64-bit (x86) Installer**_ . 
+Go to https://www.anaconda.com/download/#linux with your local browser and **COPY** the link address of the _**Python 2.7 64-bit (x86) Installer**_ .  
 Or just trust me and use this link: https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh  
 
 In Taito go to your application folder and download the installations script.
@@ -74,8 +74,8 @@ export CENTRIFUGE_BASE="/wrk/YOURUSERNAME/centrifuge_db"
 echo $CENTRIFUGE_BASE
 # Needs to be done every time after logging out
 ```
-**Optional**
-######################################################
+**Optional**  
+######################################################  
 OR you can add it to your `.bashrc`.  
 Go to home folder and open `.bashrc` with a text editor.  
 Add things after the `# User specific aliases and functions`. Make sure they pointy to the right place on your own folders.  
@@ -95,7 +95,7 @@ source .bashrc
 centrifuge --version
 echo $CENTRIFUGE_BASE
 ```
-######################################################
+######################################################  
 
 **Metaxa2**  
 For taxonomic profiling of the samples using the trimmed reads.
