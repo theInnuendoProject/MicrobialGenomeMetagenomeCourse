@@ -20,7 +20,7 @@
 <!---
 ### Get complete genomes
 
-<span style="color:lightblue">_In your computer_</span>
+_In your computer_
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -30,7 +30,7 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   5. Choose between 4-6 complete genomes to download:
       * For the selected genome, click on the green diamond under _"FTP"_ column
       * Copy Link Location of the link ending with *"_genomic.fna.gz"* (ignore the one ending with *"_rna_from_genomic.fna.gz"*)
-      * <span style="color:lightblue">In the VM</span>:
+      * _In the VM_:
 
 ```
 # Change to directory where the data will be stored
@@ -47,7 +47,7 @@ wget <the.copied.link>
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/026/925/GCF_001026925.1_ASM102692v1/GCF_001026925.1_ASM102692v1_genomic.fna.gz
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/689/235/GCF_000689235.1_GBCO_p1/GCF_000689235.1_GBCO_p1_genomic.fna.gz
 ```
-<span style="color:lightblue">_In the VM_</span>  
+_In the VM_  
 
 Uncompressed the downloaded complete genomes:
 ```
@@ -58,7 +58,7 @@ gunzip *
 
 ### Get genomic information
 
-<font color="LightBlue"><i>In your computer</i></font>  
+_In your computer_
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -68,7 +68,7 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
 
 ### Organize the data
 
-<span style="color:lightblue">_In the VM_</span>
+_In the VM_
 
 ```bash
 # Create a folder to store the HTS reads
@@ -94,7 +94,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 <!---
 * **_Example: "What I did"_**
 
-  <span style="color:lightblue">_In your computer_</span>  
+  _In your computer_
 
   In ENA (European Nucleotide Archive) [website](https://www.ebi.ac.uk/ena):
     1. Search _"Streptococcus agalactiae"_
@@ -109,7 +109,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 
 **Upload a file with IDs to download**  
 
-<span style="color:lightblue">_In your computer_</span>  
+_In your computer_
 
 _UNIX terminal_  
 
@@ -125,7 +125,7 @@ _FileZilla_
 
 **Get the data**
 
-<span style="color:lightblue">_In the VM_</span>  
+_In the VM_  
 
 ```bash
 # Using the Streptococcus agalactiae example
@@ -156,7 +156,7 @@ getSeqENA.py --listENAids ~/reads/streptococcus_agalactiae_example/ids.txt \
 
 Assembly HTS data using INNUca
 
-<span style="color:lightblue">_In the VM_</span>  
+_In the VM_  
 
 ```bash
 # INNUca basic command
