@@ -102,7 +102,7 @@ This is a stupid script, but does the job.
 salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
 srun --pty $SHELL
 # run DIAMOND
-diamond blastx -d ~/appl_taito/CARD/CARD -q gene_calls_fix.fasta \
+diamond blastx -d ~/appl_taito/CARD/CARD -q gene-calls.fa \
             --max-target-seqs 1 -o CARD.out -f 6 --id 90 --min-orf 20 -p 6 --masking 0
 # parse the output for Anvi'o  
 printf "gene_callers_id\tsource\taccession\tfunction\te_value\n" > CARD_functions.txt
