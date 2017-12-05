@@ -1,0 +1,11 @@
+#Sample	First_failing_reason	Stop_run_avoid	Second_failing_reason	Warnings	Notes	Sequencing_Model	Assembly	Original_read_size	Read_size_Trimmomatic
+SRR1790752			Assembly_Mapping_Coverage			HiSeq 2500	yes	101	85
+ERR840705	FastQC_sequence_GC_content	fastQCproceed		High_assembled_nucleotides		HiSeq 2500	yes_conditionally	151	148
+ERR048560			MLST scheme found (efaecalis)	Assembly_Mapping_Mapping	ReadsMapped_89_AssemblyCoverage_139_TrueCoverage_37	HiSeq 2000	yes	75	71
+ERR126845	TrueCoverage_absentGenes					HiSeq 2000	no	-	-
+SRR3320580						HiSeq 2500	yes	151	149
+SRR4414149						MiSeq	yes	150	134
+SRR494564	Low_estimatedCoverage					Genome Analyzer II	no	-	-
+SRR497008	TrueCoverage_coverage					Genome Analyzer II	no	-	-
+SRR5575009					UMMI	MiSeq	yes		
+SRR5575010					UMMI	MiSeq	yes		
