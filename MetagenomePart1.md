@@ -27,11 +27,16 @@ And make a file containing the sample names to be used later in bash scripts.
 QC for the raw data (takes few min, depending on the allocation).  
 Go to the folder that contains the raw data, load the biokit module and make a folder called e.g. `FASTQC` for the QC reports.  
 Then run the QC for the raw data and combine the results to one report using `multiqc`.  
+Can be done on the interactive nodes using `sinteractive`. In that case use only 4 threads in the `fastqc` step.  
 ```
-# allocation of computing resources. Can be done also with sinteractive (use only 4 threads)
-salloc -n 6 -t00:10:00 --ntasks-per-node=6 --mem=100 -p parallel
+# allocate the computing resources and log in to the computing node. 
+salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
+srun --pty $SHELL
+# Run fastqc 
 fastqc ./*.fastq -o FASTQC/ -t 6
-exit # free the resources after the job is done
+# free the resources after the job is done
+exit 
+# Then combine the reports with multiqc
 multiqc ./ --interactive
 ```
 
