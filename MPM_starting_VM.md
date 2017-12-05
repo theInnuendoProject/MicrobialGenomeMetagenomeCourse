@@ -2,7 +2,7 @@
 
 ---
 
-Back to [Bacterial Genomics](../blob/master/Genomics.md)
+Back to [Bacterial Genomics](../master/Genomics.md)
 
 ---
 
