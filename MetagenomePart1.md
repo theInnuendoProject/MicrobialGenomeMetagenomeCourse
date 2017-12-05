@@ -119,7 +119,7 @@ Make a script called co_assembly.sh in a text editor
 #SBATCH -J megahit
 #SBATCH -o megahit_out_%j.txt
 #SBATCH -e megahit_err_%j.txt
-#SBATCH -t 05:00:00
+#SBATCH -t 10:00:00
 #SBATCH -n 1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
@@ -131,5 +131,10 @@ module load intel/16.0.0
 module load megahit
 
 megahit -1 all_R1_trimmed.fastq -2 all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
+
+module purge
+module load biokit
+cd all_assembly_def_1000
+metaquast.py -t 16 -o assmebly_QC final.contigs.fa 
 ```
 Submit the batch job as previously
