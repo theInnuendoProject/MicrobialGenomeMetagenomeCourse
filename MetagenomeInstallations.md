@@ -114,12 +114,3 @@ Then you can remove the results
 `rm TEMP*`  
 
 You can also add Metaxa2 to your PATH (go to --> `.bashrc`)  
-
-**VSEARCH**  
-For database searches, in our case annotation of ARGs.
-```
-cd $USERAPPL
-wget https://github.com/torognes/vsearch/releases/download/v2.6.0/vsearch-2.6.0-linux-x86_64.tar.gz
-tar -xzvf vsearch-2.6.0-linux-x86_64.tar.gz
-```
-VSEARCH can be found from the `bin` folder. You can add that to your PATH as well.  
