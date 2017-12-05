@@ -50,23 +50,27 @@ module load biokit
 metaquast.py final.contigs.fa
 ```
 
-# Resistance gene annotation
-Next step is the antibiotic resistance annotation. We will use only the R1 reads.  
-Convert the fastq files to fasta and rename all sequences in the files with the sample name + running no.  
-After that combine all the R1 fasta reads with sample name in the header to one file.  
+# Antibiotic resistance gene annotation - reads
+Next step is the antibiotic resistance gene annotation.  
+
+First convert all R1 files from fastq to fasta. You can use `fastq_to_fasta_fast` program that is included in the biokit.  
+`fastq_to_fasta_fast TRIMMED.fastq > TRIMMED.fasta`  
+
+Then add the sample name to each sequence header after the `>` sign. Keep the original fasta header and separate it with `-`. You can do this either separately for each file or write a batch script to go through all files .You can use the `sample_names.txt` as a input to your bash script.  
 ```
-nice -5 parallel -j 6 -a sample_names.txt scripts/fastq2fasta.py # this takes ~5 min
-cat *R1_renamed.fasta > birds_R1.fasta
-# to save space, you can remove the individual renamed files  
-rm *_renamed.fasta
+# Example header
+>L3-1-M01457:76:000000000-BDYH7:1:1101:17200:1346
 ```
 
-Download the latest CARD release to your applications folder under a folder called CARD and extract the file.  
+When all R1 files have been transformed to fasta and reamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards.  
+
+We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD](https://card.mcmaster.ca)  
+Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
 `bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `
-Then make a DIAMOND database file form the protein homolog model.  
+Then make a DIAMOND database file form the protein homolog model amino acid fasta file.  
 `diamond makedb --in protein_fasta_protein_homolog_model.fasta -d CARD`
 
-The annotation of resistance genes will be done as a batch job using DIAMOND (This might take slightly longer, depending on the queue).
+The annotation of resistance genes could be done as a batch job using DIAMOND against CARD. (This took ~1h 30min + the time in the queue).
 ```
 #!/bin/bash -l
 #SBATCH -J diamond
@@ -77,15 +81,29 @@ The annotation of resistance genes will be done as a batch job using DIAMOND (Th
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
 #SBATCH -p serial
-#SBATCH --mem=5000
+#SBATCH --mem=7000
 #
 
 module load biokit
-cd $WRKDIR/BioInfo_course/trimmed_data
-diamond blastx -d ~/databases/CARD/CARD_prot -q birds_R1.fasta --max-target-seqs 1 -o birds_R1_CARD.txt -f 6 --id 90 --min-orf 20 -p 24 --seq no
+cd $WRKDIR/BioInfo_course
+diamond blastx -d ~/appl_taito/CARD/CARD -q trimmed_data/birds_R1.fasta \
+            --max-target-seqs 1 -o birds_R1_CARD.txt -f 6 --id 90 --min-orf 20 \
+            -p $SLURM_CPUS_PER_TASK --masking 0
 ```
 
-When the job is finished, go tot the folder with trimmed data and inspect the results.  
+When the job is finished, inspect the results.  
 They are in one file with each hit on one line and we would like to have a count table where we have ARGs on rows and samples as columns.  
 This is a stupid script, but does the job.  
-`python ../scripts/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
+`python scripts/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
+
+# Antibiotic resistance gene annotation - contigs
+```
+salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
+srun --pty $SHELL
+diamond blastx -d ~/appl_taito/CARD/CARD -q gene_calls_fix.fasta \
+            --max-target-seqs 1 -o CARD.out -f 6 --id 90 --min-orf 20 -p 6 --masking 0
+# parse the output for Anvi'o  
+printf "gene_callers_id\tsource\taccession\tfunction\te_value\n" > CARD_functions.txt
+awk '{print $1"\tCARD\t\t"$2"\t"$11}' CARD.out >> CARD_functions.txt
+# and finally import the functions to anvio contigs DB  
+anvi-import-functions -c contigs.db -i CARD_functions.txt
