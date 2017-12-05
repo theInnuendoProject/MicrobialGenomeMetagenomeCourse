@@ -81,28 +81,3 @@ When the job is finished, go tot the folder with trimmed data and inspect the re
 They are in one file with each hit on one line and we would like to have a count table where we have ARGs on rows and samples as columns.  
 This is a stupid script, but does the job.  
 `python ../scripts/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
-
-
-Search againts MegaRes (MIGHT BE AN OPTION TO CARD, better DB and VSEARCH can make a count table as output. Much slower though)
-```
-#!/bin/bash -l
-#SBATCH -J vsearch
-#SBATCH -o vsearch_out_%j.txt
-#SBATCH -e vsearch_err_%j.txt
-#SBATCH -t 10:00:00
-#SBATCH -n 1
-#SBATCH --nodes=1
-#SBATCH --cpus-per-task=8
-#SBATCH -p serial
-#SBATCH --mem=10000
-#
-
-module load biokit
-cd $WRKDIR/BioInfo_course/trimmed_data
-vsearch --usearch_global birds_R1.fasta -db $USERAPPL/database//megares_v1.01/megares_database_v1.01.fasta --id 0.9 --maxaccepts 8 --maxhits 1 --otutabout birds_MegaRes.txt --strand both --threads $SLURM_CPUS_PER_TASK --mincols 30
-```
-Submit the job to queue.  
-`sbatch scripts/vsearch_batch`
-
-
-Metaphlan 2 ??
