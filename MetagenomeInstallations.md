@@ -114,3 +114,10 @@ Then you can remove the results
 `rm TEMP*`  
 
 You can also add Metaxa2 to your PATH (go to --> `.bashrc`)  
+
+**DIAMOND parser**
+Python script to parse the diamond output into a count table.  
+```
+cd scripts
+git clone https://github.com/karkman/parse_diamond.git
+```
