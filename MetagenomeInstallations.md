@@ -21,7 +21,7 @@ bash Anaconda2-5.0.1-Linux-x86_64.sh
 For combining multiple QC reports.  
 `conda install -c bioconda multiqc`
 
-**_STOP HERE AND GO BACK TO the QC & TRIMMING PART_**
+**_STOP HERE AND GO TO THE QC & TRIMMING PART_**
 
 **Anvi'o**  
 Create a virtual environemnt for Anvi'o and install all dependencies using anaconda (takes 5–10 min)  
