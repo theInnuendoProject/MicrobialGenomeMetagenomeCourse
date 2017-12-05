@@ -2,6 +2,10 @@
 
 ---
 
+Back to [Bacterial Genomics](../blob/master/Genomics.md)
+
+---
+
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).
 **Note 2:** check the number of CPUs of your VM using `htop` (the CPUs available will be displayed at the top as dynamic horizontal bars, numbered sequentially).
 
@@ -262,3 +266,9 @@ In Sanger Pathogens Docker Hub [webpage](https://hub.docker.com/u/sangerpathogen
 ```
 docker pull sangerpathogens/roary:latest
 ```
+
+---
+
+Back to [Bacterial Genomics](../blob/master/Genomics.md)
+
+---
