@@ -11,6 +11,7 @@ mkdir BioInfo_course
 cd BioInfo_course
 mkdir raw_data
 mkdir scripts
+mkdir trimmed_data
 ```
 
 Download the metagenomic data (takes few minutes)  
@@ -34,10 +35,10 @@ salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
 srun --pty $SHELL
 # Run fastqc 
 fastqc ./*.fastq -o FASTQC/ -t 6
-# free the resources after the job is done
-exit 
 # Then combine the reports with multiqc
 multiqc ./ --interactive
+# free the resources after the job is done
+exit 
 ```
 
 Copy the resulting HTML file to your local machine with `scp` from the command line (Mac/Linux) or *WinSCP* on Windows.  
@@ -54,7 +55,9 @@ Go to your scripts folder and make a bash script for cutadapt with any text edit
 
 while read i
 do
-        cutadapt  -a CTGTCTCTTATACACATCT -A CTGTCTCTTATACACATCT -q 28 -O 10 -o ../trimmed_data/$i"_R1_trimmed.fastq" -p ../trimmed_data/$i"_R2_trimmed.fastq" *$i*_R1*.fastq.gz *$i*_R2*.fastq.gz > ../trimmed_data/$i"_trim.log"
+        cutadapt  -a CTGTCTCTTATACACATCT -A CTGTCTCTTATACACATCT -q 28 -O 10 \
+        -o ../trimmed_data/$i"_R1_trimmed.fastq" -p ../trimmed_data/$i"_R2_trimmed.fastq" \
+        *$i*_R1*.fastq.gz *$i*_R2*.fastq.gz > ../trimmed_data/$i"_trim.log"
 done < $1
 ```
 Then we need a batch job file to submit the job to the SLURM system. More about CSC batch jobs here: https://research.csc.fi/taito-batch-jobs  
@@ -116,21 +119,17 @@ Make a script called co_assembly.sh in a text editor
 #SBATCH -J megahit
 #SBATCH -o megahit_out_%j.txt
 #SBATCH -e megahit_err_%j.txt
-#SBATCH -t 6:00:00
+#SBATCH -t 05:00:00
 #SBATCH -n 1
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=64000
+#SBATCH --mem=20000
 #
 
 module purge
 module load intel/16.0.0
 module load megahit
 
-megahit -1 all_R1_trim.fastq -2 all_R2_trim.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
+megahit -1 all_R1_trimmed.fastq -2 all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
 ```
-
-
-
-
-
+Submit the batch job as previously
