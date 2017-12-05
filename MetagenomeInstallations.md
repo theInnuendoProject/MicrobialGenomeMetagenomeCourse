@@ -5,8 +5,8 @@
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 
 **Anaconda2** (takes ~5 min)  
-Go to https://www.anaconda.com/download/#linux with your local browser and copy the link address of the Python 2.7 64-bit (x86) Installer
-Or just trust me and use this: https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh  
+Go to https://www.anaconda.com/download/#linux with your local browser and copy the link address of the _Python 2.7 64-bit (x86) Installer_ . 
+Or just trust me and use this: https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh  
 
 In Taito go to your application folder and download the installations script.
 ```
