@@ -2,6 +2,13 @@
 
 ---
 
+* [_From microbial genomics to metagenomics_](./README.md)
+  * [_Bacterial Genomics_](./Genomics.md)
+    * [_Prepare the Virtual Machine_](./MPM_workingwithINNUCA.md)
+    * _From reads to assembly: working with INNUca pipeline_
+
+---
+
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in _"Organize the data"_ `<your_species_name>`, write the species name you selected (something like `campylobacter_jejuni`).  
 **Note 2:** if the VM has 16 CPUs, use `16` in CPUs/threads instead of `8`.  
 **Note 3:** do the steps bellow for the bacteria species of your choise. _Streptococcus agalactiae_ is used as example.
@@ -13,7 +20,7 @@
 <!---
 ### Get complete genomes
 
-<span style="color:grey">_In your computer_</span>
+<span style="color:lightblue">_In your computer_</span>
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -40,7 +47,7 @@ wget <the.copied.link>
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/026/925/GCF_001026925.1_ASM102692v1/GCF_001026925.1_ASM102692v1_genomic.fna.gz
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/689/235/GCF_000689235.1_GBCO_p1/GCF_000689235.1_GBCO_p1_genomic.fna.gz
 ```
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">_In the VM_</span>  
 
 Uncompressed the downloaded complete genomes:
 ```
@@ -51,7 +58,7 @@ gunzip *
 
 ### Get genomic information
 
-<span style="color:grey">_In your computer_</span>
+<span style="color:lightblue">_In your computer_</span>
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -61,7 +68,7 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
 
 ### Organize the data
 
-<span style="color:grey">_In the VM_</span>
+<span style="color:lightblue">_In the VM_</span>
 
 ```
 # Create a folder to store the HTS reads
@@ -87,7 +94,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 <!---
 * **_Example: "What I did"_**
 
-  <span style="color:grey">_In your computer_</span>  
+  <span style="color:lightblue">_In your computer_</span>  
 
   In ENA (European Nucleotide Archive) [website](https://www.ebi.ac.uk/ena):
     1. Search _"Streptococcus agalactiae"_
@@ -102,7 +109,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 
 **Upload a file with IDs to download**  
 
-<span style="color:grey">_In your computer_</span>  
+<span style="color:lightblue">_In your computer_</span>  
 
 _UNIX terminal_  
 
@@ -118,7 +125,7 @@ _FileZilla_
 
 **Get the data**
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">_In the VM_</span>  
 
 ```
 # Using the Streptococcus agalactiae example
@@ -149,7 +156,7 @@ getSeqENA.py --listENAids ~/reads/streptococcus_agalactiae_example/ids.txt \
 
 Assembly HTS data using INNUca
 
-<span style="color:grey">_In the VM_</span>  
+<span style="color:lightblue">_In the VM_</span>  
 
 ```
 # INNUca basic command
@@ -190,3 +197,12 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 # Runtime :0.0h:34.0m:45.3s
 ```
 * More information about `screen` [here](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/ "Google search: linux screen") and `man screen`
+
+---
+
+* [_From microbial genomics to metagenomics_](./README.md)
+  * [_Bacterial Genomics_](./Genomics.md)
+    * [_Prepare the Virtual Machine_](./MPM_workingwithINNUCA.md)
+    * _From reads to assembly: working with INNUca pipeline_
+
+---

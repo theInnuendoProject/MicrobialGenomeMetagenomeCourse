@@ -4,6 +4,8 @@
 
 * [_From microbial genomics to metagenomics_](./README.md)
   * [_Bacterial Genomics_](./Genomics.md)
+    * _Prepare the Virtual Machine_
+    * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
 
 ---
 
@@ -270,7 +272,9 @@ docker pull sangerpathogens/roary:latest
 
 ---
 
-* [_From microbial genomics to metagenomics_](../README.md)
-  * [_Bacterial Genomics_](../Genomics.md)
+* [_From microbial genomics to metagenomics_](./README.md)
+  * [_Bacterial Genomics_](./Genomics.md)
+    * _Prepare the Virtual Machine_
+    * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
 
 ---
