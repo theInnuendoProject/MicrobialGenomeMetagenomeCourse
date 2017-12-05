@@ -132,6 +132,7 @@ module load megahit
 
 megahit -1 all_R1_trimmed.fastq -2 all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
 
+# MetaQUAST assembly statistics
 module purge
 module load biokit
 cd all_assembly_def_1000
