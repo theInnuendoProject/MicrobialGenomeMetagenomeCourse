@@ -24,7 +24,7 @@
 
 Using terminal
 
-```
+```bash
 # Give user read only permission to the SSH key
 chmod 400 </path/to/provided/private/ssh/key/mgmc.key>
 
@@ -61,7 +61,7 @@ Install `htop` to allow monitoring VM activity (CPUs and memory usage, proccesse
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 sudo apt-get install -y htop
 ```
 
@@ -71,7 +71,7 @@ Create a folder where all the tools to be used will be placed.
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 mkdir ~/NGStools
 ```
 
@@ -93,7 +93,7 @@ In Docker [webpage](https://www.docker.com/):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 sudo apt-get remove -y docker docker-engine docker.io
 sudo apt-get update
 sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
@@ -114,7 +114,7 @@ sudo docker run hello-world
 
 More information [here](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo "Google search: docker avoid sudo").
 
-```
+```bash
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 
@@ -140,7 +140,7 @@ In the [webpage](http://downloads.asperasoft.com/connect2/):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 wget http://download.asperasoft.com/download/sw/connect/3.7.4/aspera-connect-3.7.4.147727-linux-64.tar.gz
 tar xf aspera-connect-3.7.4.147727-linux-64.tar.gz
 bash aspera-connect-3.7.4.147727-linux-64.sh
@@ -160,7 +160,7 @@ In the [webpage](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-ubuntu64.tar.gz
 tar xf sratoolkit.2.8.2-1-ubuntu64.tar.gz
 rm sratoolkit.2.8.2-1-ubuntu64.tar.gz
@@ -177,7 +177,7 @@ In the [webpage](https://github.com/B-UMMI/getSeqENA):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 git clone https://github.com/B-UMMI/getSeqENA.git
 mv getSeqENA/ ~/NGStools/
 echo "export PATH=$HOME/NGStools/getSeqENA"':$PATH' >> ~/.profile
@@ -196,7 +196,7 @@ In the [webpage](https://github.com/B-UMMI/INNUca):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 docker pull ummidock/innuca:3.1
 ```
 
@@ -213,7 +213,7 @@ In the [webpage](https://github.com/B-UMMI/ReMatCh):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 git clone https://github.com/B-UMMI/ReMatCh.git
 mv ReMatCh/ ~/NGStools/
 echo "export PATH=$HOME/NGStools/ReMatCh"':$PATH' >> ~/.profile
@@ -232,7 +232,7 @@ In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/dashboard/):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 docker pull ummidock/abricate:latest
 ```
 
@@ -249,7 +249,7 @@ In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/):
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 docker pull ummidock/prokka:1.12
 ```
 
@@ -266,7 +266,7 @@ In Sanger Pathogens Docker Hub [webpage](https://hub.docker.com/u/sangerpathogen
 
 <span style="color:lightblue">In the VM</span>  
 
-```
+```bash
 docker pull sangerpathogens/roary:latest
 ```
 

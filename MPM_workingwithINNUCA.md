@@ -58,7 +58,7 @@ gunzip *
 
 ### Get genomic information
 
-<span style="color:lightblue">_In your computer_</span>
+<p style="color:LightBlue"><i>In your computer</i></p>
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -70,7 +70,7 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
 
 <span style="color:lightblue">_In the VM_</span>
 
-```
+```bash
 # Create a folder to store the HTS reads
 
 mkdir ~/reads
@@ -113,7 +113,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 
 _UNIX terminal_  
 
-```
+```bash
 scp -i </path/to/provided/private/ssh/key/mgmc.key> </path/to/file/with/IDs.txt> cloud-user@<VM.IP>:~/reads/<your_species_name>
 ```
 
@@ -127,7 +127,7 @@ _FileZilla_
 
 <span style="color:lightblue">_In the VM_</span>  
 
-```
+```bash
 # Using the Streptococcus agalactiae example
 
 # Get the file with IDs
@@ -158,7 +158,7 @@ Assembly HTS data using INNUca
 
 <span style="color:lightblue">_In the VM_</span>  
 
-```
+```bash
 # INNUca basic command
 
 # You should specify where the output goes whenever there is an option to do that
@@ -174,7 +174,7 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 
 Using the Streptococcus agalactiae example:
 
-```
+```bash
 # Run inside a screen
 screen -S streptococcus_agalactiae_example
 
