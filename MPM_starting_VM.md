@@ -2,7 +2,8 @@
 
 ---
 
-Back to [Bacterial Genomics](../master/Genomics.md)
+* [_From microbial genomics to metagenomics_](../master/README.md)
+  * [_Bacterial Genomics_](../master/Genomics.md)
 
 ---
 
@@ -269,6 +270,7 @@ docker pull sangerpathogens/roary:latest
 
 ---
 
-Back to [Bacterial Genomics](../blob/master/Genomics.md)
+* [_From microbial genomics to metagenomics_](../master/README.md)
+  * [_Bacterial Genomics_](../master/Genomics.md)
 
 ---
