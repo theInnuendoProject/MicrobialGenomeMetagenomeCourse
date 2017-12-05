@@ -26,7 +26,8 @@ module load biokit
 # each job will get one sample from the sample names file stored to a variable $name
 name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
 # then the variable is used in running metaxa2
-metaxa2 -1 ../trimmed_data/$name"_R1_trimmed.fastq" -2 ../trimmed_data/$name"_R2_trimmed.fastq" -o $name --align none --graphical F --cpu $SLURM_CPUS_PER_TASK
+metaxa2 -1 ../trimmed_data/$name"_R1_trimmed.fastq" -2 ../trimmed_data/$name"_R2_trimmed.fastq" \
+            -o $name --align none --graphical F --cpu $SLURM_CPUS_PER_TASK --plus
 metaxa2_ttt -i $name".taxonomy.txt" -o $name
 ```
 
