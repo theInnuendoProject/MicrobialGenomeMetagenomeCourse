@@ -107,9 +107,10 @@ module load megahit
 ```
 module purge is needed to remove wrong Pyhton versions you might have loaded in earlier today.
 
-Assembly requires lot of memory and we need to do a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into twol files with cat
+Assembly requires lot of memory and we need to do a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into two files with `cat`
 
 ```
+cd trimmed_data
 cat *R1_trimmed.fastq > all_R1_trimmed.fastq
 cat *R2_trimmed.fastq > all_R2_trimmed.fastq
 ```
@@ -130,7 +131,7 @@ module purge
 module load intel/16.0.0
 module load megahit
 
-megahit -1 all_R1_trimmed.fastq -2 all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
+megahit -1 trimmed_data/all_R1_trimmed.fastq -2 trimmed_data/all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
 
 # MetaQUAST assembly statistics
 module purge
