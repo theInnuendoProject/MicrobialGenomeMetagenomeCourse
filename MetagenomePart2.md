@@ -92,9 +92,9 @@ diamond blastx -d ~/appl_taito/CARD/CARD -q trimmed_data/birds_R1.fasta \
 ```
 
 When the job is finished, inspect the results.  
-They are in one file with each hit on one line and we would like to have a count table where we have ARGs on rows and samples as columns.  
+They are in one file with each hit on one line and we would like to have a count table where we have different ARGs as rows and our samples as columns.  
 This is a stupid script, but does the job.  
-`python scripts/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
+`python scripts/parse_diamond/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
 
 # Antibiotic resistance gene annotation - contigs
 ```
