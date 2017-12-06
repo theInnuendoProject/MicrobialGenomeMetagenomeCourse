@@ -7,5 +7,5 @@ SRR3320580						HiSeq 2500	yes	151	149
 SRR4414149						MiSeq	yes	150	134
 SRR494564	Low_estimatedCoverage					Genome Analyzer II	no	-	-
 SRR497008	TrueCoverage_coverage					Genome Analyzer II	no	-	-
-SRR5575009					UMMI	MiSeq	yes		
-SRR5575010					UMMI	MiSeq	yes		
+SRR5575009					UMMI	MiSeq	yes	250	233
+SRR5575010					UMMI	MiSeq	yes	250	233
