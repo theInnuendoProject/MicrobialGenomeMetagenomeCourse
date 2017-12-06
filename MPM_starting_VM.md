@@ -5,7 +5,10 @@
 * [_From microbial genomics to metagenomics_](./README.md)
   * [_Bacterial Genomics_](./Genomics.md)
     * _Prepare the Virtual Machine_
+      1. [_Connect to VM_](## Connect to VM)
+      2. [_Prepare the VM_](## Prepare the VM)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
+    * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
 ---
 
@@ -55,24 +58,30 @@ _In the VM_
 Edit `~/.bashrc` (using for example `nano ~/.bashrc`) and uncomment `force_color_prompt=yes` by removing the `#`. More information [here](https://askubuntu.com/questions/517677/how-to-get-a-colored-bash "Google search: get colored bash").
   * **Note:** After editing exit with `Ctrl + X`; type `y` to save changes; don't change the name file by only pressing `Enter`.
 
-### Control your VM
+### Install generic programs
 
-Install `htop` to allow monitoring VM activity (CPUs and memory usage, proccesses running, etc.).
+* [htop](http://hisham.hm/htop/)
+  * An interactive process viewer for Unix systems
+  * Allows monitoring VM activity (CPUs and memory usage, proccesses running, etc.)
+* [GNU Parallel](https://www.gnu.org/software/parallel/)
+  * Shell tool for executing jobs in parallel using one or more computers.
 
 _In the VM_  
 
 ```bash
-sudo apt-get install -y htop
+sudo apt-get install -y htop parallel
 ```
 
-### Organize your tools
-
-Create a folder where all the tools to be used will be placed.
+### Organize your VM
 
 _In the VM_  
 
 ```bash
+# Create a folder where all the tools to be used will be placed
 mkdir ~/NGStools
+
+# Create a folder to store different databases
+mkdir ~/DBs
 ```
 
 ### Install Docker
@@ -127,7 +136,7 @@ docker run hello-world
 
 **_What is [getSeqENA](https://github.com/B-UMMI/getSeqENA)?_**  
 
-> Download sequences from ENA database
+> Download sequences from ENA/SRA databases
 
 **Install dependencies**  
 
@@ -271,12 +280,3 @@ _In the VM_
 ```bash
 docker pull sangerpathogens/roary:latest
 ```
-
----
-
-* [_From microbial genomics to metagenomics_](./README.md)
-  * [_Bacterial Genomics_](./Genomics.md)
-    * _Prepare the Virtual Machine_
-    * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
-
----

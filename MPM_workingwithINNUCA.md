@@ -6,6 +6,9 @@
   * [_Bacterial Genomics_](./Genomics.md)
     * [_Prepare the Virtual Machine_](./MPM_workingwithINNUCA.md)
     * _From reads to assembly: working with INNUca pipeline_
+      1. [_Get genomic data_](## Get genomic data)
+      2. [_Assembly HTS data_](## Assembly HTS data)
+    * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
 ---
 
@@ -145,10 +148,12 @@ getSeqENA.py --listENAids ~/reads/streptococcus_agalactiae_example/ids.txt \
              --downloadInstrumentPlatform ILLUMINA \
              --threads 8 \
              --SRAopt
+
+# Runtime :0.0h:2.0m:10.12s
 ```
 * More information about piping and redirection [here](https://ryanstutorials.net/linuxtutorial/piping.php "Google search: linux pipe command")
 * More information on skipping lines [here](https://stackoverflow.com/questions/604864/print-a-file-skipping-x-lines-in-bash "Google search: linux skip first line file")
-* For more information about cutting text based on delimiters: `cut --help` or `man cut`
+* For more information about cutting text based on delimiters: `cut --help` or `man cut`, and [here](http://www.thegeekstuff.com/2013/06/cut-command-examples "Google search: linux cut")
 
 ---
 
@@ -194,15 +199,38 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 # Press Ctrl + A (release) and then D
 
 # With 8 CPUs
-# Runtime :0.0h:34.0m:45.3s
+# Runtime :1.0h:14.0m:33.47s
 ```
 * More information about `screen` [here](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/ "Google search: linux screen") and `man screen`
 
----
+## Organize assemblies
 
-* [_From microbial genomics to metagenomics_](./README.md)
-  * [_Bacterial Genomics_](./Genomics.md)
-    * [_Prepare the Virtual Machine_](./MPM_workingwithINNUCA.md)
-    * _From reads to assembly: working with INNUca pipeline_
+Store all assembled genomes (good and bad assemblies) in a single folder to use with next tools.
 
----
+_In the VM_  
+
+```bash
+# Create the folder where assemblies will be stored
+mkdir ~/genomes/<your_species_name>/all_assemblies
+
+# Using the Streptococcus agalactiae example
+
+mkdir ~/genomes/streptococcus_agalactiae_example/all_assemblies
+
+# Copy INNUca's final assemblies
+# The next command pipes different commands:
+## The first sed command read the INNUca combine_samples_reports.tab file and skip the header line
+## cut command will get the final_assembly column
+## grep will ignore those samples that did not produced a final assembly ("NA")
+## Then, the resulting list feeds parallel command that will copy the file for each entry
+### Inside parallel {} substitutes each line that gets inside parallel
+### Because INNUca ran inside Docker, the assembly path is relative to /data/
+### The second sed (inside parallel) replaces the /data/ with user HOME directory in each line that gets inside parallel
+
+sed 1d ~/genomes/streptococcus_agalactiae_example/innuca/combine_samples_reports.*.tab | \
+          cut -f 23 | \
+          grep --invert-match "NA" | \
+          parallel --jobs 8 'cp $(sed s#/data/#$HOME/#1 <(echo {})) $HOME/genomes/streptococcus_agalactiae_example/all_assemblies/'
+```
+* For more information about finding patterns: `grep --help` or `man grep`, and [here](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/ "Google search: linux grep")
+* More information about using parallel: [introduction and bioinformatics examples](https://www.biostars.org/p/63816/); [manual](https://www.gnu.org/software/parallel/man.html); [tutorial](https://www.gnu.org/software/parallel/parallel_tutorial.html)
