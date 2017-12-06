@@ -7,7 +7,7 @@
     * [_Prepare the Virtual Machine_](./MPM_starting_VM.md)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
     * In silico _typing using ReMatCh and Abricate_
-      1. [_Get DB of antimicrobial resistance genes_](./MPM_ReMatCh_Abricate.md# Get DB of antimicrobial resistance genes)
+      1. [_Get DB of antimicrobial resistance genes_](./MPM_ReMatCh_Abricate.md#get-db-of-antimicrobial-resistance-genes)
 
 ---
 

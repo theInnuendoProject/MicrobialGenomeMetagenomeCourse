@@ -6,8 +6,8 @@
   * [_Bacterial Genomics_](./Genomics.md)
     * [_Prepare the Virtual Machine_](./MPM_starting_VM.md)
     * _From reads to assembly: working with INNUca pipeline_
-      1. [_Get genomic data_](./MPM_workingwithINNUCA.md# Get genomic data)
-      2. [_Assembly HTS data_](./MPM_workingwithINNUCA.md# Assembly HTS data)
+      1. [_Get genomic data_](./MPM_workingwithINNUCA.md#get-genomic-data)
+      2. [_Assembly HTS data_](./MPM_workingwithINNUCA.md#assembly-hts-data)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
 ---
