@@ -5,8 +5,8 @@
 * [_From microbial genomics to metagenomics_](./README.md)
   * [_Bacterial Genomics_](./Genomics.md)
     * _Prepare the Virtual Machine_
-      1. [_Connect to VM_](## Connect to VM)
-      2. [_Prepare the VM_](## Prepare the VM)
+      1. [_Connect to VM_](./MPM_starting_VM.md# Connect to VM)
+      2. [_Prepare the VM_](./MPM_starting_VM.md# Prepare the VM)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
