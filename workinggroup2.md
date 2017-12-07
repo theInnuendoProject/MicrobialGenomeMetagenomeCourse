@@ -17,7 +17,7 @@ Samplename_1  GeneName-GeneName-...-GeneName
 Samplename_2  ND
 ```
 
-**Note**: use the same nomenclature for same antibiotic resistance profile (e.g. two samples with the same list of genes should have the same value under *ResistanceGenes*
+**Note**: use the same nomenclature for same antibiotic resistance profile (e.g. two samples with the same list of genes should have the same value under *ResistanceGenes*)
 
 ## Session (2)
 
