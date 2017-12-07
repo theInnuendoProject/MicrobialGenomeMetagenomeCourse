@@ -1,7 +1,7 @@
 # Prepping files for Anvio
 * Tom Delmont, Antti Karkman, Jenni Hultman*
 
-Anvi’o is an analysis and visualization platform for ‘omics data. You can read more from Anvio's webpage at http://merenlab.org/software/anvio/.
+Anvio is an analysis and visualization platform for omics data. You can read more from Anvio's webpage at http://merenlab.org/software/anvio/.
 
 ![alt text](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/raw/master/Screen%20Shot%202017-12-07%20at%2013.50.20.png "Tom's fault")
 
@@ -17,7 +17,9 @@ We need to do some tricks for the contigs from assembly before we can use them o
 module load biokit
 source activate anvio3
 ```
-## Rename the scaffolds and select those >2,500nt
+## Rename the scaffolds and select those >2,500nt.
+Anvio 
+
 ```
 anvi-script-reformat-fasta ../final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
 ```
@@ -53,4 +55,32 @@ anvi-import-taxonomy -i centrifuge_report.tsv centrifuge_hits.tsv -p centrifuge 
 bowtie2-build MEGAHIT_co-assembly_2500nt.fa MEGAHIT_co-assembly_2500nt
 ```
 ## MAPPING 
+
+
+## Visualization in the interface
+
+Open a new ssh window. In mac:
+```
+ssh -L 8080:localhost:8080 hultman@taito.csc.fi
+```
+
+in Windows with Putty:
+In SSH tab select "tunnels". Add
+
+Source port: 8080 
+Destination: localhost:8080
+
+Click add and log in to Taito.
+
+Activate anvio
+
+```
+anvi-interactive -c METASPADES_co-assembly_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
+```
+
+Then open google chrome and go to address 
+
+http://localhost:8080
+
+
 
