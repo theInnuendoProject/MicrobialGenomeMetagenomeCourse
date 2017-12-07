@@ -9,10 +9,10 @@ Today the group work is divided in two sessions: 1) evaluation of the assemblies
 2) make a new directory and transfer in it all the genomes passing the QA/QC
 3) in the same directory upload the *full* and/or *draft* genome sequencing of the species of your choice (previously downloaded from NCBI/EMBL-EBI)
 4) use *abrigate* and *ResFinder* database for detecting antibiotic resistance genes
-5) make a single file containing two columns, following the example below:
+5) starting from *abrigate* report, decide cut-off for presence/absence make a single file containing two columns, following the example below:
 
 ```
 FILE  ResistanceGenes
-Samplename_1  ShortGeneName-ShortGeneName-...-ShortGeneName
-Samplename_2  ShortGeneName-ShortGeneName-...-ShortGeneName
+Samplename_1  GeneName-GeneName-...-GeneName
+Samplename_2  GeneName-GeneName-...-GeneName
 ```
