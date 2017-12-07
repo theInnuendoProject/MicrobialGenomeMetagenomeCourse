@@ -28,10 +28,13 @@ Then add the sample name to each sequence header after the `>` sign. Keep the or
 
 When all R1 files have been converted to fasta and renamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards using the script you downloaded earlier.  
 
-We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD](https://card.mcmaster.ca)  
+We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD].(https://card.mcmaster.ca)  
 Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
-`bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `
+
+`bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `  
+
 Then make a DIAMOND database file form the protein homolog model. It is a fasta file with amino acid sequences.  
+
 `diamond makedb --in protein_fasta_protein_homolog_model.fasta -d CARD`
 
 The annotation of resistance genes will be done as a batch job using DIAMOND against CARD. Make the batch script and submit it as previously. (This takes less than an hour + possible time in the queue).  
@@ -58,6 +61,7 @@ diamond blastx -d ~/appl_taito/CARD/CARD -q trimmed_data/birds_R1.fasta \
 When the job is finished, inspect the results.  
 They are in one file with each hit on one line and we would like to have a count table where we have different ARGs as rows and our samples as columns.  
 This is a stupid script, but does the job.  
+
 `python scripts/parse_diamond/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
 
 # Antibiotic resistance gene annotation - contigs
