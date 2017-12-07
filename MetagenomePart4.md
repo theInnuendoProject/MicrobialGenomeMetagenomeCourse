@@ -8,12 +8,12 @@ ssh -L 8080:localhost:8080 hultman@taito.csc.fi
 ```
 
 in Windows with Putty:
-In SSH tab select "tunnels". Add
+In SSH category [+] select "tunnels". Add
 
 Source port: 8080 
 Destination: localhost:8080
 
-Click add and log in to Taito.
+Click add and log in to Taito as usual.
 
 Activate anvio
 
