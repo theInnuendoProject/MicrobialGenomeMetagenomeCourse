@@ -34,7 +34,7 @@ Go to the CARD website and download the latest CARD release to folder called CAR
 Then make a DIAMOND database file form the protein homolog model amino acid fasta file.  
 `diamond makedb --in protein_fasta_protein_homolog_model.fasta -d CARD`
 
-The annotation of resistance genes could be done as a batch job using DIAMOND against CARD. (This took ~1h 30min + the time in the queue).
+The annotation of resistance genes could be done as a batch job using DIAMOND against CARD. (This takes less than an hour + possible time in the queue).
 ```
 #!/bin/bash -l
 #SBATCH -J diamond
