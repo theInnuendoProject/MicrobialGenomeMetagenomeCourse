@@ -13,13 +13,7 @@ metaxa2_dc -o birds_metaxa7.txt *level_7.txt
 ```
 
 # Assembly quality assesment
-Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we will run MetaQUAST (http://bioinf.spbau.ru/metaquast)
-```
-#load biokit
-module load biokit
-#go to $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000
-metaquast.py final.contigs.fa
-```
+Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run MetaQUAST (http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
 
 
 # Antibiotic resistance gene annotation - reads
