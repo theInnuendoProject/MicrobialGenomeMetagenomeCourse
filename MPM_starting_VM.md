@@ -110,7 +110,7 @@ mkdir ~/DBs
 
 ### Install Docker
 
-**_What is_** [Docker](https://www.docker.com/)**_?_**
+**_What is [Docker](https://www.docker.com/)?_**
 
 > "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc." From [here](https://www.linux.com/news/docker-shipping-container-linux-code).
 
@@ -231,7 +231,7 @@ docker pull ummidock/innuca:3.1
 
 ### Install ReMatCh
 
-**_What is_** [ReMatCh](https://github.com/B-UMMI/ReMatCh)*__?_**  
+**_What is [ReMatCh](https://github.com/B-UMMI/ReMatCh)?_**  
 
 > Reads mapping against target sequences, checking mapping and consensus sequences production
 
