@@ -26,15 +26,15 @@ Then add the sample name to each sequence header after the `>` sign. Keep the or
 >L3-1-M01457:76:000000000-BDYH7:1:1101:17200:1346
 ```
 
-When all R1 files have been transformed to fasta and reamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards.  
+When all R1 files have been converted to fasta and renamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards using the script you downloaded earlier.  
 
 We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD](https://card.mcmaster.ca)  
 Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
 `bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `
-Then make a DIAMOND database file form the protein homolog model amino acid fasta file.  
+Then make a DIAMOND database file form the protein homolog model. It is a fasta file with amino acid sequences.  
 `diamond makedb --in protein_fasta_protein_homolog_model.fasta -d CARD`
 
-The annotation of resistance genes could be done as a batch job using DIAMOND against CARD. (This takes less than an hour + possible time in the queue).
+The annotation of resistance genes will be done as a batch job using DIAMOND against CARD. Make the batch script and submit it as previously. (This takes less than an hour + possible time in the queue).  
 ```
 #!/bin/bash -l
 #SBATCH -J diamond
