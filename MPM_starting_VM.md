@@ -12,7 +12,8 @@
 <span style="color:lightblue">In your computer</span>  
 
   * **Note:** The SSH key was produced in Linux using `ssh-keygen -t rsa -f /home/cloud-user/mgmc.key`. More information [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2 "Google search: ssh key linux").
-  The key is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the key will be available during the course*.
+  
+The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the Dropbox directory will be available during the course*.
 
 ### Unix
 
