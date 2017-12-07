@@ -2,7 +2,7 @@
 
 1) transfer the **_fastq_** files of the bacteria of your choice to your **VM** in a dedicated directory
 2) make sure that the directoy contains only the **_fastq_**
-3) open a *[screen](* session by doing (substitute <screen_name> with your name of choice)
+3) open a *[screen](https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/)* session by doing (substitute <screen_name> with your name of choice)
 
 ```
 screen -S <screen_name>
