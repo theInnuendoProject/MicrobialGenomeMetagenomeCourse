@@ -52,9 +52,10 @@ After inspecting the output, it should be clear that we need to do some trimming
 
 Make a folder for the trimmed data.  
 Then we'll make a bash script that runs cutadapt for each file using the `sample_names.txt` file.    
-Go to your scripts folder and make a bash script for cutadapt with any text editor. Specify the adapter sequences that you want to trim after `-a` and `-A`. Cutadapt [manual.](http://cutadapt.readthedocs.io)  
+Go to your scripts folder and make a bash script for cutadapt with any text editor. Specify the adapter sequences that you want to trim after `-a` and `-A`.  
 Option `-q` is for quality trimming (PHRED score).  
-Check that the paths are correct.   
+Check that the paths are correct.  
+Cutadapt [manual.](http://cutadapt.readthedocs.io)  
 ```
 #!/bin/bash
 
