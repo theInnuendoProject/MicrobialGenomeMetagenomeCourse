@@ -4,12 +4,10 @@
 # Taxonomic profiling with Metaxa2 continued...
 When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
 When using any 16S rRNA based software, be cautious with species (and beyond) level classifications. Especially when using short reads.  
-We have longer reads than metagenomic studies in general and Metaxa2 should be conservative in its classification, so we could have a look at the species level classification as well.  
+We will look at genus level classification.
 ```
 # Genus level taxonomy
 metaxa2_dc -o birds_metaxa6.txt *level_6.txt
-# Species level taxonomy
-metaxa2_dc -o birds_metaxa7.txt *level_7.txt
 ```
 
 # Assembly quality assesment
