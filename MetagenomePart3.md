@@ -18,13 +18,16 @@ module load biokit
 source activate anvio3
 ```
 ## Rename the scaffolds and select those >2,500nt.
-Anvio 
+Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we need to reformat the headerlines to remove spaces and non-numeric characters. Also contigs shorter than 2500 bp will be removed. 
 
 ```
 anvi-script-reformat-fasta ../final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
 ```
 
 ## Generate CONTIGS.db
+
+Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database for more information.
+
 ```
 anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembly_2500nt_CONTIGS.db -n MEGAHIT_co-assembly
 ```
@@ -33,6 +36,9 @@ anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembl
 anvi-run-hmms -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
 ## Run COGs
+
+Next we annotate genes in  contigs database with functions from the NCBI’s Clusters of Orthologus Groups (COGs). 
+
 ```
 anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
