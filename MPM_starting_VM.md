@@ -15,6 +15,8 @@
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).
 **Note 2:** check the number of CPUs of your VM using `htop` (the CPUs available will be displayed at the top as dynamic horizontal bars, numbered sequentially).
 
+The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the Dropbox directory will be available during the course*.
+
 ---
 
 ## Connect to VM
@@ -46,6 +48,28 @@ For information on how to use SSH Keys with PuTTY see [here](https://devops.prof
 
 ![putty_connection_info](https://user-images.githubusercontent.com/13034956/33169167-859e1676-d03b-11e7-91a2-ecc4fe29024d.png)  
 _Yellow steps are optional steps. They serve to avoid introducing always 1-3 steps. After it is saved, everytime it is necessary to connect the VM, it is only need to click 6-8._
+
+---
+## Transfer data between your computer and the VM
+
+### Unix
+
+Using terminal
+
+From the Local computer to the VM
+
+```
+scp -i </path/to/provided/private/ssh/key/mgmc.key> </path/to/local/data/file> cloud-user@<VM.IP>:</path/to/data/file>
+```
+
+From the VM to the Local computer
+
+```
+scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to/data/file> </path/to/local/data/file> 
+```
+### Using client software
+
+For information on how to use SSH Keys with [FileZilla](https://wiki.filezilla-project.org/Howto) or [WinSCP](https://winscp.net/eng/docs/ui_login_authentication) please used the following [link](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Client.pdf)
 
 ---
 
@@ -86,19 +110,13 @@ mkdir ~/DBs
 
 ### Install Docker
 
-**_What is [Docker](https://www.docker.com/)?_**
+**_What is_** [Docker](https://www.docker.com/)**_?_**
 
-> "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc."
-
-<div style="text-align: right">From [here](https://www.linux.com/news/docker-shipping-container-linux-code).</div>
-
-**_Get Docker_**  
-_In your computer_  
-
-In Docker [webpage](https://www.docker.com/):
-  * Get Docker > For Servers > [Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
+> "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc." From [here](https://www.linux.com/news/docker-shipping-container-linux-code).
 
 **Installation**
+
+Information on how to install [Docker](https://www.docker.com/) for Ubuntu is available at this [link](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
 
 _In the VM_  
 
@@ -121,7 +139,7 @@ sudo docker run hello-world
 
 **Run Docker without sudo**  
 
-More information [here](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo "Google search: docker avoid sudo").
+More information [here](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 
 ```bash
 sudo groupadd docker
@@ -213,7 +231,7 @@ docker pull ummidock/innuca:3.1
 
 ### Install ReMatCh
 
-**_What is [ReMatCh](https://github.com/B-UMMI/ReMatCh)?_**  
+**_What is_** [ReMatCh](https://github.com/B-UMMI/ReMatCh)*__?_**  
 
 > Reads mapping against target sequences, checking mapping and consensus sequences production
 
