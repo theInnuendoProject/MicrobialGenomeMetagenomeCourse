@@ -53,6 +53,9 @@ bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
 ```
 Then again submit the array job with `sbatch`.  
 
+# Assembly quality assesment
+Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run MetaQUAST (http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
+
 # Taxonomic profiling with Metaxa2 continued...
 When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
 When using any 16S rRNA based software, be cautious with species (and beyond) level classifications. Especially when using short reads.  
@@ -61,10 +64,6 @@ We will look at genus level classification.
 # Genus level taxonomy
 metaxa2_dc -o birds_metaxa6.txt *level_6.txt
 ```
-
-# Assembly quality assesment
-Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run MetaQUAST (http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
-
 
 # Antibiotic resistance gene annotation - reads
 Next step is the antibiotic resistance gene annotation.  
