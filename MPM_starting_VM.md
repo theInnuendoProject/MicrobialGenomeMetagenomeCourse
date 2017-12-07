@@ -31,7 +31,8 @@ Using [PuTTY](http://www.putty.org/)
   * **Note 1:** use `putty.exe` and `puttygen.exe` from _"Alternative binary files"_ ([Download PuTTY](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys "Google search: use ssh key in putty"))
   * **Note 2:** to paste text in PuTTY click on mouse right botton inside PuTTY terminal
 
-For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections)  
+For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections) 
+Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the key.ppk in *Private key file for authentication*, then follow the instructions below 
 
 **Connection settings (after preparing PuTTY to use SSH key):**  
 
