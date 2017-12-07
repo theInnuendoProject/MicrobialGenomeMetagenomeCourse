@@ -82,7 +82,7 @@ The annotation of resistance genes could be done as a batch job using DIAMOND ag
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
 #SBATCH -p serial
-#SBATCH --mem=7000
+#SBATCH --mem-per-cpu=2000
 #
 
 module load biokit
