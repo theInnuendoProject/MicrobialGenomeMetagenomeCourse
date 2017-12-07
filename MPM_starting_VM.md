@@ -101,7 +101,6 @@ mkdir ~/NGStools
 > "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc." From [here](https://www.linux.com/news/docker-shipping-container-linux-code).
 
 **_Get Docker_**  
-<span style="color:lightblue">In your computer</span>  
 
 Information on how to install [Docker](https://www.docker.com/) for Ubuntu is available at this [link](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
 
