@@ -6,13 +6,14 @@
   * [_Bacterial Genomics_](./Genomics.md)
     * _Prepare the Virtual Machine_
       1. [_Connect to VM_](./MPM_starting_VM.md#connect-to-vm)
-      2. [_Prepare the VM_](./MPM_starting_VM.md#prepare-the-vm)
+      2. [_Transfer data between your computer and the VM_](./MPM_starting_VM.md#transfer-data-between-your-computer-and-the-vm)
+      3. [_Prepare the VM_](./MPM_starting_VM.md#prepare-the-vm)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
 ---
 
-**Note 1:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).
+**Note 1:** replace whatever is between `<>` with the proper value. For example, in `<VM.IP>` use your Virtual Machine (VM) IP provided (something like `193.166.24.142`).  
 **Note 2:** check the number of CPUs of your VM using `htop` (the CPUs available will be displayed at the top as dynamic horizontal bars, numbered sequentially).
 
 The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the Dropbox directory will be available during the course*.
@@ -65,7 +66,7 @@ scp -i </path/to/provided/private/ssh/key/mgmc.key> </path/to/local/data/file> c
 From the VM to the Local computer
 
 ```
-scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to/data/file> </path/to/local/data/file> 
+scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to/data/file> </path/to/local/data/file>
 ```
 ### Using client software
 
@@ -177,7 +178,7 @@ mv ~/.aspera/ ~/NGStools/aspera/
 echo "export PATH=$HOME/NGStools/aspera/connect/bin"':$PATH' >> ~/.profile
 ```
 
-  * **Note:** More information on add path to PATH environmental variable [here](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path "Google search: add path to PATH linux")
+*  information on add path to PATH environmental variable [here](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path "Google search: add path to PATH linux")
 
 _NCBI SRA Toolkit_  
 

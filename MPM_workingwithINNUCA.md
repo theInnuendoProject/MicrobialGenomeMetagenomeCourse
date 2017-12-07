@@ -8,7 +8,7 @@
     * _From reads to assembly: working with INNUca pipeline_
       1. [_Get genomic data_](./MPM_workingwithINNUCA.md#get-genomic-data)
       2. [_Assembly HTS data_](./MPM_workingwithINNUCA.md#assembly-hts-data)
-      3. [_Assembly HTS data_](./MPM_workingwithINNUCA.md#organize-assemblies)
+      3. [_Organize assemblies_](./MPM_workingwithINNUCA.md#organize-assemblies)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
 
 ---
