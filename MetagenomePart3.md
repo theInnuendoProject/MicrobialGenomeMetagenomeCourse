@@ -3,7 +3,7 @@
 
 Anvi’o is an analysis and visualization platform for ‘omics data. You can read more from Anvio's webpage at http://merenlab.org/software/anvio/.
 
-
+![alt text](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/raw/master/Screen%20Shot%202017-12-07%20at%2013.50.20.png "Tom's fault")
 
 Go to your co-assembly folder and make a new folder called ANVIO
 
