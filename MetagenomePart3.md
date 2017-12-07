@@ -1,6 +1,10 @@
 # Prepping files for Anvio
 * Tom Delmont, Antti Karkman, Jenni Hultman*
 
+Anvi’o is an analysis and visualization platform for ‘omics data. You can read more from Anvio's webpage at http://merenlab.org/software/anvio/.
+
+
+
 Go to your co-assembly folder and make a new folder called ANVIO
 
 ```
@@ -34,4 +38,10 @@ anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
 anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
 ```
-#
+
+## Run centrifuge
+
+```
+centrifuge -f -x /wrk/hultman/DONOTREMOVE/SCRIPTS/centrifuge_db/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.tsv
+```
+
