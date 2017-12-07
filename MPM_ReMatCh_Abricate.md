@@ -8,6 +8,7 @@
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
     * In silico _typing using ReMatCh and Abricate_
       1. [_Get DB of antimicrobial resistance genes_](./MPM_ReMatCh_Abricate.md#get-db-of-antimicrobial-resistance-genes)
+      2. [_Typing samples_](./MPM_ReMatCh_Abricate.md#typing-samples)
 
 ---
 
@@ -38,45 +39,100 @@ In Genomic Epidemiology databases Bitbucket [webpage](https://hub.docker.com/u/s
 
 _In the VM_  
 
+Althoug ResFinder is a curated database, small details impair a simple concatenation for downstream use. Therefore several steps are required to properlly prepare the DB.
+
 ```bash
+# Get ResFinder DB
 git clone https://bitbucket.org/genomicepidemiology/resfinder_db.git
 mv resfinder_db/ ~/DBs/
 
 # Create a single file containing the sequences of genes confering resistance to all antibiotic classes together
+## Make sure all files end with a newline to avoid concatening two sequences together
 mkdir temp_concat_resfinder
 ls ~/DBs/resfinder_db/*.fsa | parallel --jobs 8 'cp {} temp_concat_resfinder/; echo "" >> temp_concat_resfinder/{/}'
+## Correct several details
+### Concatenate all files
+### Convert DOS to UNIX newlines special chracters
+### Ignore blank lines
+### Pass everytnhing to parallel
+#### Split everything that enters parallel by sequene (--recstart '>')
+#### cat receives each sequence
+#### Each sequence is saved in seq variable
+#### The header line is saved by grepping the line with ">" while removing trailing spaces with sed
+#### The sequnce is saved in a file named as the sequence header without the '>' character, therefore removing duplicated sequences (at least on headers level)
 mkdir temp_concat_resfinder/seq_file
-cat temp_concat_resfinder/*.fsa | sed $'s/\r$//' | grep --invert-match "^$" | parallel --jobs 8 --pipe -N 1 --recstart '>' 'cat | { seq=$(cat); header=$(echo "$seq" | grep ">" | sed -e "s/[[:space:]]*$//"); echo "$seq" > temp_concat_resfinder/seq_file/${header:1}.fasta; }'
+cat temp_concat_resfinder/*.fsa | \
+       sed $'s/\r$//' | \
+       grep --invert-match "^$" | \
+       parallel --jobs 1 --pipe -N 1 --recstart '>' 'cat | { seq=$(cat); header=$(echo "$seq" | grep ">" | sed -e "s/[[:space:]]*$//"); echo "$seq" > temp_concat_resfinder/seq_file/${header:1}.fasta; }'
+
+# Concatenate the cleaned sequences
 cat temp_concat_resfinder/seq_file/*.fasta > ~/DBs/resfinder_db/resfinder_db.fasta
 rm -r temp_concat_resfinder/
 ```
-* More information about adding newlines at the end of files [here](https://stackoverflow.com/questions/23055831/add-new-line-character-at-the-end-of-file-in-bash "Google search: add newline at end of file")
-* For more information about reading different files together: `cat --help` or `man cat`, and [here](https://www.computerhope.com/unix/ucat.htm "Google search: linux cat")
-* More information about using skipping blank lines [here](https://stackoverflow.com/questions/22080937/bash-skip-blank-lines-when-iterating-through-file-line-by-line "Google search: bash skip blank lines")
+More informations:
+* [Adding newlines at the end of files](https://stackoverflow.com/questions/23055831/add-new-line-character-at-the-end-of-file-in-bash "Google search: add newline at end of file")
+* Reading different files together: `cat --help` or `man cat`, and [here](https://www.computerhope.com/unix/ucat.htm "Google search: linux cat")
+* [Converting newline characters from DOS to UNIX](https://stackoverflow.com/questions/2613800/how-to-convert-dos-windows-newline-crlf-to-unix-newline-n-in-a-bash-script "Google search: sed dos to unix")
+* [Skipping blank lines](https://stackoverflow.com/questions/22080937/bash-skip-blank-lines-when-iterating-through-file-line-by-line "Google search: bash skip blank lines")
+* [Removing trailing spaces](https://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-a-bash-variable "Google search: remove space end string linux")
+* [Removing characters from the beggining of a string](https://stackoverflow.com/questions/11469989/how-can-i-strip-first-x-characters-from-string-using-sed "Google search: remove first character from string shell")
 
-remove space end string linux
-https://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-a-bash-variable
+### Update Abricate DB
 
-sed dos to unix
-https://stackoverflow.com/questions/2613800/how-to-convert-dos-windows-newline-crlf-to-unix-newline-n-in-a-bash-script
+After a Docker image is built, its content is static, which mean it might carry outdated databases. However, some small steps can overwrite the provided DBs with updated ones.
 
-add newline at end of file
-https://stackoverflow.com/questions/23055831/add-new-line-character-at-the-end-of-file-in-bash
+_In the VM_  
 
-remove first character from string shell
-https://stackoverflow.com/questions/11469989/how-can-i-strip-first-x-characters-from-string-using-sed
+```bash
+# Create folder to store Abricate DBs
+mkdir ~/DBs/abricate
 
-bash skip blank lines
-https://stackoverflow.com/questions/22080937/bash-skip-blank-lines-when-iterating-through-file-line-by-line
+# Copy DB folder to outside image
+## External folder will overwrite image inside folder when mapped
+docker run --rm -u $(id -u):$(id -g) -it -v ~/DBs/abricate/:/data/ ummidock/abricate:latest \
+       cp -r /NGStools/miniconda/db/ /data/
+mv ~/DBs/abricate/db/* ~/DBs/abricate/
+rm -r ~/DBs/abricate/db/
+
+# Update DB in a folder that will persist after container stops
+docker run --rm -u $(id -u):$(id -g) -it -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
+      abricate-get_db --db resfinder --force
+```
+
+## Typing samples
+
+
+
+### Using reads
+
+Prepare working directory
+
 ```bash
 mkdir ~/typing
 mkdir ~/typing/rematch
-# /home/cloud-user/reads/streptococcus_agalactiae_example/ERR048560/ERR048560_1.fq.gz
-ls ~/reads/streptococcus_agalactiae_example/*/* | parallel --jobs 1 'mkdir ~/typing/rematch/$(basename {//}); ln -s {} ~/typing/rematch/$(basename {//})/{/}'
+
+for sample_dir in $(ls -d ~/reads/streptococcus_agalactiae_example/*/); do
+  mkdir ~/typing/rematch/$(basename $sample_dir)
+  ln -s $(ls ${sample_dir}*_1.fq.gz) ~/typing/rematch/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
+  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/rematch/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
+done
+
 rematch.py -w ~/typing/rematch/ -r ~/DBs/resfinder_db/resfinder_db.fasta -j 8 --reportSequenceCoverage --notWriteConsensus
 ```
 
+### Using _de novo_ assembly
+
+When using redirect with Docker stdout must be outside container
+the input device is not a TTY
+
 ```bash
-cat ~/DBs/resfinder_db/*.fsa | grep --invert-match "^$" | parallel --jobs 1 -N 1 --recstart '>' --pipe 'cat | { seq=$(cat); header=$(echo "$seq" | grep ">"); echo "$seq" > ~/test/${header:1}.fasta; }'
-cat ~/test/*.fasta > ~/DBs/resfinder_db/resfinder_db.fasta.tmp2
+mkdir ~/typing/abricate
+
+ls ~/genomes/streptococcus_agalactiae_example/all_assemblies/* | \
+      parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > ~/typing/abricate/{/.}.abricate_out.tab'
+
+echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > ~/typing/abricate/abricate_commands.sh
+
+docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest sh /data/abricate_commands.sh
 ```
