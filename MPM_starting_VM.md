@@ -61,7 +61,7 @@ scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to
 ```
 ### Using client software
 
-For information on how to use SSH Keys with [FileZilla](https://winscp.net/eng/docs/ui_login_authentication) or [WinSCP](https://winscp.net/eng/docs/ui_login_authentication) please used the following [link](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Client.pdf)
+For information on how to use SSH Keys with [FileZilla](https://wiki.filezilla-project.org/Howto) or [WinSCP](https://winscp.net/eng/docs/ui_login_authentication) please used the following [link](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Client.pdf)
 
 ---
 
