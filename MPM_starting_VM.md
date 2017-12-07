@@ -58,7 +58,10 @@ From the VM to the Local computer
 ```
 scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to/data/file> </path/to/local/data/file> 
 ```
-### 
+### Using client software
+
+![client connection](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/Client.pdf)
+
 ---
 
 ## Prepare the VM
