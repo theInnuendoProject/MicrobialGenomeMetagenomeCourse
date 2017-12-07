@@ -1,5 +1,56 @@
-*Antti Karkman*
+*Jenni Hultman and Antti Karkman*
 
+# Mapping the reads back to the assembly
+The assembly should be finished and we hopefully have also some contigs. Next thing to do is mapping all the reads back to the contigs. We do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
+We will need to two scripts for that, one for the actual mapping and another to run it as an array job. Save both scripts to your `scripts` folder. 
+
+But before doing that we have make a bowtie2 index from the contig file. Move to the assembly folder where you have a file called `final.contigs.fa` and load the biokit. Then run the following command:  
+
+`bowtie2-build final.contigs.fa co-assembly`  
+
+`co-assembly` is the base name for the resulting index files.  
+
+
+The mapping script from Tom, modified to be used in Taito:
+```
+#!/bin/bash
+# example run: ./bowtie2-map-batch.sh SAMPLE1_R1.fastq SAMPLE1_R2.fastq SAMPLE1 bt2_index
+
+# $1: Forward reads
+# $2: Reverse reads
+# $3: Sample name
+# $4: Bowtie2 index
+
+set -e
+
+bowtie2 --threads $SLURM_CPUS_PER_TASK -x $4 -1 $1 -2 $2 -S $3.sam --no-unal
+samtools view -F 4 -bS $3.sam > $3-RAW.bam
+samtools sort $3-RAW.bam -o $3.bam
+samtools index $3.bam
+rm $3.sam $3-RAW.bam
+```
+The array job script:
+```
+#!/bin/bash -l
+#SBATCH -J array_map
+#SBATCH -o array_map_out_%A_%a.txt
+#SBATCH -e array_map_err_%A_%a.txt
+#SBATCH -t 00:30:00
+#SBATCH --mem-per-cpu=1000
+#SBATCH --array=1-6
+#SBATCH -n 1
+#SBATCH --cpus-per-task=6
+#SBATCH -p serial
+
+cd $WRKDIR/BioInfo_course/all_assembly_def_1000
+# we need Bowtie2 from the biokit
+module load biokit
+# each job will get one sample from the sample names file
+name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
+bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" ../trimmed_data/$name"_R2_trimmed.fastq" \
+     $name ../co-assembly
+```
+Then again submit the array job with `sbatch`.  
 
 # Taxonomic profiling with Metaxa2 continued...
 When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
@@ -23,12 +74,12 @@ First convert all R1 files from fastq to fasta. You can use `fastq_to_fasta_fast
 Then add the sample name to each sequence header after the `>` sign. Keep the original fasta header and separate it with `-`. You can do this either separately for each file or write a batch script to go through all files .You can use the `sample_names.txt` as a input to your bash script.  
 ```
 # Example header
->L3-1-M01457:76:000000000-BDYH7:1:1101:17200:1346
+>L3-M01457:76:000000000-BDYH7:1:1101:17200:1346
 ```
 
 When all R1 files have been converted to fasta and renamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards using the script you downloaded earlier.  
 
-We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD].(https://card.mcmaster.ca)  
+We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD.](https://card.mcmaster.ca)  
 Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
 
 `bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `  
