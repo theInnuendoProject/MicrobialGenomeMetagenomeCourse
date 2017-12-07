@@ -47,7 +47,8 @@ cd $WRKDIR/BioInfo_course/all_assembly_def_1000
 module load biokit
 # each job will get one sample from the sample names file
 name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
-bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" ../trimmed_data/$name"_R2_trimmed.fastq" \
+bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
+     ../trimmed_data/$name"_R2_trimmed.fastq" \
      $name ../co-assembly
 ```
 Then again submit the array job with `sbatch`.  
