@@ -24,6 +24,6 @@
 | Time | Description |
 | --- | --- |
 | 08:30-10:45 | **Miguel Machado & Bruno Gonçalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
-| 10:45-11:00 | **Mirko Rossi**: [Working in group instruction, part 3] |
+| 10:45-11:00 | **Mirko Rossi**: [Working in group instruction, part 3](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workinggroup3.md)|
 | 11:00-12:30 | **Working with your data** and **lunch** |
 | 12:30-14:30 | **Bruno Gonçalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
