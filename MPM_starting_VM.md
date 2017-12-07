@@ -103,8 +103,7 @@ mkdir ~/NGStools
 **_Get Docker_**  
 <span style="color:lightblue">In your computer</span>  
 
-In Docker [webpage](https://www.docker.com/):
-  * Get Docker > For Servers > [Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
+Information on how to install [Docker](https://www.docker.com/) for Ubuntu is available at this [link](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
 
 **Installation**
 
