@@ -140,13 +140,14 @@ module purge
 module load intel/16.0.0
 module load megahit
 
-megahit -1 trimmed_data/all_R1_trimmed.fastq -2 trimmed_data/all_R2_trimmed.fastq -o all_assembly_def_1000 -t 16 --min-contig-len 1000
+megahit -1 trimmed_data/all_R1_trimmed.fastq -2 trimmed_data/all_R2_trimmed.fastq \
+         -o all_assembly_def_1000 -t $SLURM_CPUS_PER_TASK --min-contig-len 1000
 
 # MetaQUAST assembly statistics
 module purge
 module load biokit
 cd all_assembly_def_1000
-metaquast.py -t 16 --no-plots -o assembly_QC final.contigs.fa 
+metaquast.py -t $SLURM_CPUS_PER_TASK --no-plots -o assembly_QC final.contigs.fa 
 ```
 Submit the batch job as previously
 
