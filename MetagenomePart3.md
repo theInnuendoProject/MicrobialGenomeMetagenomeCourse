@@ -44,4 +44,13 @@ anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_25
 ```
 centrifuge -f -x /wrk/hultman/DONOTREMOVE/SCRIPTS/centrifuge_db/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.tsv
 ```
+## IMPORT CENTRIFUGE RESULTS
+```
+anvi-import-taxonomy -i centrifuge_report.tsv centrifuge_hits.tsv -p centrifuge -c MEGAHIT_co-assembly_2500nt_CONTIGS.db 
+```
+## Create the BOWTIE2 index
+```
+bowtie2-build MEGAHIT_co-assembly_2500nt.fa MEGAHIT_co-assembly_2500nt
+```
+## MAPPING 
 
