@@ -147,7 +147,7 @@ docker run hello-world
 _Aspera Connect_  
 <span style="color:lightblue">In your computer</span>  
 
-In the [webpage](http://downloads.asperasoft.com/connect2/):
+From the [webpage](http://downloads.asperasoft.com/connect2/):
   * See all installers > Linux > Linux - Select Version > Direct download
   * Copy Link Location (Direct download)
 
@@ -185,7 +185,7 @@ echo "export PATH=$HOME/NGStools/sratoolkit.2.8.2-1-ubuntu64/bin"':$PATH' >> ~/.
 
 <span style="color:lightblue">In your computer</span>  
 
-In the [webpage](https://github.com/B-UMMI/getSeqENA):
+From the [webpage](https://github.com/B-UMMI/getSeqENA):
   * Clone or download > Copy to clipboard
 
 <span style="color:lightblue">In the VM</span>  
@@ -203,8 +203,7 @@ echo "export PATH=$HOME/NGStools/getSeqENA"':$PATH' >> ~/.profile
 > INNUENDO quality control of reads, de novo assembly and contigs quality assessment, and possible contamination detection
 
 <span style="color:lightblue">In your computer</span>  
-
-In the [webpage](https://github.com/B-UMMI/INNUca):
+From the [webpage](https://github.com/B-UMMI/INNUca):
   * Docker
 
 <span style="color:lightblue">In the VM</span>  
@@ -221,7 +220,7 @@ docker pull ummidock/innuca:3.1
 
 <span style="color:lightblue">In your computer</span>  
 
-In the [webpage](https://github.com/B-UMMI/ReMatCh):
+From the [webpage](https://github.com/B-UMMI/ReMatCh):
   * Clone or download > Copy to clipboard
 
 <span style="color:lightblue">In the VM</span>  
@@ -240,7 +239,7 @@ echo "export PATH=$HOME/NGStools/ReMatCh"':$PATH' >> ~/.profile
 
 <span style="color:lightblue">In your computer</span>  
 
-In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/dashboard/):
+From UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/dashboard/):
   * ummidock/abricate
 
 <span style="color:lightblue">In the VM</span>  
@@ -257,7 +256,7 @@ docker pull ummidock/abricate:latest
 
 <span style="color:lightblue">In your computer</span>  
 
-In UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/):
+From UMMI Docker Hub [webpage](https://hub.docker.com/u/ummidock/):
   * ummidock/prokka
 
 <span style="color:lightblue">In the VM</span>  
@@ -274,7 +273,7 @@ docker pull ummidock/prokka:1.12
 
 <span style="color:lightblue">In your computer</span>  
 
-In Sanger Pathogens Docker Hub [webpage](https://hub.docker.com/u/sangerpathogens/):
+From Sanger Pathogens Docker Hub [webpage](https://hub.docker.com/u/sangerpathogens/):
   * sangerpathogens/roary
 
 <span style="color:lightblue">In the VM</span>  
