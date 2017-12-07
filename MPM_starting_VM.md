@@ -96,7 +96,7 @@ mkdir ~/NGStools
 
 ### Install Docker
 
-**_What is [Docker](https://www.docker.com/)?_**
+**_What is_** [Docker](https://www.docker.com/)**_?_**
 
 > "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc."
 
