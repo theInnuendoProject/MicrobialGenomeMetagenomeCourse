@@ -15,16 +15,15 @@
 | Time | Description |
 | --- | --- |
 | 08:30-11:45 | **Miguel Machado**: *In silico* typing using ReMatCh and Abricate |
-| 11:45-12:00 | **Mirko Rossi**: *INSTRUCTION FOR GROUP WORK* |
+| 11:45-12:00 | **Mirko Rossi**: [working in group instruction, part 2] |
 | 12:00-13:30 | **Working with your data** and **lunch** |
 | 13:30-16:00 | **Mickael Silva**: Whole genome and core genome MLST analysis using *chewBBACA* suite (see also [*chewBBACA wiki*](https://github.com/B-UMMI/chewBBACA/wiki)) |
-| 16:00-16:10 | **Mirko Rossi**:*INSTRUCTION FOR GROUP WORK* |
-| 16:10-17:00 | **Working with your data** 
+| 16:00-17:00 | **Working with your data** 
 
 ## Wednesday - Viikki C building, lecture room 130 (Latokartanonkaari 5)
 | Time | Description |
 | --- | --- |
 | 08:30-10:45 | **Miguel Machado & Bruno Gonçalves**: Annotation (*PROKKA*), pangenome anaylysis (*ROARY*) and GWAS (*SCOARY*)|
-| 10:45-11:00 | **Mirko Rossi**: *INSTRUCTION FOR GROUP WORK* |
+| 10:45-11:00 | **Mirko Rossi**: [working in group instruction, part 3] |
 | 11:00-12:30 | **Working with your data** and **lunch** |
 | 12:30-14:30 | **Bruno Gonçalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
