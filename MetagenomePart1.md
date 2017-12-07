@@ -49,7 +49,6 @@ Copy the resulting HTML file to your local machine with `scp` from the command l
 Have a look at the QC report with your favorite browser.  
 
 After inspecting the output, it should be clear that we need to do some trimming.  
-(cutadapt with reverse complements of tagmentation adapter. Transposon End Sequence reverse complemented: _CTGTCTCTTATACACATCT_)
 
 Make a folder for the trimmed data.  
 Then we'll make a bash script that runs cutadapt for each file using the `sample_names.txt` file.    
@@ -59,7 +58,7 @@ Go to your scripts folder and make a bash script for cutadapt with any text edit
 
 while read i
 do
-        cutadapt  -a CTGTCTCTTATACACATCT -A CTGTCTCTTATACACATCT -q 28 -O 10 \
+        cutadapt  -a ADAPTER -A ANOTHER_ADAPTER -q 28 -O 10 \
         -o ../trimmed_data/$i"_R1_trimmed.fastq" -p ../trimmed_data/$i"_R2_trimmed.fastq" \
         *$i*_R1*.fastq.gz *$i*_R2*.fastq.gz > ../trimmed_data/$i"_trim.log"
 done < $1
@@ -82,12 +81,15 @@ cd $WRKDIR/BioInfo_course/raw_data
 bash ../scripts/cutadapt.sh ../sample_names.txt
 ```
 After it is done, we can submit it to the SLURM system. Do it form the main folder, so go one step back in your folders.  
+
 `sbatch scripts/cut_batch.sh`  
 
 You can check the status of your job with:  
- `squeue -l -u $USER`  
+
+`squeue -l -u $USER`  
 
 After the job has finished, you can see how much resources it actually used and how many billing units were consumed. `JOBID` is the number after the batch job error and output files.  
+
 `seff JOBID`  
 
 Then let's check the results from the trimming. Go to the folder containing the trimmed reads and make a new folder for the QC files.  
