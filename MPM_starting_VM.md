@@ -100,11 +100,9 @@ mkdir ~/NGStools
 
 > "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc." From [here](https://www.linux.com/news/docker-shipping-container-linux-code).
 
-**_Get Docker_**  
+**Installation**
 
 Information on how to install [Docker](https://www.docker.com/) for Ubuntu is available at this [link](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
-
-**Installation**
 
 <span style="color:lightblue">In the VM</span>  
 
@@ -127,13 +125,13 @@ sudo docker run hello-world
 
 **Run Docker without sudo**  
 
-More information [here](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo "Google search: docker avoid sudo").
+More information [here](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 
 ```
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 
-# logout and login to activate the changes to groups
+# logout and login to activate the changes to groups (close the terminal and open it again)
 
 docker run hello-world
 ```
