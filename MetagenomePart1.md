@@ -20,8 +20,12 @@ cd raw_data
 *detailes given on Wed*
 tar -xzvf course_metagenomes.tar.gz
 ```
+The md5 sum for the file is #XXXXX#. Check that the md5 um for the file you downloaded matches by typing
+```
+md5sum filename
+```
 
-And make a file containing the sample names to be used later in bash scripts.  
+Make a file containing the sample names to be used later in bash scripts.  
  `ls *.fastq.gz |awk -F "-" '{print $2}'|uniq > ../sample_names.txt`  
 
 # QC and trimming
@@ -98,7 +102,7 @@ multiqc ./ --interactive
 Copy it to your local machine as earlier and look how well the trimming went.  
 
 # Assembly
-Let's assemble first one seagull sample and one goose sample an then all six samples together (co-assembly). We will use tool Megahit for the assembly https://github.com/voutcn/megahit. It is installed to CSC and be loaded with following commands:
+Let's assemble first one seagull sample and one goose sample an then all six samples together (co-assembly). We will use tool Megahit for the assembly https://github.com/voutcn/megahit. Megahit is an ultra fast assembly tool for metagenomics data. It is installed to CSC and be loaded with following commands:
 
 ```
 module purge
@@ -107,7 +111,7 @@ module load megahit
 ```
 module purge is needed to remove wrong Pyhton versions you might have loaded in earlier today.
 
-Assembly requires lot of memory and we need to do a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into two files with `cat`
+Assembling metagenomic data can be very resource demanding and we need to do it as a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into two files with `cat`
 
 ```
 cd trimmed_data
