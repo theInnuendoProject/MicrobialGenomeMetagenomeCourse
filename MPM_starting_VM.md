@@ -32,6 +32,7 @@ Using [PuTTY](http://www.putty.org/)
   * **Note 2:** to paste text in PuTTY click on mouse right botton inside PuTTY terminal
 
 For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections) 
+
 Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the key.ppk in *Private key file for authentication*, then follow the instructions below 
 
 **Connection settings (after preparing PuTTY to use SSH key):**  
@@ -39,6 +40,25 @@ Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the ke
 ![putty_connection_info](https://user-images.githubusercontent.com/13034956/33169167-859e1676-d03b-11e7-91a2-ecc4fe29024d.png)  
 _Yellow steps are optional steps. They serve to avoid introducing always 1-3 steps. After it is saved, everytime it is necessary to connect the VM, it is only need to click 6-8._
 
+---
+## Transfer data between your computer and the VM
+
+### Unix
+
+Using terminal
+
+From the Local computer to the VM
+
+```
+scp -i </path/to/provided/private/ssh/key/mgmc.key> </path/to/local/data/file> cloud-user@<VM.IP>:</path/to/data/file>
+```
+
+From the VM to the Local computer
+
+```
+scp -i </path/to/provided/private/ssh/key/mgmc.key> cloud-user@<VM.IP>:</path/to/data/file> </path/to/local/data/file> 
+```
+### 
 ---
 
 ## Prepare the VM
