@@ -1,6 +1,6 @@
 # Working group bacterial genomics, part 1
 
-1) transfer the **_fastq_** files of the bacteria you choice to work with to your **VM** in a dedicated directory
+1) transfer the **_fastq_** files of the bacteria of your choice to your **VM** in a dedicated directory
 2) make sure that the directoy contains only the **_fastq_**
 3) open a *[screen](* session by doing (substitute <screen_name> with your name of choice)
 
