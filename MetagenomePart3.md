@@ -11,17 +11,25 @@ Go to your course folder and make a new folder called ANVIO. All task on this se
 mkdir ANVIO
 cd ANVIO
 ```
-We need to do some tricks for the contigs from assembly before we can use them on Friday. You'll need to upload biokit and activate Anvio
+We need to do some tricks for the contigs from assembly before we can use them on Friday. You'll need to load bioconda and activate Anvio
 
 ```
-module load biokit
+module load bioconda/3
+# allocate resources
+salloc -n 1 --mem=10000 -t 00:20:00 -p serial
+srun --pty $SHELL
 source activate anvio3
 ```
 ## Rename the scaffolds and select those >2,500nt.
 Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we need to reformat the headerlines to remove spaces and non-numeric characters. Also contigs shorter than 2500 bp will be removed. 
 
+  
 ```
 anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
+# deactivate virtual env, log out and free the resources
+source deactivate
+exit
+exit
 ```
 ## Mapping the reads back to the assembly
 Next thing to do is mapping all the reads back to the assembly. We use the renamed >2,500 nt contigs and do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
@@ -86,21 +94,26 @@ samtools index
 
 ## Generate CONTIGS.db
 
-Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See [Anvio webpage](http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database) for more information.
+Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See [Anvio webpage](http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database) for more information.  
+Start by allocating some resources and avtivating the anvio virtul env
 
 ```
+salloc -n 1 --cpus-per-task=6 --mem=10000 --nodes=1 -t 04:00:00 -p serial
+srun --pty $SHELL
+source activate anvio3
+# then generate the Anvi'o contigs DB
 anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembly_2500nt_CONTIGS.db -n MEGAHIT_co-assembly
 ```
 ## Run HMMs to identify single copy core genes for Bacteria and Archaea, plus rRNAs
 ```
-anvi-run-hmms -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
+anvi-run-hmms -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 6
 ```
 ## Run COGs
 
 Next we annotate genes in  contigs database with functions from the NCBI’s Clusters of Orthologus Groups (COGs). 
 
 ```
-anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
+anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 6
 ```
 ## Export GENES
 With this command we export the genecalls from Prodigal to gene-calls.fa and do taxonomic annotation against centrifuge database you installed on Wednesday
@@ -122,6 +135,18 @@ centrifuge -f -x $CENTRIFUGE_BASE/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.t
 anvi-import-taxonomy -i centrifuge_report.tsv centrifuge_hits.tsv -p centrifuge -c MEGAHIT_co-assembly_2500nt_CONTIGS.db 
 ```
 
+## Antibiotic resistance gene annotation
+```
+# run DIAMOND
+diamond blastx -d ~/appl_taito/CARD/CARD -q gene-calls.fa \
+            --max-target-seqs 1 -o CARD.out -f 6 --id 90 --min-orf 20 -p 6 --masking 0
+# parse the output for Anvi'o  
+printf "gene_callers_id\tsource\taccession\tfunction\te_value\n" > CARD_functions.txt
+awk '{print $1"\tCARD\t\t"$2"\t"$11}' CARD.out >> CARD_functions.txt
+# and finally import the functions to anvio contigs DB  
+anvi-import-functions -c contigs.db -i CARD_functions.txt
+```
+
 ## Visualization in the interface (On Friday)
 
 Open a new ssh window. In mac:
@@ -140,7 +165,7 @@ Click add and log in to Taito.
 Activate anvio
 
 ```
-anvi-interactive -c METASPADES_co-assembly_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
+anvi-interactive -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
 ```
 
 Then open google chrome and go to address 
