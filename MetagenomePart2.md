@@ -56,9 +56,13 @@ bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
 Then again submit the array job with `sbatch`.  
 
 During luch break check what the different steps in mapping mean.
+
 bowtie2 
+
 samtools view 
+
 samtools sort 
+
 samtools index 
 
 
