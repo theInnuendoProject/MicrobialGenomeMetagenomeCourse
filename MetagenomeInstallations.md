@@ -4,30 +4,27 @@
 # Installations
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 
-**Anaconda2** (takes ~5 min)  
-Go to https://www.anaconda.com/download/#linux with your local browser and **COPY** the link address of the _**Python 2.7 64-bit (x86) Installer**_ .  
-Or just trust me and use this link: https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh  
-
-In Taito go to your application folder and download the installations script.
+**FastQC & MultiQC**  
+Two programs for quality control of sequence data. Both programs will be installed using Bioconda package management tool taht can be found from CSC.  
+When using Bioconda at CSC everything needs to be installed in virtual enviroments. You can create the virtual environment called `QC_env` and install the packages with one command.  
 ```
-cd $USERAPPL
-# use wget to download the Anaconda installation script
-wget TheAddressHere
-# And then run
-bash Anaconda2-5.0.1-Linux-x86_64.sh  
+module load bioconda
+conda create -n QC_env multiqc fastqc
 ```
 
-**MultiQC**  
-For combining multiple QC reports.  
-`conda install -c bioconda multiqc`
+The environment can be activate with the command `source activate QC_env`. And deactivated with `source deactivate`.  
+For now, just create the environenment, we will need it soon.
 
 **_STOP HERE AND GO TO THE QC & TRIMMING PART_**
 
 **Anvi'o**  
-Create a virtual environemnt for Anvi'o and install all dependencies using anaconda (takes 5–10 min)  
-`conda create -n anvio3 -c bioconda -c conda-forge python=3.5.4 gsl anvio`  
+Create a virtual environment for Anvi'o and install all dependencies using Bioconda. This time use Bioconda3. (takes 5–10 min)  
+```
+module load bioconda/3
+conda create -n anvio3 -c bioconda -c conda-forge python=3.5.4 gsl anvio`  
+```
 
-Let's test it  
+Let's test it  
 ```
 # Activate the Anvi'o virtual environment
 source activate anvio3
