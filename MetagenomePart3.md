@@ -5,7 +5,7 @@ Anvio is an analysis and visualization platform for omics data. You can read mor
 
 ![alt text](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/raw/master/Screen%20Shot%202017-12-07%20at%2013.50.20.png "Tom's fault")
 
-Go to your co-assembly folder and make a new folder called ANVIO. All task on this section are to be done in this folder. 
+Go to your course folder and make a new folder called ANVIO. All task on this section are to be done in this folder. 
 
 ```
 mkdir ANVIO
@@ -21,7 +21,7 @@ source activate anvio3
 Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we need to reformat the headerlines to remove spaces and non-numeric characters. Also contigs shorter than 2500 bp will be removed. 
 
 ```
-anvi-script-reformat-fasta ../final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
+anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
 ```
 
 ## Generate CONTIGS.db
@@ -50,7 +50,7 @@ anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_25
 ```
 
 ## Run centrifuge
-“classification engine that enables rapid, accurate and sensitive labeling of reads and quantification of species on desktop computers”. Read more from http://biorxiv.org/content/early/2016/05/25/054965. 
+“classification engine that enables rapid, accurate and sensitive labeling of reads and quantification of species on desktop computers”. Read more from [here](http://biorxiv.org/content/early/2016/05/25/054965). 
 
 Remember to set the environmental variable pointing to the centrifuge folder as shown in [MetagenomeInstallations](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomeInstallations.md). 
 
