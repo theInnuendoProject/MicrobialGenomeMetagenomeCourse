@@ -1,7 +1,7 @@
 # Prepping files for Anvio
 * Tom Delmont, Antti Karkman, Jenni Hultman*
 
-Anvio is an analysis and visualization platform for omics data. You can read more from Anvio's webpage at http://merenlab.org/software/anvio/.
+Anvio is an analysis and visualization platform for omics data. You can read more from Anvio's [webpage](http://merenlab.org/software/anvio/).
 
 ![alt text](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/raw/master/Screen%20Shot%202017-12-07%20at%2013.50.20.png "Tom's fault")
 
@@ -26,7 +26,7 @@ anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-na
 
 ## Generate CONTIGS.db
 
-Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database for more information.
+Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See [Anvio webpage](http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database) for more information.
 
 ```
 anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembly_2500nt_CONTIGS.db -n MEGAHIT_co-assembly
