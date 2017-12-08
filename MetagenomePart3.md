@@ -5,7 +5,7 @@ Anvio is an analysis and visualization platform for omics data. You can read mor
 
 ![alt text](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/raw/master/Screen%20Shot%202017-12-07%20at%2013.50.20.png "Tom's fault")
 
-Go to your co-assembly folder and make a new folder called ANVIO
+Go to your co-assembly folder and make a new folder called ANVIO. All task on this section are to be done in this folder. 
 
 ```
 mkdir ANVIO
@@ -43,25 +43,32 @@ Next we annotate genes in  contigs database with functions from the NCBI’s Clu
 anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 10
 ```
 ## Export GENES
+With this command we export the genecalls from Prodigal to gene-calls.fa and do taxonomic annotation against centrifuge database you installed on Wednesday
+
 ```
 anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
 ```
 
 ## Run centrifuge
+“classification engine that enables rapid, accurate and sensitive labeling of reads and quantification of species on desktop computers”. Read more from http://biorxiv.org/content/early/2016/05/25/054965. 
+
 Remember to set the environmental variable pointing to the centrifuge folder as shown in [MetagenomeInstallations](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomeInstallations.md). 
 
 ```
 centrifuge -f -x $CENTRIFUGE_BASE/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.tsv
 ```
-## IMPORT CENTRIFUGE RESULTS
+## Import centrifuge results
 ```
 anvi-import-taxonomy -i centrifuge_report.tsv centrifuge_hits.tsv -p centrifuge -c MEGAHIT_co-assembly_2500nt_CONTIGS.db 
 ```
 ## Create the BOWTIE2 index
+We will use Bowtie2 to map the trimmed reads against assembled contigs.
 ```
+module load biokit
 bowtie2-build MEGAHIT_co-assembly_2500nt.fa MEGAHIT_co-assembly_2500nt
 ```
-## MAPPING 
+## Mapping with bowtie2
+We will use Boewtie2 to map the trimmed reads against assembled contigs. 
 
 
 ## Visualization in the interface
