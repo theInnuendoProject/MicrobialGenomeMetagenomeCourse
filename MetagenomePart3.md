@@ -23,6 +23,66 @@ Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we 
 ```
 anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
 ```
+## Mapping the reads back to the assembly
+Next thing to do is mapping all the reads back to the assembly. We use the renamed >2,500 nt contigs and do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
+We will need to two scripts for that, one for the actual mapping and another to run it as an array job. Save both scripts to your `scripts` folder. 
+
+But before doing that we have make a bowtie2 index from the contig file. Run the following command:  
+
+`bowtie2-build MEGAHIT_co-assembly_2500nt.fa co-assembly`  
+
+`co-assembly` is the base name for the resulting index files.  
+
+
+The mapping script from Tom, modified to be used in Taito:
+```
+#!/bin/bash
+# example run: ./bowtie2-map-batch.sh SAMPLE1_R1.fastq SAMPLE1_R2.fastq SAMPLE1 bt2_index
+
+# $1: Forward reads
+# $2: Reverse reads
+# $3: Sample name
+# $4: Bowtie2 index
+
+set -e
+
+bowtie2 --threads $SLURM_CPUS_PER_TASK -x $4 -1 $1 -2 $2 -S $3.sam --no-unal
+samtools view -F 4 -bS $3.sam > $3-RAW.bam
+samtools sort $3-RAW.bam -o $3.bam
+samtools index $3.bam
+rm $3.sam $3-RAW.bam
+```
+The array job script:
+```
+#!/bin/bash -l
+#SBATCH -J array_map
+#SBATCH -o array_map_out_%A_%a.txt
+#SBATCH -e array_map_err_%A_%a.txt
+#SBATCH -t 00:30:00
+#SBATCH --mem-per-cpu=1000
+#SBATCH --array=1-6
+#SBATCH -n 1
+#SBATCH --cpus-per-task=6
+#SBATCH -p serial
+
+cd $WRKDIR/BioInfo_course/all_assembly_def_1000
+# we need Bowtie2 from the biokit
+module load biokit
+# each job will get one sample from the sample names file
+name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
+bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
+     ../trimmed_data/$name"_R2_trimmed.fastq" \
+     $name co-assembly
+```
+Then again submit the array job with `sbatch`.  
+
+During luch break check what happens in the different steps in the mapping script.
+```
+bowtie2 
+samtools view 
+samtools sort 
+samtools index 
+```
 
 ## Generate CONTIGS.db
 
