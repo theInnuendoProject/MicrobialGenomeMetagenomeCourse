@@ -97,7 +97,7 @@ samtools index
 
 ## Back to Anvi'o
 
-Start by allocating some resources and avtivating the anvio virtul env
+Again allocate some resources and activate the anvio virtul environment.
 
 ```
 salloc -n 1 --cpus-per-task=6 --mem=10000 --nodes=1 -t 04:00:00 -p serial
