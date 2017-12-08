@@ -5,8 +5,8 @@
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 
 **FastQC & MultiQC**  
-Two programs for quality control of sequence data. Both programs will be installed using Bioconda package management tool taht can be found from CSC.  
-When using Bioconda at CSC everything needs to be installed in virtual enviroments. You can create the virtual environment called `QC_env` and install the packages with one command.  
+Two programs for sequence data quality control. Both will be installed using Bioconda package management tool that can be found from CSC.  
+When using Bioconda at CSC, everything needs to be installed in virtual enviroments. You can create the virtual environment called `QC_env` and install the packages with one command.  
 ```
 module load bioconda
 conda create -n QC_env multiqc fastqc
