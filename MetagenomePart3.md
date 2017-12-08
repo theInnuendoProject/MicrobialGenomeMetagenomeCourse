@@ -48,9 +48,10 @@ anvi-get-dna-sequences-for-gene-calls -o gene-calls.fa -c MEGAHIT_co-assembly_25
 ```
 
 ## Run centrifuge
+Remember to set the environmental variable pointing to the centrifuge folder as shown in [MetagenomeInstallations](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomeInstallations.md). 
 
 ```
-centrifuge -f -x /wrk/hultman/DONOTREMOVE/SCRIPTS/centrifuge_db/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.tsv
+centrifuge -f -x $CENTRIFUGE_BASE/p+h+v/p+h+v gene-calls.fa -S centrifuge_hits.tsv
 ```
 ## IMPORT CENTRIFUGE RESULTS
 ```
