@@ -26,11 +26,14 @@ Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we 
   
 ```
 anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
-# deactivate virtual env, log out and free the resources
+````
+Deactivate virtual env, log out and free the resources before going to the mapping step.  
+```
 source deactivate
 exit
 exit
 ```
+
 ## Mapping the reads back to the assembly
 Next thing to do is mapping all the reads back to the assembly. We use the renamed >2,500 nt contigs and do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
 We will need to two scripts for that, one for the actual mapping and another to run it as an array job. Save both scripts to your `scripts` folder. 
