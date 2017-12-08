@@ -158,6 +158,15 @@ awk '{print $1"\tCARD\t\t"$2"\t"$11}' CARD.out >> CARD_functions.txt
 anvi-import-functions -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -i CARD_functions.txt
 ```
 
+## Profiling 
+Write a bash script that profiles each sample and finally merges all the profiles.  
+These are the two commands. First needs to be done for each sample and the second one only once to merge all 6 samples.
+
+```
+anvi-profile -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -M 2500 -i SAMPLE1.bam -o SAMPLE1 
+anvi-merge SAMPLE1/PROFILE.db SAMPLE2/PROFILE.db SAMPLE3/PROFILE.db -o SAMPLES-MERGED -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
+```
+
 ## Visualization in the interface (On Friday)
 
 Open a new ssh window. In mac:
