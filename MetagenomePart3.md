@@ -90,6 +90,7 @@ http://localhost:8080
 # In case sinteractive gets stuck
 ```
 salloc -n 1 --cpus-per-task=4 --mem=8000 --nodes=1 -t 08:00:00 -p serial
+srun --pty $SHELL
 ```
 
 
