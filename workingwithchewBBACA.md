@@ -8,7 +8,8 @@
 docker pull mickaelsilva/chewbbaca
  
 # Create a working folder and enter it
-mkdir test_chewBBACA && cd test_chewBBACA 
+mkdir test_chewBBACA
+cd test_chewBBACA 
  
 # Create folders to store the genomes
 
@@ -16,10 +17,11 @@ mkdir complete_genomes
 mkdir other_assemblies
  
 # create a list of complete genomes to download
+# we will be using nano for text editing
 touch 2down_cg.txt
 nano 2down_cg.txt
  
-# copy and paste this list of links into the file (to exit nano press "q" and save the changes with "y"
+# copy and paste this list of links into the file (to exit nano press "q" and save the changes with "y")
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/265/GCF_000007265.1_ASM726v1/GCF_000007265.1_ASM726v1_genomic.fna.gz
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/705/GCF_000012705.1_ASM1270v1/GCF_000012705.1_ASM1270v1_genomic.fna.gz
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/055/GCF_000196055.1_ASM19605v1/GCF_000196055.1_ASM19605v1_genomic.fna.gz
