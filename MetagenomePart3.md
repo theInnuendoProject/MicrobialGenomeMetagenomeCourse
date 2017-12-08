@@ -92,16 +92,22 @@ samtools sort
 samtools index 
 ```
 
-## Generate CONTIGS.db
+## Back to Anvi'o
 
-Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See [Anvio webpage](http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database) for more information.  
 Start by allocating some resources and avtivating the anvio virtul env
 
 ```
 salloc -n 1 --cpus-per-task=6 --mem=10000 --nodes=1 -t 04:00:00 -p serial
 srun --pty $SHELL
 source activate anvio3
-# then generate the Anvi'o contigs DB
+```
+
+
+## Generate CONTIGS.db
+
+Contigs database (contigs.db) contains information on contig length, open reading frames (searched with Prodigal) and kmers. See [Anvio webpage](http://merenlab.org/2016/06/22/anvio-tutorial-v2/#creating-an-anvio-contigs-database) for more information.  
+
+```
 anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembly_2500nt_CONTIGS.db -n MEGAHIT_co-assembly
 ```
 ## Run HMMs to identify single copy core genes for Bacteria and Archaea, plus rRNAs
