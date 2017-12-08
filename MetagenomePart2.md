@@ -53,6 +53,8 @@ bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
 ```
 Then again submit the array job with `sbatch`.  
 
+During luch break check what do the different steps in mapping do.
+
 # Assembly quality assesment
 Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run MetaQUAST (http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
 
