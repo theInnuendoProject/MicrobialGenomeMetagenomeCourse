@@ -8,7 +8,7 @@ Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)
 Two programs for sequence data quality control. Both will be installed using Bioconda package management tool that can be found from CSC.  
 When using Bioconda at CSC, everything needs to be installed in virtual enviroments. You can create the virtual environment called `QC_env` and install the packages with one command.  
 ```
-module load bioconda
+module load bioconda/3
 conda create -n QC_env multiqc fastqc
 ```
 
@@ -18,7 +18,7 @@ For now, just create the environenment, we will need it soon.
 **_STOP HERE AND GO TO THE QC & TRIMMING PART_**
 
 **Anvi'o**  
-Create a virtual environment for Anvi'o and install all dependencies using Bioconda. This time use Bioconda3. (takes 5–10 min)  
+Create a virtual environment for Anvi'o and install all dependencies using Bioconda. (takes 5–10 min)  
 ```
 module load bioconda/3
 conda create -n anvio3 -c bioconda -c conda-forge python=3.5.4 gsl anvio`  
