@@ -154,8 +154,8 @@ diamond blastx -d ~/appl_taito/CARD/CARD -q gene-calls.fa \
 # parse the output for Anvi'o  
 printf "gene_callers_id\tsource\taccession\tfunction\te_value\n" > CARD_functions.txt
 awk '{print $1"\tCARD\t\t"$2"\t"$11}' CARD.out >> CARD_functions.txt
-# and finally import the functions to anvio contigs DB  
-anvi-import-functions -c contigs.db -i CARD_functions.txt
+# and finally import the functions to Anvi'o contigs DB  
+anvi-import-functions -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -i CARD_functions.txt
 ```
 
 ## Visualization in the interface (On Friday)
