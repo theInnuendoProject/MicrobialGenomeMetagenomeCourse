@@ -1,6 +1,8 @@
 *Jenni Hultman and Antti Karkman*
 
-# Mapping the reads back to the assembly
+# Metagenome part 2
+
+## Mapping the reads back to the assembly
 The assembly should be finished and we hopefully have also some contigs. Next thing to do is mapping all the reads back to the contigs. We do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
 We will need to two scripts for that, one for the actual mapping and another to run it as an array job. Save both scripts to your `scripts` folder. 
 
@@ -55,10 +57,10 @@ Then again submit the array job with `sbatch`.
 
 During luch break check what do the different steps in mapping do.
 
-# Assembly quality assesment
+## Assembly quality assesment
 Let's take a look at the assembly file from yesterday. From the log file at $WRKDIR/BioInfo_course/trimmed_data/all_assembly_def_1000 you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run MetaQUAST (http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
 
-# Taxonomic profiling with Metaxa2 continued...
+## Taxonomic profiling with Metaxa2 continued...
 When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
 When using any 16S rRNA based software, be cautious with species (and beyond) level classifications. Especially when using short reads.  
 We will look at genus level classification.
@@ -67,7 +69,7 @@ We will look at genus level classification.
 metaxa2_dc -o birds_metaxa6.txt *level_6.txt
 ```
 
-# Antibiotic resistance gene annotation - reads
+## Antibiotic resistance gene annotation - reads
 Next step is the antibiotic resistance gene annotation.  
 
 First convert all R1 files from fastq to fasta. You can use `fastq_to_fasta_fast` program that is included in the biokit.  
@@ -117,7 +119,7 @@ This is a stupid script, but does the job.
 
 `python scripts/parse_diamond/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
 
-# Antibiotic resistance gene annotation - contigs
+## Antibiotic resistance gene annotation - contigs
 ```
 # allocate resources
 salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
