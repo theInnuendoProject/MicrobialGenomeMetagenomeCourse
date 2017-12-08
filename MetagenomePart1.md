@@ -35,14 +35,20 @@ Then run the QC for the raw data and combine the results to one report using `mu
 Can be done on the interactive nodes using `sinteractive`. In that case use only 4 threads in the `fastqc` step.  
 ```
 # allocate the computing resources and log in to the computing node. 
-salloc -n 1 --cpus-per-task=6 --mem=100 --nodes=1 -t 00:10:00 -p serial
+salloc -n 1 --cpus-per-task=6 --mem=3000 --nodes=1 -t 00:30:00 -p serial
 srun --pty $SHELL
+# activate the QC environment
+source activate QC_env
 # Run fastqc 
-fastqc ./*.fastq -o FASTQC/ -t 6
+fastqc ./*.fastq.gz -o FASTQC/ -t 6
 # Then combine the reports with multiqc
 multiqc ./ --interactive
-# free the resources after the job is done
-exit 
+# deactivate the virtual env
+source deactivate
+# log out from the computing node 
+exit
+# and free the resources after the job is done
+exit
 ```
 
 Copy the resulting HTML file to your local machine with `scp` from the command line (Mac/Linux) or *WinSCP* on Windows.  
@@ -98,10 +104,19 @@ After the job has finished, you can see how much resources it actually used and 
 Then let's check the results from the trimming. Go to the folder containing the trimmed reads and make a new folder for the QC files.  
 Allocate some resources and then run FASTQC and MultiQC again.  
 ```
-salloc -n 6 -t00:10:00 --ntasks-per-node=6 --mem=100 -p parallel
+salloc -n 1 --cpus-per-task=6 --mem=3000 --nodes=1 -t 00:30:00 -p serial
+srun --pty $SHELL
+# activate the QC environment
+source activate QC_env
+# run QC on the trimmed reads
 fastqc ./*.fastq -o FASTQC/ -t 6
+ multiqc ./ --interactive
+# deactivate the virtual env
+source deactivate
+# log out from the computing node 
 exit
-multiqc ./ --interactive
+# and free the resources after the job is done
+exit
 ```
 
 Copy it to your local machine as earlier and look how well the trimming went.  
