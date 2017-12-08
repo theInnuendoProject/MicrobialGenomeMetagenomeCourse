@@ -68,10 +68,38 @@ module load biokit
 bowtie2-build MEGAHIT_co-assembly_2500nt.fa MEGAHIT_co-assembly_2500nt
 ```
 ## Mapping with bowtie2
-We will use Boewtie2 to map the trimmed reads against assembled contigs. 
+What does the following script do? KORJAA AJAT JA MUISTI
+```
+#!/bin/bash
+#SBATCH -J bowtie_batch
+#SBATCH -o bowtie_out_%j.txt
+#SBATCH -e bowtie_err_%j.txt
+#SBATCH -t 06:00:00
+#SBATCH -n 1
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=20000
+#
 
+#example run: ./bowtie2-map-batch.sh 13_Jan_CAT-QUALITY_PASSED_R1.fastq 13_Jan_CAT-QUALITY_PASSED_R2.fastq CAT0113 /Quaterly_megahit_12samples-assembly/Ella_quaterly_12samples_assembly_5kb
 
-## Visualization in the interface
+# $1: 13_Jan_CAT-QUALITY_PASSED_R1.fastq
+# $2: 13_Jan_CAT-QUALITY_PASSED_R2.fastq
+# $3: CAT0113
+# $4: /Quaterly_megahit_12samples-assembly/Ella_quaterly_12samples_assembly_5kb
+
+bowtie2 --threads 6 -x MEGAHIT_co-assembly_2500nt -1 ../trimmed_data/$name"_R1_trimmed.fastq" -2 ../trimmed_data/$name"_R2_trimmed.fastq -S $name.sam --no-unal
+samtools view -F 4 -bS $name.sam > $name-RAW.bam
+samtools sort $name-RAW.bam -o $name.bam
+samtools index $name.bam
+rm $name.sam $name-RAW.bam
+
+```
+run
+
+sbatch ../../../scripts/bowtie2-map-batch.sh ../../../sample_names.txt
+
+## Visualization in the interface (On Friday)
 
 Open a new ssh window. In mac:
 ```
@@ -95,6 +123,11 @@ anvi-interactive -c METASPADES_co-assembly_2500nt_CONTIGS.db -p SAMPLES-MERGED/P
 Then open google chrome and go to address 
 
 http://localhost:8080
+
+# In case sinteractive gets stuck
+```
+salloc -n 1 --cpus-per-task=4 --mem=8000 --nodes=1 -t 08:00:00 -p serial
+```
 
 
 
