@@ -116,3 +116,13 @@ chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.
 
 ```
 
+
+### Task 4 - schema eval
+```
+chewBBACA.py SchemaEvaluator -o rms/Myschema.html --cpu 8
+
+zip -r myschemaEval.zip testcq
+
+#download the myschemaEval.zip to your computer, unzip it and open the Myschema.html with firefox
+
+```
