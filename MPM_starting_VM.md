@@ -25,6 +25,8 @@ The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [
 _In your computer_
 
   * **Note:** The SSH key was produced in Linux using `ssh-keygen -t rsa -f /home/cloud-user/mgmc.key`. More information [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2 "Google search: ssh key linux").
+  
+The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the Dropbox directory will be available during the course*.
 
 ### Unix
 
@@ -43,7 +45,9 @@ Using [PuTTY](http://www.putty.org/)
   * **Note 1:** use `putty.exe` and `puttygen.exe` from _"Alternative binary files"_ ([Download PuTTY](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys "Google search: use ssh key in putty"))
   * **Note 2:** to paste text in PuTTY click on mouse right botton inside PuTTY terminal
 
-For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections)  
+For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections) 
+
+Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the key.ppk in *Private key file for authentication*, then follow the instructions below 
 
 **Connection settings (after preparing PuTTY to use SSH key):**  
 
@@ -111,7 +115,7 @@ mkdir ~/DBs
 
 ### Install Docker
 
-**_What is [Docker](https://www.docker.com/)?_**
+**_What is_** [Docker](https://www.docker.com/)**_?_**
 
 > "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server," Lyman explained. "This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc." From [here](https://www.linux.com/news/docker-shipping-container-linux-code).
 
@@ -146,7 +150,7 @@ More information [here](https://docs.docker.com/engine/installation/linux/linux-
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 
-# logout and login to activate the changes to groups
+# logout and login to activate the changes to groups (close the terminal and open it again)
 
 docker run hello-world
 ```
@@ -163,7 +167,7 @@ _Aspera Connect_
 
 _In your computer_  
 
-In the [webpage](http://downloads.asperasoft.com/connect2/):
+From the [webpage](http://downloads.asperasoft.com/connect2/):
   * See all installers > Linux > Linux - Select Version > Direct download
   * Copy Link Location (Direct download)
 
@@ -221,7 +225,8 @@ echo "export PATH=$HOME/NGStools/getSeqENA"':$PATH' >> ~/.profile
 
 _In your computer_  
 
-In the [webpage](https://github.com/B-UMMI/INNUca):
+<span style="color:lightblue">In your computer</span>  
+From the [webpage](https://github.com/B-UMMI/INNUca):
   * Docker
 
 _In the VM_  

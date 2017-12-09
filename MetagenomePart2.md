@@ -1,43 +1,34 @@
-*Antti Karkman*
-**_UNDER CONSTRUCTION FROM HERE ON_**
-# Taxonomic annotation with Metaxa2
-The first annotation step is to run Metaxa2 on the same samples. We will make a array job that will run each sample as a separate job.  
+*Jenni Hultman and Antti Karkman*
 
+# Metagenome part 2
 
+## Assembly quality assesment
+Let's take a look at the assembly file from yesterday. From the log file at `$WRKDIR/BioInfo_course/trimmed_data/co-assembly` you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run [MetaQUAST](http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
+
+## Antibiotic resistance gene annotation - reads
+Next step is the antibiotic resistance gene annotation.  
+
+First convert all R1 files from fastq to fasta. You can use `fastq_to_fasta_fast` program that is included in the biokit.  
+`fastq_to_fasta_fast TRIMMED.fastq > TRIMMED.fasta`  
+
+Then add the sample name to each sequence header after the `>` sign. Keep the original fasta header and separate it with `-`. You can do this either separately for each file or write a batch script to go through all files .You can use the `sample_names.txt` as a input to your bash script.  
 ```
-nice -5 parallel -j 6 -a sample_names.txt scripts/metaxa2.sh
-nice -5 parallel -j 6 -a sample_names.txt scripts/metaxa2_ttt.sh
-metaxa2_dc -o birds_metaxa6.txt *level_6.txt
-metaxa2_dc -o birds_metaxa7.txt *level_7.txt
-
-#Tax table from the OTU table
-awk '{print $1}' birds_metaxa6.txt > taxa_names.txt
-sed 's/;/ /g' taxa_names.txt > temp
-awk '{print "OTU"(++i)"\t"$0}' temp > taxa_names.txt
-rm temp
-#And add taxonomic levels by hand to the resulting file
-##OTUs to metaxa file too.##
+# Example header
+>L3-M01457:76:000000000-BDYH7:1:1101:17200:1346
 ```
 
+When all R1 files have been converted to fasta and renamed, combine them to one file. It will be the input file for antibiotic resistance gene annotation. The sample name in each fasta header will make it possible to count the gene abundances for each sample afterwards using the script you downloaded earlier.  
 
+We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD.](https://card.mcmaster.ca)  
+Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
 
-# Resistance gene annotation
-Next step is the antibiotic resistance annotation. We will use only the R1 reads.  
-Convert the fastq files to fasta and rename all sequences in the files with the sample name + running no.  
-After that combine all the R1 fasta reads with sample name in the header to one file.  
-```
-nice -5 parallel -j 6 -a sample_names.txt scripts/fastq2fasta.py # this takes ~5 min
-cat *R1_renamed.fasta > birds_R1.fasta
-# to save space, you can remove the individual renamed files  
-rm *_renamed.fasta
-```
+`bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `  
 
-Download the latest CARD release to your applications folder under a folder called CARD and extract the file.  
-`bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `
-Then make a DIAMOND database file form the protein homolog model.  
+Then make a DIAMOND database file form the protein homolog model. It is a fasta file with amino acid sequences.  
+
 `diamond makedb --in protein_fasta_protein_homolog_model.fasta -d CARD`
 
-The annotation of resistance genes will be done as a batch job using DIAMOND (This might take slightly longer, depending on the queue).
+The annotation of resistance genes will be done as a batch job using DIAMOND against CARD. Make the batch script and submit it as previously. (This takes less than an hour + possible time in the queue).  
 ```
 #!/bin/bash -l
 #SBATCH -J diamond
@@ -48,40 +39,27 @@ The annotation of resistance genes will be done as a batch job using DIAMOND (Th
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
 #SBATCH -p serial
-#SBATCH --mem=5000
+#SBATCH --mem-per-cpu=2000
 #
 
 module load biokit
-cd $WRKDIR/BioInfo_course/trimmed_data
-diamond blastx -d ~/databases/CARD/CARD_prot -q birds_R1.fasta --max-target-seqs 1 -o birds_R1_CARD.txt -f 6 --id 90 --min-orf 20 -p 24 --seq no
+cd $WRKDIR/BioInfo_course
+diamond blastx -d ~/appl_taito/CARD/CARD -q trimmed_data/birds_R1.fasta \
+            --max-target-seqs 1 -o birds_R1_CARD.txt -f 6 --id 90 --min-orf 20 \
+            -p $SLURM_CPUS_PER_TASK --masking 0
 ```
 
-When the job is finished, go tot the folder with trimmed data and inspect the results.  
-They are in one file with each hit on one line and we would like to have a count table where we have ARGs on rows and samples as columns.  
+When the job is finished, inspect the results.  
+They are in one file with each hit on one line and we would like to have a count table where we have different ARGs as rows and our samples as columns.  
 This is a stupid script, but does the job.  
-`python ../scripts/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
 
+`python scripts/parse_diamond/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
 
-Search againts MegaRes (MIGHT BE AN OPTION TO CARD, better DB and VSEARCH can make a count table as output. Much slower though)
+## Taxonomic profiling with Metaxa2 continued...
+When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
+When using any 16S rRNA based software, be cautious with species (and beyond) level classifications. Especially when using short reads.  
+We will look at genus level classification.
 ```
-#!/bin/bash -l
-#SBATCH -J vsearch
-#SBATCH -o vsearch_out_%j.txt
-#SBATCH -e vsearch_err_%j.txt
-#SBATCH -t 10:00:00
-#SBATCH -n 1
-#SBATCH --nodes=1
-#SBATCH --cpus-per-task=8
-#SBATCH -p serial
-#SBATCH --mem=10000
-#
-
-module load biokit
-cd $WRKDIR/BioInfo_course/trimmed_data
-vsearch --usearch_global birds_R1.fasta -db $USERAPPL/database//megares_v1.01/megares_database_v1.01.fasta --id 0.9 --maxaccepts 8 --maxhits 1 --otutabout birds_MegaRes.txt --strand both --threads $SLURM_CPUS_PER_TASK --mincols 30
+# Genus level taxonomy
+metaxa2_dc -o birds_metaxa6.txt *level_6.txt
 ```
-Submit the job to queue.  
-`sbatch scripts/vsearch_batch`
-
-
-Metaphlan 2 ??
