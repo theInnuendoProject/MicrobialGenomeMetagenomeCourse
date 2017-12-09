@@ -103,7 +103,7 @@ chewBBACA.py TestGenomeQuality -i results/<results_20171207T150515>/results_alle
 ```
 # Extract a profile suitable to be used by phyloviz
 
-chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.tsv -o cgMLST_all -r results/results_20171207T150515/RepeatedLoci.txt -p 0.95
+chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.tsv -o my_cgMLST -r results/results_20171207T150515/RepeatedLoci.txt -p 0.95
 
 # download cgMLST_all/cgMLST.tsv to your computer and use it later for phyloviz
 
@@ -112,7 +112,7 @@ chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.
 
 ### Task 6 - schema eval
 ```
-chewBBACA.py SchemaEvaluator -o rms/Myschema.html --cpu 8
+chewBBACA.py SchemaEvaluator -i schema_seed/ -l rms/Myschema.html --cpu 8
 
 zip -r myschemaEval.zip testcq
 
