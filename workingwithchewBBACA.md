@@ -21,7 +21,7 @@ mkdir other_assemblies
 touch 2down_cg.txt
 nano 2down_cg.txt
  
-# copy and paste this list of links into the file (to exit nano press "q" and save the changes with "y")
+# copy and paste this list of links into the file (to exit nano press ctrl+x and save the changes with "y" and enter)
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/265/GCF_000007265.1_ASM726v1/GCF_000007265.1_ASM726v1_genomic.fna.gz
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/705/GCF_000012705.1_ASM1270v1/GCF_000012705.1_ASM1270v1_genomic.fna.gz
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/055/GCF_000196055.1_ASM19605v1/GCF_000196055.1_ASM19605v1_genomic.fna.gz
@@ -46,12 +46,14 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/287/955/GCF_000287955.1_ASM28795v
 cd complete_genomes
 wget -i ../2down_cg.txt
 gunzip ./*.gz
+ls
 cd ..
  
 # download and decompress other assemblies
 cd other_assemblies
 wget -i ../2down_other.txt
 gunzip ./*.gz
+ls
 cd ..
 
 ```
@@ -60,10 +62,10 @@ cd ..
 
 ```
 # start a container with chewBBACA
-docker run -it -v ~/:/data/ mickaelsilva/chewbbaca /bin/bash
+docker run -it -v ~/:/data/ mickaelsilva/chewbbaca bash
  
 # go to our working folder
-cd /data/test_chewie
+cd /data/test_chewBBACA/
  
 # run chewBBACA to create the schema using the complete genomes
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Streptococcus agalactiae"
@@ -76,8 +78,8 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Strept
 
 # create a file with full paths of the genomes we want to call alleles
  
-find /data/test_chewie/complete_genomes/* >listgenomes.txt
-find /data/test_chewie/other_assemblies/* >>listgenomes.txt
+find /data/test_chewBBACA/complete_genomes/* >listgenomes.txt
+find /data/test_chewBBACA/other_assemblies/* >>listgenomes.txt
 find /path/to/innuca/assemblies/*.fasta >>listgenomes.txt
  
 # open listgenomes.txt and check if there are 20 lines with full paths for each assembly. Press "q" to exit less after the check
@@ -87,15 +89,6 @@ less listgenomes.txt
 chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 -t "Streptococcus agalactiae"
 ```
 
-### Task 4 - schema eval
-```
-chewBBACA.py SchemaEvaluator -o rms/Myschema.html --cpu 8
-
-zip -r myschemaEval.zip testcq
-
-#download the myschemaEval.zip to your computer, unzip it and open the Myschema.html with firefox
-
-```
 
 ### Task 4 - test genome allele call quality
 ```
