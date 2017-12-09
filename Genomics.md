@@ -14,7 +14,7 @@
 ## Tuesday - Biocentre 3, lecture room 1402 (Viikinkaari 1)
 | Time | Description |
 | --- | --- |
-| 08:30-11:45 | **Miguel Machado**: *In silico* typing using ReMatCh and Abricate |
+| 08:30-11:45 | **Miguel Machado**: [_In silico_ typing using ReMatCh and Abricate](./MPM_ReMatCh_Abricate.md) |
 | 11:45-12:00 | **Mirko Rossi**: [Working in group instruction, part 2](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workinggroup2.md) |
 | 12:00-13:30 | **Working with your data** and **lunch** |
 | 13:30-16:00 | **Mickael Silva**: Whole genome and core genome MLST analysis using *chewBBACA* suite (see also [*chewBBACA wiki*](https://github.com/B-UMMI/chewBBACA/wiki)) |

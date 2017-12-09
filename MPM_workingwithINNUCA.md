@@ -2,6 +2,17 @@
 
 ---
 
+* [_From microbial genomics to metagenomics_](./README.md)
+  * [_Bacterial Genomics_](./Genomics.md)
+    * [_Prepare the Virtual Machine_](./MPM_starting_VM.md)
+    * _From reads to assembly: working with INNUca pipeline_
+      1. [_Get genomic data_](./MPM_workingwithINNUCA.md#get-genomic-data)
+      2. [_Assembly HTS data_](./MPM_workingwithINNUCA.md#assembly-hts-data)
+      3. [_Organize assemblies_](./MPM_workingwithINNUCA.md#organize-assemblies)
+    * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
+
+---
+
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in _"Organize the data"_ `<your_species_name>`, write the species name you selected (something like `campylobacter_jejuni`).  
 **Note 2:** if the VM has 16 CPUs, use `16` in CPUs/threads instead of `8`.  
 **Note 3:** do the steps bellow for the bacteria species of your choise. _Streptococcus agalactiae_ is used as example.
@@ -13,7 +24,7 @@
 <!---
 ### Get complete genomes
 
-<span style="color:grey">_In your computer_</span>
+_In your computer_
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -23,7 +34,7 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   5. Choose between 4-6 complete genomes to download:
       * For the selected genome, click on the green diamond under _"FTP"_ column
       * Copy Link Location of the link ending with *"_genomic.fna.gz"* (ignore the one ending with *"_rna_from_genomic.fna.gz"*)
-      * <span style="color:lightblue">In the VM</span>:
+      * _In the VM_:
 
 ```
 # Change to directory where the data will be stored
@@ -40,7 +51,7 @@ wget <the.copied.link>
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/026/925/GCF_001026925.1_ASM102692v1/GCF_001026925.1_ASM102692v1_genomic.fna.gz
 # wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/689/235/GCF_000689235.1_GBCO_p1/GCF_000689235.1_GBCO_p1_genomic.fna.gz
 ```
-<span style="color:grey">_In the VM_</span>  
+_In the VM_  
 
 Uncompressed the downloaded complete genomes:
 ```
@@ -51,7 +62,7 @@ gunzip *
 
 ### Get genomic information
 
-<span style="color:grey">_In your computer_</span>
+_In your computer_
 
 In NCBI [website](https://www.ncbi.nlm.nih.gov/):
   1. Select _"Genome"_ in dropdown menu and search _"Streptococcus agalactiae"_
@@ -61,9 +72,9 @@ In NCBI [website](https://www.ncbi.nlm.nih.gov/):
 
 ### Organize the data
 
-<span style="color:grey">_In the VM_</span>
+_In the VM_
 
-```
+```bash
 # Create a folder to store the HTS reads
 
 mkdir ~/reads
@@ -87,7 +98,7 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 <!---
 * **_Example: "What I did"_**
 
-  <span style="color:grey">_In your computer_</span>  
+  _In your computer_
 
   In ENA (European Nucleotide Archive) [website](https://www.ebi.ac.uk/ena):
     1. Search _"Streptococcus agalactiae"_
@@ -102,11 +113,11 @@ mkdir ~/genomes/streptococcus_agalactiae_example
 
 **Upload a file with IDs to download**  
 
-<span style="color:grey">_In your computer_</span>  
+_In your computer_
 
 _UNIX terminal_  
 
-```
+```bash
 scp -i </path/to/provided/private/ssh/key/mgmc.key> </path/to/file/with/IDs.txt> cloud-user@<VM.IP>:~/reads/<your_species_name>
 ```
 
@@ -118,10 +129,11 @@ _FileZilla_
 
 **Get the data**
 
-<span style="color:grey">_In the VM_</span>  
+_In the VM_  
 
-```
+```bash
 # Using the Streptococcus agalactiae example
+# 10 samples
 
 # Get the file with IDs
 wget -O ~/reads/streptococcus_agalactiae_example/MPM_GBS_samples.tab https://raw.githubusercontent.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/master/MPM_GBS_samples.tab
@@ -138,10 +150,12 @@ getSeqENA.py --listENAids ~/reads/streptococcus_agalactiae_example/ids.txt \
              --downloadInstrumentPlatform ILLUMINA \
              --threads 8 \
              --SRAopt
+
+# Runtime :0.0h:2.0m:10.12s
 ```
 * More information about piping and redirection [here](https://ryanstutorials.net/linuxtutorial/piping.php "Google search: linux pipe command")
 * More information on skipping lines [here](https://stackoverflow.com/questions/604864/print-a-file-skipping-x-lines-in-bash "Google search: linux skip first line file")
-* For more information about cutting text based on delimiters: `cut --help` or `man cut`
+* For more information about cutting text based on delimiters: `cut --help` or `man cut`, and [here](http://www.thegeekstuff.com/2013/06/cut-command-examples "Google search: linux cut")
 
 ---
 
@@ -149,9 +163,9 @@ getSeqENA.py --listENAids ~/reads/streptococcus_agalactiae_example/ids.txt \
 
 Assembly HTS data using INNUca
 
-<span style="color:grey">_In the VM_</span>  
+_In the VM_  
 
-```
+```bash
 # INNUca basic command
 
 # You should specify where the output goes whenever there is an option to do that
@@ -167,7 +181,7 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 
 Using the Streptococcus agalactiae example:
 
-```
+```bash
 # Run inside a screen
 screen -S streptococcus_agalactiae_example
 
@@ -186,7 +200,38 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 # Detatch the screen
 # Press Ctrl + A (release) and then D
 
-# With 8 CPUs
-# Runtime :0.0h:34.0m:45.3s
+# Runtime :1.0h:14.0m:33.47s
 ```
 * More information about `screen` [here](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/ "Google search: linux screen") and `man screen`
+
+## Organize assemblies
+
+Store all assembled genomes (good and bad assemblies) in a single folder to use with next tools.
+
+_In the VM_  
+
+```bash
+# Create the folder where assemblies will be stored
+mkdir ~/genomes/<your_species_name>/all_assemblies
+
+# Using the Streptococcus agalactiae example
+
+mkdir ~/genomes/streptococcus_agalactiae_example/all_assemblies
+
+# Copy INNUca's final assemblies
+# The next command pipes different commands:
+## The first sed command read the INNUca combine_samples_reports.tab file and skip the header line
+## cut command will get the final_assembly column
+## grep will ignore those samples that did not produced a final assembly ("NA")
+## Then, the resulting list feeds parallel command that will copy the file for each entry
+### Inside parallel {} substitutes each line that gets inside parallel
+### Because INNUca ran inside Docker, the assembly path is relative to /data/
+### The second sed (inside parallel) replaces the /data/ with user HOME directory in each line that gets inside parallel
+
+sed 1d ~/genomes/streptococcus_agalactiae_example/innuca/combine_samples_reports.*.tab | \
+          cut -f 23 | \
+          grep --invert-match "NA" | \
+          parallel --jobs 8 'cp $(sed s#/data/#$HOME/#1 <(echo {})) $HOME/genomes/streptococcus_agalactiae_example/all_assemblies/'
+```
+* For more information about finding patterns: `grep --help` or `man grep`, and [here](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/ "Google search: linux grep")
+* More information about using parallel: [introduction and bioinformatics examples](https://www.biostars.org/p/63816/); [manual](https://www.gnu.org/software/parallel/man.html); [tutorial](https://www.gnu.org/software/parallel/parallel_tutorial.html)
