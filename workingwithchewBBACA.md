@@ -8,8 +8,8 @@
 docker pull mickaelsilva/chewbbaca
  
 # Create a working folder and enter it
-mkdir test_chewBBACA
-cd test_chewBBACA 
+mkdir test_chewbbaca
+cd test_chewbbaca
  
 # Create folders to store the genomes
 
@@ -65,7 +65,7 @@ cd ..
 docker run -it -v ~/:/data/ mickaelsilva/chewbbaca bash
  
 # go to our working folder
-cd /data/test_chewBBACA/
+cd /data/test_chewbbaca/
  
 # run chewBBACA to create the schema using the complete genomes
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Streptococcus agalactiae"
@@ -78,8 +78,8 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Strept
 
 # create a file with full paths of the genomes we want to call alleles
  
-find /data/test_chewBBACA/complete_genomes/* >listgenomes.txt
-find /data/test_chewBBACA/other_assemblies/* >>listgenomes.txt
+find /data/test_chewbbaca/complete_genomes/* >listgenomes.txt
+find /data/test_chewbbaca/other_assemblies/* >>listgenomes.txt
 find /path/to/innuca/assemblies/*.fasta >>listgenomes.txt
  
 # open listgenomes.txt and check if there are 20 lines with full paths for each assembly. Press "q" to exit less after the check
