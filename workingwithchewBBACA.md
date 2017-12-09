@@ -97,7 +97,7 @@ zip -r myschemaEval.zip testcq
 
 ```
 
-### Task 5 - test genome allele call quality
+### Task 4 - test genome allele call quality
 ```
 
 # at the end of the command the program will try to open the html. Press "q" and "y" to exit that action when prompted
@@ -106,7 +106,7 @@ chewBBACA.py TestGenomeQuality -i results/<results_20171207T150515>/results_alle
 # download testcq/GenomeQualityPlot.html to your local computer and open with your favorite browser
 
 ```
-### Task 6- Extract the profile for phyloviz
+### Task 5 - Extract the profile for phyloviz
 ```
 # Extract a profile suitable to be used by phyloviz
 
@@ -117,12 +117,25 @@ chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.
 ```
 
 
-### Task 4 - schema eval
+### Task 6 - schema eval
 ```
 chewBBACA.py SchemaEvaluator -o rms/Myschema.html --cpu 8
 
 zip -r myschemaEval.zip testcq
 
 #download the myschemaEval.zip to your computer, unzip it and open the Myschema.html with firefox
+
+```
+
+### Extra - create prodigal training file
+```
+Prodigal -i assembly.fasta -t tfName.trn -p single
+
+```
+
+
+### Extra - create schema with a personalized prodigal training file
+```
+chewBBACA.py CreateSchema -i genomes/ -o schema_seed --cpu 6 --ptf tfName.trn
 
 ```
