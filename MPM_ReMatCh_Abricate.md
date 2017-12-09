@@ -55,7 +55,7 @@ ls ~/DBs/resfinder_db/*.fsa | parallel --jobs 8 'cp {} temp_concat_resfinder/; e
 ### Convert DOS to UNIX newlines special chracters
 ### Ignore blank lines
 ### Pass everytnhing to parallel
-#### Split everything that enters parallel by sequene (--recstart '>')
+#### Split everything that enters parallel by sequence (--recstart '>')
 #### cat receives each sequence
 #### Each sequence is saved in seq variable
 #### The header line is saved by grepping the line with ">" while removing trailing spaces with sed
@@ -102,37 +102,151 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/DBs/abricate/:/NGStools/miniconda/
 
 ## Typing samples
 
+Two different approaches can be used to type HTS data: directly from reads using a reference mapping approach, or throught similarity sequence search using an already produced genome assembly.
+* Since the similarity sequence search approach uses a reduced representation of original HTS reads dataset, it's a very fast method
+* Therefore, we will leave the first read command running and move to _de novo_ assembly approach
 
+_In the VM_  
+
+```bash
+# Create folder to store typing results
+mkdir ~/typing
+```
 
 ### Using reads
 
-Prepare working directory
+**MLST for a given taxon**
+
+Let's start with Multi-Locus Sequence Typing (MLST), and type all HTS reads available for a given taxon using ReMatCh.
+* For example purposes, we will use _Bartonella bacilliformis_ because only around 30 reads datasets are available
+* Only Illumina reads will be used
+
+_In the VM_  
 
 ```bash
-mkdir ~/typing
-mkdir ~/typing/rematch
+# Run inside a screen
+screen -S rematch_mlst_Bb
 
+rematch.py \
+    --workdir ~/typing/rematch_mlst_Bb/ \
+    --mlst "Bartonella bacilliformis" \
+    --mlstReference \
+    --doubleRun \
+    --threads 8 \
+    --taxon "Bartonella bacilliformis" \
+    --asperaKey ~/NGStools/aspera/connect/etc/asperaweb_id_dsa.openssh \
+    --SRAopt
+
+# Detatch the screen
+# Press Ctrl + A (release) and then D
+
+# 29 samples out of 30 run successfully
+# Runtime :0.0h:55.0m:6.53s
+```
+
+**Antibiotic resistance genes**
+
+To screen antibiotic resistance genes we will use the Resfinder DB obtained before. For that, we will:
+* Move back to _Streptococcus agalactiae_ example
+* Re-download example's samples while running, or using already downloaded reads data
+
+_In the VM_  
+
+ Re-download example's samples while running
+
+```bash
+# Run inside a screen
+screen -S rematch_ARgenes_download
+
+rematch.py \
+    --workdir ~/typing/rematch_ARgenes_download/ \
+    --reference ~/DBs/resfinder_db/resfinder_db.fasta \
+    --reportSequenceCoverage \
+    --notWriteConsensus \
+    --summary \
+    --threads 8 \
+    --listIDs ~/reads/streptococcus_agalactiae_example/ids.txt \
+    --asperaKey  ~/NGStools/aspera/connect/etc/asperaweb_id_dsa.openssh \
+    --SRAopt
+
+# Detatch the screen
+# Press Ctrl + A (release) and then D
+
+# 10 samples out of 10 run successfully
+# Runtime :0.0h:59.0m:54.58s
+```
+
+_In the VM_  
+
+Using already downloaded reads data
+
+```bash
+# Create a ReMatCh working directory
+mkdir ~/typing/rematch_ARgenes_localSamples
+
+# Set ReMatCh working directory
+## Using a bash for-loop for that
+## Create symlinks instead of duplicate data
+### Iterate over samples directories from reads folders
+#### Create sample directory by obtaining only last directory name instead of directory path using basename
+#### Create symbolic links to sample's reads inside newly created sample's directory
 for sample_dir in $(ls -d ~/reads/streptococcus_agalactiae_example/*/); do
-  mkdir ~/typing/rematch/$(basename $sample_dir)
-  ln -s $(ls ${sample_dir}*_1.fq.gz) ~/typing/rematch/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
-  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/rematch/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
+  mkdir ~/typing/rematch_ARgenes_localSamples/$(basename $sample_dir)
+  ln -s $(ls ${sample_dir}*_1.fq.gz) ~/
+  typing/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
+  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
 done
 
-rematch.py -w ~/typing/rematch/ -r ~/DBs/resfinder_db/resfinder_db.fasta -j 8 --reportSequenceCoverage --notWriteConsensus
+# ReMatCh command example
+# Not necessary to run
+# Added fake option to avoid ReMatCh to run
+# Don't forget use screen
+rematch.py \
+    --workdir ~/typing/rematch_ARgenes_localSamples/ \
+    --reference ~/DBs/resfinder_db/resfinder_db.fasta \
+    --reportSequenceCoverage \
+    --notWriteConsensus \
+    --summary \
+    --threads 8 \
+    --avoidRunningReMatCh
+
+# 10 samples out of 10 run successfully
+# Runtime :0.0h:56.0m:30.66s
 ```
+More informations:
+* [Using bash for-loop](https://www.cyberciti.biz/faq/bash-for-loop/ "Google search: bash for loop")
+* Listing only folders: `ls --help` or `man ls` and [here](https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash-an-examination "Google search: linux list only directories")
+* [Using subcommands and other things](http://www.compciv.org/topics/bash/variables-and-substitution/ "Google search: bash subcommand example")
+* Create symbolic links: `ln --help` or `man ln` and [here](https://www.cyberciti.biz/faq/unix-creating-symbolic-link-ln-command/ "Google search: linux symbolic link")
 
 ### Using _de novo_ assembly
 
-When using redirect with Docker stdout must be outside container
-the input device is not a TTY
+Typing with Abricate using Resfinder DB (the one previously updated)
+
+**Antibiotic resistance genes**
+
+_In the VM_  
 
 ```bash
+# Create folder to store Abricate outputs
 mkdir ~/typing/abricate
 
+# Run Abricate for each sample
+## List all produced assemblies and pass to parallel
+### Run Docker without TTY (-t option)
+### Map the assemblies folder in /data/ folder and the updated Abricate DB in Docker Abricate DB folder
+### Redirect the Abricate output to a file named as the assembly but without the extension (using {/.})
+### Note that the redirection should be done using filesystem paths outside the container
 ls ~/genomes/streptococcus_agalactiae_example/all_assemblies/* | \
       parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > ~/typing/abricate/{/.}.abricate_out.tab'
 
+# Summarize all Abricate results into a single file
+## With Docker, when using * to refer multiple files, the paths obtained refer to the filesystem outside the container
+## Therefore, a shell script file is created containing the command to be run inside the container
+## Note that the command inside the shell script only contains paths refering to mapped folder /data/
 echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > ~/typing/abricate/abricate_commands.sh
-
-docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest sh /data/abricate_commands.sh
+## Run the summary Abricate command
+docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
+      sh /data/abricate_commands.sh
 ```
+More informations on what TTY is [here](https://askubuntu.com/questions/481906/what-does-tty-stand-for "Google search: tty device")

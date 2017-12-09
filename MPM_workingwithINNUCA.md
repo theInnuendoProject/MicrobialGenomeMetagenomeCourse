@@ -133,6 +133,7 @@ _In the VM_
 
 ```bash
 # Using the Streptococcus agalactiae example
+# 10 samples
 
 # Get the file with IDs
 wget -O ~/reads/streptococcus_agalactiae_example/MPM_GBS_samples.tab https://raw.githubusercontent.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/master/MPM_GBS_samples.tab
@@ -199,7 +200,6 @@ docker run --rm -u $(id -u):$(id -g) -it -v ~/:/data/ ummidock/innuca:3.1 \
 # Detatch the screen
 # Press Ctrl + A (release) and then D
 
-# With 8 CPUs
 # Runtime :1.0h:14.0m:33.47s
 ```
 * More information about `screen` [here](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/ "Google search: linux screen") and `man screen`

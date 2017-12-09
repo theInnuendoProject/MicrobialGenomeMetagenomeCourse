@@ -299,3 +299,16 @@ _In the VM_
 ```bash
 docker pull sangerpathogens/roary:latest
 ```
+
+### Get Scoary
+
+**_What is [Scoary](https://github.com/AdmiralenOla/Scoary)?_**  
+
+> Scoary is designed to take the gene_presence_absence.csv file from Roary as well as a traits file created by the user and calculate the assocations between all genes in the accessory genome and the traits. It reports a list of genes sorted by strength of association per trait.
+
+_In the VM_  
+
+```bash
+sudo apt-get install python-pip
+pip install scoary
+```
