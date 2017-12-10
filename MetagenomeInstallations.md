@@ -39,8 +39,7 @@ anvi-setup-ncbi-cogs --num-threads 4
 All should be good and we can close the virtual environment.  
 `source deactivate`  
 
-**CheckM**
-
+**CheckM**  
 For assessing the quality of recovered genomes
 ```
 conda create -n checkm pplacer checkm-genome numpy python=2
