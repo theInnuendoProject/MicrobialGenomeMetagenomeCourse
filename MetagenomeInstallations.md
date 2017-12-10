@@ -40,6 +40,7 @@ All should be good and we can close the virtual environment.
 `source deactivate`  
 
 **CheckM**
+
 For assessing the quality of recovered genomes
 ```
 conda create -n checkm pplacer checkm-genome numpy python=2
