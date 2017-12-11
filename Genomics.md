@@ -14,7 +14,7 @@
 ## Tuesday - Biocentre 3, lecture room 1402 (Viikinkaari 1)
 | Time | Description |
 | --- | --- |
-| 08:30-10:45 | **Miguel Machado**: From reads to assemblies: working with INNUca pipeline](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MPM_workingwithINNUCA.md)|
+| 08:30-10:45 | **Miguel Machado**: [From reads to assemblies: working with INNUca pipeline](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MPM_workingwithINNUCA.md)|
 | 10:45-11:00 | *break* - Note: the coffee break is not included in the course |
 | 11:00-12:00 | **Mirko Rossi**: [Working in group instruction, part 1](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workinggroup1.md) |
 | 12:00-13:00 | **Working with your data** and **lunch** |
