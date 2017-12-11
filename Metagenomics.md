@@ -1,7 +1,7 @@
 ## Wednesday - Viikki C building, lecture room 130 (Latokartanonkaari 5)
 | Time | Description |
 | --- | --- |
-| 14:30-15:30 | **Antti Karkman**: Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)|https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart1.md
+| 14:30-15:30 | **Antti Karkman**: [Data download, QC (*FASTQC*) and trimming (*CUTADAPT*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart1.md)|
 | 15:30-17:00 | **Jenni Hultman**: Assembly (*MEGAHIT*) and installation of programs |
 
 ## Thusday - Lab building, lecture room 228 (Koetilantie 5)
