@@ -15,7 +15,7 @@
 | --- | --- |
 | 08:30-11:45 | *Genomics* **Miguel Machado**: *In silico* typing using ReMatCh and Abricate |
 | 12:00-13:30 | **Working with your data** and **lunch** |
-| 13:30-16:00 | *Genomics* **Mickael Silva**: Whole genome and core genome MLST analysis using *chewBBACA* suite (see also [*chewBBACA wiki*](https://github.com/B-UMMI/chewBBACA/wiki)) |
+| 13:30-16:00 | *Genomics* **Mickael Silva**:  [*Whole genome and core genome MLST analysis using *chewBBACA* suite*](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workingwithchewBBACA.md) (see also [*chewBBACA wiki*](https://github.com/B-UMMI/chewBBACA/wiki)) |
 | 16:00-17:00 | **Working with your data** 
 
 ## Wednesday - Viikki C building, lecture room 130 
