@@ -41,7 +41,7 @@ We will need to two scripts for that, one for the actual mapping and another to 
 But before doing that we have make a bowtie2 index from the contig file. Run the following command:  
 
 ```
-bowtie2-build MEGAHIT_co-assembly_2500nt.fa co-assembly`  
+bowtie2-build MEGAHIT_co-assembly_2500nt.fa co-assembly  
 ```
 
 `co-assembly` is the base name for the resulting index files.  
