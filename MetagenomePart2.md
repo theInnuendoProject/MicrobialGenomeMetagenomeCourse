@@ -2,9 +2,6 @@
 
 # Metagenome part 2
 
-## Assembly quality assesment
-Let's take a look at the assembly file from yesterday. From the log file at `$WRKDIR/BioInfo_course/trimmed_data/co-assembly` you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run [MetaQUAST](http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
-
 ## Antibiotic resistance gene annotation - reads
 Next step is the antibiotic resistance gene annotation.  
 
@@ -54,6 +51,9 @@ They are in one file with each hit on one line and we would like to have a count
 This is a stupid script, but does the job.  
 
 `python scripts/parse_diamond/parse_diamond.py -i birds_R1_CARD.txt -o birds_CARD.csv`
+
+## Assembly quality assesment
+Let's take a look at the assembly file from yesterday. From the log file at `$WRKDIR/BioInfo_course/trimmed_data/co-assembly` you can check how the assembly run and at the last rows how is the output. However, for more detailed analysis we run [MetaQUAST](http://bioinf.spbau.ru/metaquast) together with the assembly. Copy folder called "assembly_QC" to your computer. We will view the results in your favorite browser. 
 
 ## Taxonomic profiling with Metaxa2 continued...
 When all Metaxa2 array jobs are done, we can combine the results to an OTU table. Different levels correspond to different taxonomic levels.  
