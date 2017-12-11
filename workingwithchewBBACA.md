@@ -107,6 +107,29 @@ chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.
 
 # download cgMLST_all/cgMLST.tsv to your computer and use it later for phyloviz
 
+#create a metadata file on your computer
+FILE	species	ST	contigs
+GCF_000007265.1_ASM726v1_genomic.fna	sagalactiae	110	1
+GCF_000012705.1_ASM1270v1_genomic.fna	sagalactiae	7	1
+GCF_000196055.1_ASM19605v1_genomic.fna	sagalactiae	23	1
+GCF_000427035.1_09mas018883_genomic.fna	sagalactiae	1	1
+GCF_000689235.1_GBCO_p1_genomic.fna	sagalactiae	17	1
+GCF_001026925.1_ASM102692v1_genomic.fna	sagalactiae	1	1
+GCF_000167715.1_ASM16771v1_genomic.fna	sagalactiae	-	553
+GCF_000221325.1_ASM22132v2_genomic.fna	sagalactiae	67	8
+GCF_000736485.1_ASM73648v1_genomic.fna	sagalactiae	7	8
+GCF_001694415.1_ASM169441v1_genomic.fna	sagalactiae	196	493
+GCF_001694615.1_ASM169461v1_genomic.fna	sagalactiae	-	553
+GCF_002246945.1_ASM224694v1_genomic.fna	sagalactiae	7	5
+GCF_000287955.1_ASM28795v1_genomic.fna	sagalactiae	-	18
+ERR048560.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+ERR840705.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+SRR1790752.contigs.length_GCcontent.mappingCov.polished.fasta	?	?	?
+SRR3320580.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+SRR4414149.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+SRR5575009.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+SRR5575010.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
+
 ```
 
 
