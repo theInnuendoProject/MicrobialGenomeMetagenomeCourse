@@ -21,7 +21,7 @@ For now, just create the environenment, we will need it soon.
 Create a virtual environment for Anvi'o and install all dependencies using Bioconda. (takes 5–10 min)  
 ```
 module load bioconda/3
-conda create -n anvio3 -c bioconda -c conda-forge python=3.5.4 gsl anvio`  
+conda create -n anvio3 -c bioconda -c conda-forge python=3.5.4 gsl anvio
 ```
 
 Let's test it  
