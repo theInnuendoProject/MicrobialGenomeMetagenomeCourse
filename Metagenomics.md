@@ -10,7 +10,7 @@
 | 08:00-10:00 | **Jenni Hultman**: Assembly check and mapping with (*BOWTIE2*) |
 | 10:00-12:00 | **Antti Karkman**: Read based analysis for 16S rRNA (*Metaxa2*) and ARG (*ResFinder*) |
 | 12:00-14:00 | **Working with your data** and **lunch** |
-| 14:00-17:00 | **Antti Karkman and Jenni Hultman**: Prepping files for Anvio |
+| 14:00-17:00 | **Antti Karkman and Jenni Hultman**: [Prepping files for Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
 
 
 ## Friday - Viikki C building, lecture room 130 (Latokartanonkaari 5)
