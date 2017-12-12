@@ -2,7 +2,6 @@
 title: "A tutorial on genome-resolved metagenomics"
 excerpt: "Extracting population genomes from millions of short metagenomic reads"
 tags: [anvi'o, binning, it always snows in Helsinki, snow is nice through]
-comments: true
 ---
 
 # Genome-resolved metagenomics
