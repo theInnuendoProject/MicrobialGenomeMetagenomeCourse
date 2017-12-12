@@ -153,7 +153,7 @@ We offer two ways to aquire Tom's binning collection:
 Either way, you can then import this information into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface:
 
 ```
-anvi-import-collection -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS collection-TOM_5_BINS.txt```
+anvi-import-collection -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS collection-TOM_5_BINS.txt
 ```
 
 Then please invoke the interface once again:
