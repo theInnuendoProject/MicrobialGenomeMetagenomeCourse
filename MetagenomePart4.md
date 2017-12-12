@@ -317,5 +317,5 @@ Perspectives:
 
 Combining taxonomy, phylogeny and functions, like here:
 
-![alt text](Figure/Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
+![alt text](Figure/Delmont_et_al_2017_HBDs.png "Delmont_et_al_2017_HBDs.png")
 
