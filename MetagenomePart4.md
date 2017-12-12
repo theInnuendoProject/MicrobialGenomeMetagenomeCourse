@@ -200,7 +200,7 @@ When done, we will do the same for the bins 02, 03, 04 and 05, and finally summa
 anvi-summarize -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS -o SUMMARY_BINNING
 ```
 
-This step create a folder called `SUMMARY_BINNING`. Please download this folder into your laptop using `scp`, open it to and double click on the file called `index.html`. This should open a windows in your browser.
+This step create a folder called `SUMMARY_BINNING`. Please download this folder into your laptop using `scp`, open it and double click on the file called `index.html`. This should open a windows in your browser.
 
 Ok.
 
