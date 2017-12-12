@@ -8,7 +8,7 @@
 | Time | Description |
 | --- | --- |
 | 08:00-10:00 | **Antti Karkman**: [Read based analysis for 16S rRNA (*Metaxa2*) and ARG (*ResFinder*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart2.md) |
-| 10:00-12:00 | **Jenni Hultman**: [Assembly check and mapping with (*BOWTIE2*)[8https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
+| 10:00-12:00 | **Jenni Hultman**: [Assembly check and mapping with (*BOWTIE2*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
 | 12:00-14:00 | **Working with your data** and **lunch** |
 | 14:00-17:00 | **Antti Karkman and Jenni Hultman**: [Prepping files for Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
 
