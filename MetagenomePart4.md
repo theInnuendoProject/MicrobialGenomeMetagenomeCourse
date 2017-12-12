@@ -32,6 +32,8 @@ Here are a few definitions we came up with, so we can try to speak the same lang
 
 -**A split**: a section of a contig defined by length (for improved binning experience, we display multiple splits for very long contigs in the anvi'o interface).
 
+-**The working environment**: Path in the server where you have all anvi'o files related to this project (contains the file `MEGAHIT_2500nt_CONTIGS.db` and the folder `SAMPLES-MERGED` )
+
 So, we hope you are in a good mood to discover and characterize new genomes!
 
 Today, we are going to use these programs within the platform anvi'o:
@@ -154,7 +156,7 @@ Please close the windows of the interface, and kill the job in the terminal usin
 
 We offer two ways to aquire Tom's binning collection:
 
-1- **From Github**: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db)
+1- **From Github**: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working environment (reminder: this is the path where you have the CONTIGS.db)
 
 2- **Using wget with a dropbox link**: please run from your working environment:
 
