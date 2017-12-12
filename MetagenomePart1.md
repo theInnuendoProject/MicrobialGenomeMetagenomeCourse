@@ -138,7 +138,7 @@ module purge
 module load intel/16.0.0
 module load megahit
 ```
-module purge is needed to remove wrong Pyhton versions you might have loaded in earlier today.
+module purge is needed to remove wrong Python versions you might have loaded in earlier today.
 
 Assembling metagenomic data can be very resource demanding and we need to do it as a batch job. As we want to do both individual and co-assemblies the R1 and R2 reads need to be merged into two files with `cat`
 
