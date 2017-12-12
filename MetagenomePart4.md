@@ -81,7 +81,7 @@ There are currently two programs to invoke the interactive interface. We will fi
 Open a new ssh window. In mac:
 
 ```
-ssh -L 8080:localhost:8080 hultman@taito.csc.fi
+ssh -L 8080:localhost:8080 YOUR_USERNAME@taito.csc.fi
 ```
 
 in Windows with Putty:
@@ -92,7 +92,8 @@ Destination: localhost:8080
 
 Click add and log in to Taito as usual.
 
-Activate anvio
+Activate anvio virtual environemnt `source activate anvio3`  
+and go to the Anvi'o folder in the course folder at `$WRKDIR`.  
 
 ```
 anvi-interactive -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
@@ -156,7 +157,7 @@ Please close the windows of the interface, and kill the job in the terminal usin
 
 We offer two ways to aquire Tom's binning collection:
 
-1- **From Github**: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working environment (reminder: this is the path where you have the CONTIGS.db)
+1- **From Github**: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working environment (reminder: this is the path where you have the CONTIGS.db `$WRKDIR/BioInfo_course/Anvio`)
 
 2- **Using wget with a dropbox link**: please run from your working environment:
 
@@ -308,8 +309,15 @@ OK.
 
 Let's run CheckM from this directory now, and learn about the taxonomy of each MAG using this advanced tool:
 
-Antti?
+```
+# Deactivate the anvio environment
+source deactive anvio3
+# And activate the CheckM environment
+source activate checkm
 
+...checkM commands here...
+
+```
 
 Nice.
 
