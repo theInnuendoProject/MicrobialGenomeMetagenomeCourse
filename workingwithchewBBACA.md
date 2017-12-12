@@ -75,9 +75,11 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Strept
 
 ```
 # start a container with chewBBACA
-docker run -it -v ~/media/volume/mydata:/mydata/< mickaelsilva/chewbbaca bash
+docker run -it -v ~/media/volume/mydata:/mydata/ mickaelsilva/chewbbaca bash
 
-# When working in your own data:
+# go to your working folder
+cd /mydata/
+
 # make sure the genomes you will be using are on unix (assemblies made with innuca don't need this step)
 
 dos2unix /mydata/<my/genomes/folder/>*
@@ -100,16 +102,33 @@ find /data/test_chewbbaca/complete_genomes/* >listgenomes.txt
 find /data/test_chewbbaca/other_assemblies/* >>listgenomes.txt
 find /path/to/innuca/assemblies/*.fasta >>listgenomes.txt
  
-# open listgenomes.txt and check if there are 20 lines with full paths for each assembly. Press "q" to exit less after the check
+# open listgenomes.txt and check if thereis 1 line with full paths for each assembly (20 in total).Press "q" to exit less after the check
 less listgenomes.txt
  
 # use the created list of genomes to call the alleles 
 chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 -t "Streptococcus agalactiae"
 
-#when working with your own data
-chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 --ptf mytrainingFile.trn
-```
 
+```
+### Work assignment - Run an allele call using the created schema with YOUR samples and the genomes YOU have
+
+```
+# start a container with chewBBACA if you have exited the last one and cd to your data folder
+docker run -it -v ~/media/volume/mydata:/mydata/< mickaelsilva/chewbbaca bash
+cd /mydata/
+
+# create a file with full paths of the genomes you want to call alleles
+ 
+find /mydata/complete_genomes/* >listgenomes.txt
+find /mydata/my_other_assemblies/* >>listgenomes.txt
+ 
+# open listgenomes.txt and check if there is 1 line with full paths for each assembly. Press "q" to exit less after the check
+less listgenomes.txt
+
+# use the created list of genomes to call the alleles 
+chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 --ptf mytrainingFile.trn
+
+```
 
 ### Task 4 - test genome allele call quality
 ```
