@@ -93,7 +93,7 @@ Basically, **the interface allows you to manipulate various parameters**, zoom i
 
 Overwhelmed by the interface? Here is a brief explanation to help digest this new environment:
 
-![Alt Image Text](Interface-explanations.png "Interface-explanations.png")
+![alt text](Figure/Interface-explanations.png "Interface-explanations.png")
 
 We hope that by the end of the day all of you will be familiar with the interface.
 
@@ -103,7 +103,7 @@ We hope that by the end of the day all of you will be familiar with the interfac
 
 Here is what you should see:
 
-![Alt Image Text](Interface-RAW.png "Interface-RAW.png")
+[alt text](Figure/Interface-RAW.png "Interface-RAW.png")
 
 Here is the key part to remember: **the six grey layers correspond to the mean coverage values in the six metagenomes**. For each split, a black color means their is environmental signal. No black color means the split did not recruit any reads.
 
@@ -111,7 +111,7 @@ Here is the key part to remember: **the six grey layers correspond to the mean c
 
 Let's play with the different contig clustering options:
 
-![Alt Image Text](Interface-Clustering-splits.png "Interface-Clustering-splits.png")
+[alt text](Figure/Interface-Clustering-splits.png "Interface-Clustering-splits.png")
 
 It is important to understand what they are based on. This knowledge will be key for the manual binning, and curation of population genomes in downstream analyses.
 
@@ -133,7 +133,7 @@ To save some time, we will focus on a subset of the data (Tom has done the entir
 
 Please go to the "Bins" section of the interface and load the bin collection called `tom`. You should then see this after drawing the figure:
 
-![Alt Image Text](Interface-first-binning-step.png "Interface-first-binning-step.png")
+[alt text](Figure/Interface-first-binning-step.png "Interface-first-binning-step.png")
 
 These five bins exhibit different sizes and completion/redundancy values. For instance, the `Bin_01` is 8.69 Mpb with a completion of 100% and a redundancy of 171.9%. This bin is mostly detected in the sample `L4`, and slightly detected in the sample `L3`.
 
@@ -154,7 +154,7 @@ anvi-refine -c co-assembly.db  -p SAMPLES-MERGED/PROFILE.db -C tom -b Bin_01
 Which should load this figure:
 
 
-![Alt Image Text](Interface-refining-Bin_01.png "Interface-refining-Bin_01.png")
+[alt text](Figure/Interface-refining-Bin_01.png "Interface-refining-Bin_01.png")
 
 It is actually a good example. Let's refine it together.
 
@@ -216,11 +216,11 @@ Tom got seven bacterial population genomes. What did you get?
 
 Here is the end product for Tom:
 
-![Alt Image Text](Summary_only_MAGs_FINAL.png "Summary_only_MAGs_FINAL.png")
+[alt text](Figure/Summary_only_MAGs_FINAL.png "Summary_only_MAGs_FINAL.png")
 
 And this is the perspective of these MAGs in the interface:
 
-![Alt Image Text](Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
+[alt text](Figure/Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
 
 PS: if you want, you can go to the "Bins" section and load the collection called "tom_only_MAGs_FINAL", then draw to refresh the display.
 
