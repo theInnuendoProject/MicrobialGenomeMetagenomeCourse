@@ -17,13 +17,18 @@ mkdir trimmed_data
 Download the metagenomic data (takes few minutes)  
 ```
 cd raw_data
-*detailes given on Wed*
-tar -xzvf course_metagenomes.tar.gz
+/wrk/antkark/shared/course_metagenomes.tar.gz
 ```
+
 The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5 um for the file you downloaded matches by typing
+
 ```
 md5sum filename
+
+tar -xzvf course_metagenomes.tar.gz
 ```
+
+The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5 um for the file you downloaded matches by typing
 
 Make a file containing the sample names to be used later in bash scripts.  
  `ls *.fastq.gz |awk -F "-" '{print $2}'|uniq > ../sample_names.txt`  
