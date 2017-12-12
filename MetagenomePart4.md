@@ -62,6 +62,14 @@ As you may remember, we have already done all of this:
 
 -Creating PROFILE databases from the recruited reads, and merging them into a single PROFILE database
 
+In case someone is missing some of the setps, this command will allow you to download the entire directory of anvi'o files for this project (this is a back-up for the workshop, but also a good starting point for someone that just wants to practice binning with anvi'o):
+
+```
+wget https://www.dropbox.com/s/xusxf63iykiewbs/00_MEGAHIT-Binning-v3.zip?dl=0
+mv 00_MEGAHIT-Binning-v3.zip?dl=0 00_MEGAHIT-Binning-v3.zip?dl=0
+unzip 00_MEGAHIT-Binning-v3.zip?dl=0
+```
+
 Well, I think that's it, right? **Now it is time for the fun part of visualizing and manipulating raw genome-resolved metagenomic results using the anvi'o interactive interface**.
 
 ## 02- Describing the interface
