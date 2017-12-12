@@ -17,7 +17,7 @@
 | Time | Description |
 | --- | --- |
 | 09:00-10:00 | **Tom Delmont**: Introduction to Anvio **NB. Room 2041 Biocenter 2 AND coffee and pulla** |
-| 10:30-12:00 | **Tom Delmont**: Metagenome visualization in Anvio (*ANVIO*) |
+| 10:30-12:00 | **Tom Delmont**: [Metagenome visualization in Anvio (*ANVIO*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart4.md) |
 | 12:00-13:00 | **Working with your data** and **lunch** |
-| 13:00-16:00 | **Tom Delmont**: Construction of MAGs with Anvio |
+| 13:00-16:00 | **Tom Delmont**: [Construction of MAGs with Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart4.md) |
 | 16:00-17:00 | **Jenni Hultman**: Wrapping up |
