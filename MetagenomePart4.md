@@ -190,7 +190,7 @@ anvi-refine -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_
 Which should load this figure:
 
 
-[alt text](Figure/Interface-refining-Bin_01.png "Interface-refining-Bin_01.png")
+![alt text](Figure/Interface-refining-Bin_01.png "Interface-refining-Bin_01.png")
 
 It is actually a good example. Let's refine it together.
 
