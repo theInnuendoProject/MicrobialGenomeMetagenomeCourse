@@ -146,9 +146,9 @@ Please close the windows of the interface, and kill the job in the terminal usin
 
 We offer two ways to aquire Tom's binning collection:
 
-1- From Github: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db)
+1- **From Github**: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db)
 
-2- Using wget with a dropbox link: please (1) run `wget https://www.dropbox.com/s/9fc5lsj3vk1ds2v/collection-TOM_5_BINS.txt?dl=0` from your working environment, (2) and run `mv collection-TOM_5_BINS.txt?dl=0 collection-TOM_5_BINS.txt` to create the file `collection-TOM_5_BINS.txt`.
+2- **Using wget with a dropbox link**: please (1) run `wget https://www.dropbox.com/s/9fc5lsj3vk1ds2v/collection-TOM_5_BINS.txt?dl=0` from your working environment, (2) and run `mv collection-TOM_5_BINS.txt?dl=0 collection-TOM_5_BINS.txt` to create the file `collection-TOM_5_BINS.txt`.
 
 Either way, you can then import this information into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface:
 
