@@ -195,3 +195,9 @@ prodigal -i assembly.fasta -t tfName.trn -p single
 chewBBACA.py CreateSchema -i genomes/ -o schema_seed --cpu 6 --ptf tfName.trn
 
 ```
+
+### Extra - get information about each locus
+```
+uniprot_find.py -i schema_seed/ -t proteinID_Genome.tsv
+#creates a file new_protids.tsv with the information per locus and respective name on uniprot and a link to the sequence
+```
