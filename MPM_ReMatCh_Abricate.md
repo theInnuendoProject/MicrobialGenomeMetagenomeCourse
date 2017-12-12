@@ -233,6 +233,14 @@ More informations:
 * [Using subcommands and other things](http://www.compciv.org/topics/bash/variables-and-substitution/ "Google search: bash subcommand example")
 * Create symbolic links: `ln --help` or `man ln` and [here](https://www.cyberciti.biz/faq/unix-creating-symbolic-link-ln-command/ "Google search: linux symbolic link")
 
+```bash
+for fastq in $(ls /media/volume/mydata/Fastqfiles/*.fq.gz); do \
+   mkdir /media/volume/typing/staphylococcus_aureus/rematch_ARgenes_localSamples/$(basename $fastq | cut -d "_" -f 1); \
+   ln -s $fastq /media/volume/typing/staphylococcus_aureus/rematch_ARgenes_localSamples/$(basename $fastq | cut -d "_" -f 1)/$(basename $fastq); \
+done
+```
+
+
 ### Using _de novo_ assembly
 
 Typing with Abricate using Resfinder DB (the one previously updated)
