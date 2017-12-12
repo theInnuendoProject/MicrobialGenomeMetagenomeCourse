@@ -261,21 +261,21 @@ And this is the perspective of these MAGs in the interface:
 
 ![alt text](Figure/Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
 
-We should discuss why contigs from each MAG are not next to each other. This is a key advantage of the manual binning, and explains well why automatic binning as it is developpeed today is noy working well (Tom's opinion, at least).
+We should discuss why contigs from each MAG are not next to each other. This is a key advantage of the manual binning, and explains well why automatic binning as it is developped today is noy working well (Tom's opinion, at least).
 
-PS: if you want, you can download the collection called `collection-TOM_only_MAGs_FINAL.txt` on the Github, import it into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface.
+PS: if you want, you can download the collection called `collection-TOM_only_MAGs_FINAL.txt` on the Github, import it into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface. Alternatively you can use `wget https://www.dropbox.com/s/k4b3acezmdlh30j/collection-TOM_only_MAGs_FINAL.txt?dl=0` and `mv collection-TOM_only_MAGs_FINAL.txt?dl=0 collection-TOM_only_MAGs_FINAL.txt`.
 
 ## 10- Exploring the summary output
 
 Anvi'o produced a fast file for each MAG, along with various parameters regarding notably their environmental detection:
 
-Here are values for each MAG that I find particularly useful:
+Here are values for each MAG that are particularly useful:
 
--Mean coverage across metagenomes
+-Mean coverage across metagenomes (how abundant a MAG is in a given metagenome)
 -Detection across genomes (percentage of the nucleotides covered by the recruited reads)
--Table of genes and identified functions (very useful when you have metatranscriptomes!)
+-Table of genes and identified functions (tip: very useful when you have metatranscriptomes!)
 -All identified rRNAs (do we have a 16S rRNA gene?)
 
 ## 11- What do we do with these genomes? The case of E. coli using tools introduced in the first days of the workshop
 
-To do.
+So many things :)
