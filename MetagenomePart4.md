@@ -50,15 +50,15 @@ Ok.
 
 As you may remember, we have already done all of this:
 
--Assembling six metagenomes corresponding to the gut of two species
+-Co-assembling six metagenomes corresponding to the gut of two species
 
 -Creating a CONTIGS database to make sense of the assembly output (find genes, get GC-content and tetra-nucleotide frequency of contigs)
 
--Searching for single copy-core genes, and running COGs for functions
+-Searching for single copy-core genes, and running COGs for functions / CARD for antibiotic resistance genes
 
 -Exporting genes stored in the CONTIGS database, determining their taxonomy and importing the results into the CONTIGS database
 
--Recruiting short reads from each metagenome using the assembly output
+-Recruiting short reads from each metagenome using the co-assembly output
 
 -Creating PROFILE databases from the recruited reads, and merging them into a single PROFILE database
 
@@ -66,7 +66,7 @@ Well, I think that's it, right? **Now it is time for the fun part of visualizing
 
 ## 02- Describing the interface
 
-There are currently two programs to invoke the interactive interface. We will first use the most common one: `anvi-interactive`
+There are currently two programs to invoke the interactive interface. We will first use this one: `anvi-interactive`. It basically will let you combine and visualize all the data stored in your CONTIGS and PROFILE databases.
 
 Open a new ssh window. In mac:
 
@@ -114,9 +114,9 @@ Here is what you should see:
 
 Here is the key part to remember: **the six grey layers correspond to the mean coverage values in the six metagenomes**. For each split, a black color means their is environmental signal. No black color means the split did not recruit any reads.
 
-To do:
+In addition to the main display, there is a second layer of information describing high-resolution coverage values of contigs across metagenomes. To see it, please put your mouse on a split in the display, and right click to select the `inspection` mode, which should open a new window. Let's do it for a few splits, and discuss the observations.
 
-Inspection
+Nice.
 
 ## 05- Manipulating the inner tree
 
@@ -142,11 +142,15 @@ The game is to find as many bins with high completion value, and low redundancy 
 
 To save some time, we will focus on a subset of the data (Tom has done the entire binning and found out that other parts did not allow the recovery of population genomes. That being said, anyone is welcome to perform the entire binning another day!).
 
-Please close the windows of the interface, and kill the job in the terminal using `control + c`. Then, you are going to (1) download the collection called `collection-TOM_5_BINS.txt` from the Github and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db), (2) import it into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface.
+Please close the windows of the interface, and kill the job in the terminal using `control + c`. 
 
-Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
+We offer two ways to aquire Tom's binning collection:
 
-Here is the command line for importing the collection:
+1- From Github: Please (1) download the collection called `collection-TOM_5_BINS.txt` from the Github (https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/tree/master/ANVIO_COLLECTIONS) and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db)
+
+2- Using wget with a dropbox link: please (1) run `wget https://www.dropbox.com/s/9fc5lsj3vk1ds2v/collection-TOM_5_BINS.txt?dl=0` from your working environment, (2) and run `mv collection-TOM_5_BINS.txt?dl=0 collection-TOM_5_BINS.txt` to create the file `collection-TOM_5_BINS.txt`.
+
+Either way, you can then import this information into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface:
 
 ```
 anvi-import-collection -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS collection-TOM_5_BINS.txt```
@@ -161,6 +165,8 @@ anvi-interactive -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --ser
 And go to the "Bins" section of the interface to load the bin collection called `TOM_5_BINS`. You should then see this after drawing the figure:
 
 ![alt text](Figure/Interface-first-binning-step.png "Interface-first-binning-step.png")
+
+Note: Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
 
 Ok.
 
