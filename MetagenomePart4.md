@@ -295,4 +295,27 @@ Here are values for each MAG that are particularly useful:
 
 ## 11- What do we do with these genomes? The case of E. coli using tools introduced in the first days of the workshop
 
-Taxonomy using CHeckM
+Let's create a new directory called `Population_genomes` and copy the MAGs there:
+
+```
+mkdir Population_genomes
+cp SUMMARY_MAGs_FINAL/bin_by_bin/*/*MAG*.fa Population_genomes
+cd Population_genomes/
+ls
+```
+
+OK.
+
+Let's run CheckM from this directory now, and learn about the taxonomy of each MAG using this advanced tool:
+
+Antti?
+
+
+Nice.
+
+Perspectives:
+
+Combining taxonomy, phylogeny and functions, like here:
+
+![alt text](Figure/Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
+
