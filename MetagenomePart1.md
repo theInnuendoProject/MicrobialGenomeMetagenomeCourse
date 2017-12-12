@@ -98,7 +98,7 @@ module load biokit
 cd $WRKDIR/BioInfo_course/raw_data
 bash ../scripts/cutadapt.sh ../sample_names.txt
 ```
-After it is done, we can submit it to the SLURM system. Do it form the main folder, so go one step back in your folders.  
+After it is done, we can submit it to the SLURM system. Do it from the course main folder, so go one step back in your folders.  
 
 `sbatch scripts/cut_batch.sh`  
 
