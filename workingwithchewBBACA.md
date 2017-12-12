@@ -98,7 +98,7 @@ chewBBACA.py CreateSchema -i /mydata/complete_genomes/ -o schema_seed --cpu 6 --
  
 find /data/test_chewbbaca/complete_genomes/* >listgenomes.txt
 find /data/test_chewbbaca/other_assemblies/* >>listgenomes.txt
-find </path/to/innuca/assemblies/*.fasta> >>listgenomes.txt
+find /path/to/innuca/assemblies/*.fasta >>listgenomes.txt
  
 # open listgenomes.txt and check if there are 20 lines with full paths for each assembly. Press "q" to exit less after the check
 less listgenomes.txt
