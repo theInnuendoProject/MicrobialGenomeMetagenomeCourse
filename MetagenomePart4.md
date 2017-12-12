@@ -64,7 +64,7 @@ As you may remember, we have already done all of this:
 
 -Creating PROFILE databases from the recruited reads, and merging them into a single PROFILE database
 
-In case someone is missing some of the setps, this command will allow you to download the entire directory of anvi'o files for this project (this is a back-up for the workshop, but also a good starting point for someone that just wants to practice binning with anvi'o):
+In case someone is missing some of the steps, this command will allow you to download the entire directory of anvi'o files for this project (this is a back-up for the workshop, but also a good starting point for someone that just wants to practice binning with anvi'o):
 
 ```
 wget https://www.dropbox.com/s/xusxf63iykiewbs/00_MEGAHIT-Binning-v3.zip?dl=0
