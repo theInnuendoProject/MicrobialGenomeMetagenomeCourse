@@ -126,6 +126,8 @@ Next we annotate genes in  contigs database with functions from the NCBI’s Clu
 ```
 anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 6
 ```
+# If mapping is done (squeue -u "yourusername") detach "Anvio" screen and open a new screen titled profiling (screen -S profiling).
+
 ## Export GENES
 With this command we export the genecalls from Prodigal to gene-calls.fa and do taxonomic annotation against centrifuge database you installed on Wednesday
 
