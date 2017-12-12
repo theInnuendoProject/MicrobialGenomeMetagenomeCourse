@@ -136,7 +136,7 @@ Note: as a strategy, the anvi'o developers decided to trust the assembly, so spl
 
 ## 06- Binning the co-asssembly output (from individual contigs to bins) 
 
-We are going to zoom in and out, and use the mouse to make selection of clusters of splits, using the clustering based on `differential coverage` and `sequence composition`.
+We are going to zoom in and out, and use the mouse to make selections of split clusters, using the clustering based on `differential coverage` and `sequence composition`.
 
 The game is to find as many bins with high completion value, and low redundancy value. 
 
