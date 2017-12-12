@@ -70,6 +70,13 @@ cd /data/test_chewbbaca/
 # run chewBBACA to create the schema using the complete genomes
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Streptococcus agalactiae"
 
+# when working with your own data:
+# create your own training file based on reference genome
+Prodigal -i reference_genome.fasta -t mytrainingFile.trn -p single
+
+#run the schema creation with your specific training file
+chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 6 --ptf mytrainingFile.trn
+
 
 ```
 ### Task 3 - Run an allele call using the created schema and the genomes available
@@ -87,6 +94,9 @@ less listgenomes.txt
  
 # use the created list of genomes to call the alleles 
 chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 -t "Streptococcus agalactiae"
+
+#when working with your own data
+chewBBACA.py AlleleCall -i listgenomes.txt -g schema_seed/ -o results --cpu 8 --ptf mytrainingFile.trn
 ```
 
 
