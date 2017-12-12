@@ -1,7 +1,10 @@
 *Antti Karkman and Jenni Hultman*
 
 # Metagenome analysis of bird feces dataset
-Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
+Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows) 
+
+# All the scripts are to be run in BioInfo_course folder!
+
 # Data download
 First set up the course directory, make some folders and then download the data.  
 Move to work directory at CSC and make a course directory there. Or a subfolder under a previous course folder.  
