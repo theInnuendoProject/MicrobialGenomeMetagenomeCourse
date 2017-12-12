@@ -206,8 +206,7 @@ mkdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_loca
 #### Create symbolic links to sample's reads inside newly created sample's directory
 for sample_dir in $(ls -d ~/reads/streptococcus_agalactiae_example/*/); do
   mkdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)
-  ln -s $(ls ${sample_dir}*_1.fq.gz) /media/volume/
-  typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
+  ln -s $(ls ${sample_dir}*_1.fq.gz) /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
   ln -s $(ls ${sample_dir}*_2.fq.gz) /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
 done
 
