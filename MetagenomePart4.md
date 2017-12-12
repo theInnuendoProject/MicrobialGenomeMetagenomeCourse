@@ -15,10 +15,9 @@ note: fungi show example of the intent gut
 
 This tutorial describes a way to extract and curate population genomes from millions of short metagenomic reads using a methodology called "genome-resolved metagenomics", or simply "binning".
 
-This approach has led to major discoveries in the fiels of evolutionary biology and microbial ecology. Here are a few examples:
+This approach has led to major discoveries in the fiels of evolutionary biology and microbial ecology. Here are two examples:
 
-
-
+![alt text](Figure/FIGURE_GENOME_RESOLVED_METAG.png "Genome-resolved metagenomics")
 
 Here are a few definitions we came up with, so we can try to speak the same language today:
 
