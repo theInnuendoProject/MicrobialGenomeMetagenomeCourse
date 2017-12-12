@@ -34,7 +34,7 @@ Here are a few definitions we came up with, so we can try to speak the same lang
 
 So, we hope you are in a good mood to discover and characterize new genomes!
 
-Today, we are going to use these prorgams within the platform anvi'o:
+Today, we are going to use these programs within the platform anvi'o:
 
 `anvi-interactive`
 `anvi-import-collection`
