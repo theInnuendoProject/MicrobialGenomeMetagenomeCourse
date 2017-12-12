@@ -29,4 +29,4 @@
 | 10:45-11:00 | *break* - Note: the coffee break is not included in the course |
 | 11:00-11:30 | **Mirko Rossi**: [Working in group instruction, part 2](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workinggroup2.md)|
 | 11:30-12:30 | **Working with your data** and **lunch** |
-| 12:30-14:30 | **Bruno Gonçalves**: Integrating phylogenetic inference and metadata visualization for NGS data |
+| 12:30-14:30 | **Bruno Gonçalves**: [Integrating phylogenetic inference and metadata visualization for NGS data](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/workingwithPhylovizOnline.md) |
