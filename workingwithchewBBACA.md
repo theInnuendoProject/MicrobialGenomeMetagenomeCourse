@@ -80,7 +80,7 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Strept
 dos2unix my/genomes/folder/*
 
 # create your own training file based on the reference genome you want
-Prodigal -i reference_genome.fasta -t mytrainingFile.trn -p single
+prodigal -i reference_genome.fasta -t mytrainingFile.trn -p single
 
 #run the schema creation with your specific training file
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 6 --ptf mytrainingFile.trn
@@ -163,7 +163,7 @@ zip -r myschemaEval.zip testcq
 
 ### Extra - create prodigal training file
 ```
-Prodigal -i assembly.fasta -t tfName.trn -p single
+prodigal -i assembly.fasta -t tfName.trn -p single
 
 ```
 
