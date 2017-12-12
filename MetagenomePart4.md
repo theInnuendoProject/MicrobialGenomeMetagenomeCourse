@@ -18,7 +18,7 @@ Here are a few definitions we came up with, so we can try to speak the same lang
 
 -**A microbial species**: Is this a real thing?
 
--**A microbial population**: set of microbial cells sharing most of their genomic content due to a very close evolutionary ancestor. 
+-**A microbial population**: pool of microbial cells sharing most of their genomic content due to a very close evolutionary history (close ancestor in the tree of life). 
 
 -**A metagenome**: sequencing data corresponding to more than one genome. 
 
