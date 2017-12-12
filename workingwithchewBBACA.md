@@ -70,7 +70,11 @@ cd /data/test_chewbbaca/
 # run chewBBACA to create the schema using the complete genomes
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Streptococcus agalactiae"
 
-# when working with your own data:
+```
+### Work assignment - Create a schema based on YOUR downloaded complete genomes
+
+```
+# When working in your own data:
 # make sure the genomes you will be using are on unix (assemblies made with innuca don't need this step)
 
 dos2unix my/genomes/folder/*
