@@ -66,8 +66,8 @@ In case someone is missing some of the setps, this command will allow you to dow
 
 ```
 wget https://www.dropbox.com/s/xusxf63iykiewbs/00_MEGAHIT-Binning-v3.zip?dl=0
-mv 00_MEGAHIT-Binning-v3.zip?dl=0 00_MEGAHIT-Binning-v3.zip?dl=0
-unzip 00_MEGAHIT-Binning-v3.zip?dl=0
+mv 00_MEGAHIT-Binning-v3.zip?dl=0 00_MEGAHIT-Binning-v3.zip
+unzip 00_MEGAHIT-Binning-v3.zip
 ```
 
 Well, I think that's it, right? **Now it is time for the fun part of visualizing and manipulating raw genome-resolved metagenomic results using the anvi'o interactive interface**.
