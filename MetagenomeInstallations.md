@@ -4,7 +4,12 @@
 # Installations
 Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)  
 
-**FastQC & MultiQC**  
+Open a screen for the installations. 
+```
+screen -S installations
+```
+
+**FastQC & MultiQC**  
 Two programs for sequence data quality control. Both will be installed using Bioconda package management tool that can be found from CSC.  
 When using Bioconda at CSC, everything needs to be installed in virtual enviroments. You can create the virtual environment called `QC_env` and install the packages with one command.  
 ```
@@ -13,9 +18,13 @@ conda create -n QC_env multiqc fastqc
 ```
 
 The environment can be activate with the command `source activate QC_env`. And deactivated with `source deactivate`.  
-For now, just create the environenment, we will need it soon.
+For now, just create the environment, we will need it soon.
+
+Detach from the installations screen with `Ctrl a + d`.  
 
 **_STOP HERE AND GO TO THE QC & TRIMMING PART_**
+
+Go back to the installations screen with `screen -r installations`.  
 
 **Anvi'o**  
 Create a virtual environment for Anvi'o and install all dependencies using Bioconda. (takes 5–10 min)  
