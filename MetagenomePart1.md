@@ -5,7 +5,7 @@ Log into Taito, either with ssh (Mac/Linux) or PuTTy (Windows)
 
 # All the scripts are to be run in BioInfo_course folder!
 
-# Data download
+## Data download
 First set up the course directory, make some folders and then download the data.  
 Move to work directory at CSC and make a course directory there. Or a subfolder under a previous course folder.  
 ```
@@ -36,7 +36,7 @@ The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5
 Make a file containing the sample names to be used later in bash scripts.  
  `ls *.fastq.gz |awk -F "-" '{print $2}'|uniq > ../sample_names.txt`  
 
-# QC and trimming
+## QC and trimming
 QC for the raw data (takes few min, depending on the allocation).  
 Go to the folder that contains the raw data, load the biokit module and make a folder called e.g. `FASTQC` for the QC reports.  
 Then run the QC for the raw data and combine the results to one report using `multiqc`.  
@@ -130,7 +130,7 @@ exit
 
 Copy it to your local machine as earlier and look how well the trimming went.  
 
-# Assembly
+## Assembly
 Let's assemble first one seagull sample and one goose sample an then all six samples together (co-assembly). We will use tool Megahit for the assembly https://github.com/voutcn/megahit. Megahit is an ultra fast assembly tool for metagenomics data. It is installed to CSC and be loaded with following commands:
 
 ```
@@ -175,7 +175,7 @@ metaquast.py -t $SLURM_CPUS_PER_TASK --no-plots -o assembly_QC final.contigs.fa
 ```
 Submit the batch job as previously
 
-# Taxonomic profiling with Metaxa2
+## Taxonomic profiling with Metaxa2
 The microbial community profiling for the samples will be done using a 16S/18S rRNA gene based classification software [Metaxa2](http://microbiology.se/software/metaxa2/).  
 It identifies the 16S/18S rRNA genes from the short reads using HMM models and then annotates them using BLAST and a reference database.
 We will run Metaxa2 as an array job in Taito. More about array jobs at CSC [here](https://research.csc.fi/taito-array-jobs).  
