@@ -111,6 +111,10 @@ _In the VM_
 ```bash
 # Create folder to store typing results
 mkdir ~/typing
+mkdir ~/typing/<your_species_name>
+
+# Create a folder for Streptococcus agalactiae example
+mkdir ~/typing/streptococcus_agalactiae_example
 ```
 
 ### Using reads
@@ -128,7 +132,7 @@ _In the VM_
 screen -S rematch_mlst_Bb
 
 rematch.py \
-    --workdir ~/typing/rematch_mlst_Bb/ \
+    --workdir ~/typing/rematch_mlst_Bb_example/ \
     --mlst "Bartonella bacilliformis" \
     --mlstReference \
     --doubleRun \
@@ -159,7 +163,7 @@ _In the VM_
 screen -S rematch_ARgenes_download
 
 rematch.py \
-    --workdir ~/typing/rematch_ARgenes_download/ \
+    --workdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_download/ \
     --reference ~/DBs/resfinder_db/resfinder_db.fasta \
     --reportSequenceCoverage \
     --notWriteConsensus \
@@ -182,7 +186,7 @@ Using already downloaded reads data
 
 ```bash
 # Create a ReMatCh working directory
-mkdir ~/typing/rematch_ARgenes_localSamples
+mkdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples
 
 # Set ReMatCh working directory
 ## Using a bash for-loop for that
@@ -191,10 +195,10 @@ mkdir ~/typing/rematch_ARgenes_localSamples
 #### Create sample directory by obtaining only last directory name instead of directory path using basename
 #### Create symbolic links to sample's reads inside newly created sample's directory
 for sample_dir in $(ls -d ~/reads/streptococcus_agalactiae_example/*/); do
-  mkdir ~/typing/rematch_ARgenes_localSamples/$(basename $sample_dir)
+  mkdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)
   ln -s $(ls ${sample_dir}*_1.fq.gz) ~/
-  typing/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
-  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
+  typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
+  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
 done
 
 # ReMatCh command example
@@ -202,7 +206,7 @@ done
 # Added fake option to avoid ReMatCh to run
 # Don't forget use screen
 rematch.py \
-    --workdir ~/typing/rematch_ARgenes_localSamples/ \
+    --workdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/ \
     --reference ~/DBs/resfinder_db/resfinder_db.fasta \
     --reportSequenceCoverage \
     --notWriteConsensus \
@@ -229,7 +233,7 @@ _In the VM_
 
 ```bash
 # Create folder to store Abricate outputs
-mkdir ~/typing/abricate
+mkdir ~/typing/streptococcus_agalactiae_example/abricate
 
 # Run Abricate for each sample
 ## List all produced assemblies and pass to parallel
@@ -238,15 +242,15 @@ mkdir ~/typing/abricate
 ### Redirect the Abricate output to a file named as the assembly but without the extension (using {/.})
 ### Note that the redirection should be done using filesystem paths outside the container
 ls ~/genomes/streptococcus_agalactiae_example/all_assemblies/* | \
-      parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > ~/typing/abricate/{/.}.abricate_out.tab'
+      parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > ~/typing/streptococcus_agalactiae_example/abricate/{/.}.abricate_out.tab'
 
 # Summarize all Abricate results into a single file
 ## With Docker, when using * to refer multiple files, the paths obtained refer to the filesystem outside the container
 ## Therefore, a shell script file is created containing the command to be run inside the container
 ## Note that the command inside the shell script only contains paths refering to mapped folder /data/
-echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > ~/typing/abricate/abricate_commands.sh
+echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > ~/typing/streptococcus_agalactiae_example/abricate/abricate_commands.sh
 ## Run the summary Abricate command
-docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
+docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/streptococcus_agalactiae_example/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
       sh /data/abricate_commands.sh
 ```
 More informations on what TTY is [here](https://askubuntu.com/questions/481906/what-does-tty-stand-for "Google search: tty device")
