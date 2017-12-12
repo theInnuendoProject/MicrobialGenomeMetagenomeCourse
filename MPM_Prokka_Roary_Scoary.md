@@ -1,4 +1,4 @@
-# Annotation (_PROKKA_), pangenome anaylysis (_ROARY_) and GWAS (_SCOARY_)
+#  Annotation with Prokka and intro of Roary
 
 ---
 
@@ -6,10 +6,8 @@
   * [_Bacterial Genomics_](./Genomics.md)
     * [_Prepare the Virtual Machine_](./MPM_starting_VM.md)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
-    * In silico _typing using ReMatCh and Abricate_
-    * [_Annotation (_PROKKA_), pangenome anaylysis (_ROARY_) and GWAS (_SCOARY_)_](./MPM_Prokka_Roary_Scoary.md)
-      1. [_Get DB of antimicrobial resistance genes_](./MPM_ReMatCh_Abricate.md#get-db-of-antimicrobial-resistance-genes)
-      2. [_Typing samples_](./MPM_ReMatCh_Abricate.md#typing-samples)
+    * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
+    * _ Annotation with Prokka and intro of Roary_
 
 ---
 

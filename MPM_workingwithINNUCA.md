@@ -11,7 +11,8 @@
       3. [_Organize assemblies_](./MPM_workingwithINNUCA.md#organize-assemblies)
       4. [_Remove INNUca image_](./MPM_workingwithINNUCA.md#remove-innuca-image)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
-Removig INNUca image
+    * [_ Annotation with Prokka and intro of Roary_](./MPM_Prokka_Roary_Scoary.md)
+
 ---
 
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in _"Organize the data"_ `<your_species_name>`, write the species name you selected (something like `campylobacter_jejuni`).  

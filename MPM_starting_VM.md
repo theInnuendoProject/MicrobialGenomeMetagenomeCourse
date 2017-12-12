@@ -10,6 +10,7 @@
       3. [_Prepare the VM_](./MPM_starting_VM.md#prepare-the-vm)
     * [_From reads to assembly: working with INNUca pipeline_](./MPM_workingwithINNUCA.md)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
+    * [_ Annotation with Prokka and intro of Roary_](./MPM_Prokka_Roary_Scoary.md)
 
 ---
 
