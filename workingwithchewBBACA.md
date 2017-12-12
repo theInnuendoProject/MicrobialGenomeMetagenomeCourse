@@ -145,7 +145,7 @@ chewBBACA.py TestGenomeQuality -i results/<results_20171207T150515>/results_alle
 
 chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.tsv -o my_cgMLST -r results/<results_20171207T150515>/RepeatedLoci.txt -p 0.95
 
-# download cgMLST_all/cgMLST.tsv to your computer and use it later for phyloviz
+# download my_cgMLST/cgMLST.tsv to your computer and use it later for phyloviz
 
 #create a metadata file on your computer
 FILE	species	ST	contigs
