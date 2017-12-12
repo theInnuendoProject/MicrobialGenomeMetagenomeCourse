@@ -9,8 +9,9 @@
       1. [_Get genomic data_](./MPM_workingwithINNUCA.md#get-genomic-data)
       2. [_Assembly HTS data_](./MPM_workingwithINNUCA.md#assembly-hts-data)
       3. [_Organize assemblies_](./MPM_workingwithINNUCA.md#organize-assemblies)
+      4. [_Remove INNUca image_](./MPM_workingwithINNUCA.md#remove-innuca-image)
     * [In silico _typing using ReMatCh and Abricate_](./MPM_ReMatCh_Abricate.md)
-
+Removig INNUca image
 ---
 
 **Note 1:** replace whatever is between `<>` with the proper value. For example, in _"Organize the data"_ `<your_species_name>`, write the species name you selected (something like `campylobacter_jejuni`).  
@@ -235,3 +236,18 @@ sed 1d ~/genomes/streptococcus_agalactiae_example/innuca/combine_samples_reports
 ```
 * For more information about finding patterns: `grep --help` or `man grep`, and [here](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/ "Google search: linux grep")
 * More information about using parallel: [introduction and bioinformatics examples](https://www.biostars.org/p/63816/); [manual](https://www.gnu.org/software/parallel/man.html); [tutorial](https://www.gnu.org/software/parallel/parallel_tutorial.html)
+
+## Remove INNUca image
+
+To avoid VM space problems during the course, unused Docker images will be removed
+
+_In the VM_  
+
+```bash
+# List Docker images
+docker images
+# Remove INNuca image
+# Find the INNUca image line starting with ummidock/innuca
+# Get the Image ID, something like 1f467865b7f3
+docker rmi <INNUca_Image_ID>
+```

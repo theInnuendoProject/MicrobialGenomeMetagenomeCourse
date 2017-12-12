@@ -25,7 +25,7 @@ The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [
 _In your computer_
 
   * **Note:** The SSH key was produced in Linux using `ssh-keygen -t rsa -f /home/cloud-user/mgmc.key`. More information [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2 "Google search: ssh key linux").
-  
+
 The key for both Unix (mgmc.key) and Windows (mgmc.ppk) users is available for [download](https://www.dropbox.com/sh/vk9mup9wqh9d2y5/AAAQjLoLxBSgRWkAT6-YoocWa?dl=0); *the password for accessing the Dropbox directory will be available during the course*.
 
 ### Unix
@@ -45,9 +45,9 @@ Using [PuTTY](http://www.putty.org/)
   * **Note 1:** use `putty.exe` and `puttygen.exe` from _"Alternative binary files"_ ([Download PuTTY](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys "Google search: use ssh key in putty"))
   * **Note 2:** to paste text in PuTTY click on mouse right botton inside PuTTY terminal
 
-For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections) 
+For information on how to use SSH Keys with PuTTY see [here](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/ "Google search: use ssh key in putty") (specifically [_"Use Existing Public and Private Keys"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#use-existing-public-and-private-keys) and [_"Connect to Server with Private Key"_](https://devops.profitbricks.com/tutorials/use-ssh-keys-with-putty-on-windows/#connect-to-server-with-private-key) sections)
 
-Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the key.ppk in *Private key file for authentication*, then follow the instructions below 
+Briefly: open PuTTY; on the right pannel *Connection > SSH > Auth* upload the key.ppk in *Private key file for authentication*, then follow the instructions below
 
 **Connection settings (after preparing PuTTY to use SSH key):**  
 
@@ -105,12 +105,21 @@ sudo apt-get install -y htop parallel
 
 _In the VM_  
 
+Give right permissions and ownership to the extra volume
+
+```bash
+sudo chmod 755 /media/volume/
+sudo chown cloud-user:cloud-user /media/volume/
+```
+
+Prepare some folders
+
 ```bash
 # Create a folder where all the tools to be used will be placed
 mkdir ~/NGStools
 
 # Create a folder to store different databases
-mkdir ~/DBs
+mkdir /media/volume/DBs
 ```
 
 ### Install Docker

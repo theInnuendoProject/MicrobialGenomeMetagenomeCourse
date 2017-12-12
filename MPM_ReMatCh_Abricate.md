@@ -9,6 +9,7 @@
     * In silico _typing using ReMatCh and Abricate_
       1. [_Get DB of antimicrobial resistance genes_](./MPM_ReMatCh_Abricate.md#get-db-of-antimicrobial-resistance-genes)
       2. [_Typing samples_](./MPM_ReMatCh_Abricate.md#typing-samples)
+      4. [_Remove image_](./MPM_workingwithINNUCA.md#remove-image)
 
 ---
 
@@ -44,12 +45,12 @@ Althoug ResFinder is a curated database, small details impair a simple concatena
 ```bash
 # Get ResFinder DB
 git clone https://bitbucket.org/genomicepidemiology/resfinder_db.git
-mv resfinder_db/ ~/DBs/
+mv resfinder_db/ /media/volume/DBs/
 
 # Create a single file containing the sequences of genes confering resistance to all antibiotic classes together
 ## Make sure all files end with a newline to avoid concatening two sequences together
 mkdir temp_concat_resfinder
-ls ~/DBs/resfinder_db/*.fsa | parallel --jobs 8 'cp {} temp_concat_resfinder/; echo "" >> temp_concat_resfinder/{/}'
+ls /media/volume/DBs/resfinder_db/*.fsa | parallel --jobs 8 'cp {} temp_concat_resfinder/; echo "" >> temp_concat_resfinder/{/}'
 ## Correct several details
 ### Concatenate all files
 ### Convert DOS to UNIX newlines special chracters
@@ -67,7 +68,7 @@ cat temp_concat_resfinder/*.fsa | \
        parallel --jobs 1 --pipe -N 1 --recstart '>' 'cat | { seq=$(cat); header=$(echo "$seq" | grep ">" | sed -e "s/[[:space:]]*$//"); echo "$seq" > temp_concat_resfinder/seq_file/${header:1}.fasta; }'
 
 # Concatenate the cleaned sequences
-cat temp_concat_resfinder/seq_file/*.fasta > ~/DBs/resfinder_db/resfinder_db.fasta
+cat temp_concat_resfinder/seq_file/*.fasta > /media/volume/DBs/resfinder_db/resfinder_db.fasta
 rm -r temp_concat_resfinder/
 ```
 More informations:
@@ -84,19 +85,27 @@ After a Docker image is built, its content is static, which mean it might carry 
 
 _In the VM_  
 
+Before start, make sure Abricate image is already in the VM
+
+```bash
+docker pull ummidock/abricate:latest
+```
+
+Start updating Abricate DB
+
 ```bash
 # Create folder to store Abricate DBs
-mkdir ~/DBs/abricate
+mkdir /media/volume/DBs/abricate
 
 # Copy DB folder to outside image
 ## External folder will overwrite image inside folder when mapped
-docker run --rm -u $(id -u):$(id -g) -it -v ~/DBs/abricate/:/data/ ummidock/abricate:latest \
+docker run --rm -u $(id -u):$(id -g) -it -v /media/volume/DBs/abricate/:/data/ ummidock/abricate:latest \
        cp -r /NGStools/miniconda/db/ /data/
-mv ~/DBs/abricate/db/* ~/DBs/abricate/
-rm -r ~/DBs/abricate/db/
+mv /media/volume/DBs/abricate/db/* /media/volume/DBs/abricate/
+rm -r /media/volume/DBs/abricate/db/
 
 # Update DB in a folder that will persist after container stops
-docker run --rm -u $(id -u):$(id -g) -it -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
+docker run --rm -u $(id -u):$(id -g) -it -v /media/volume/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
       abricate-get_db --db resfinder --force
 ```
 
@@ -110,11 +119,11 @@ _In the VM_
 
 ```bash
 # Create folder to store typing results
-mkdir ~/typing
-mkdir ~/typing/<your_species_name>
+mkdir /media/volume/typing
+mkdir /media/volume/typing/<your_species_name>
 
 # Create a folder for Streptococcus agalactiae example
-mkdir ~/typing/streptococcus_agalactiae_example
+mkdir /media/volume/typing/streptococcus_agalactiae_example
 ```
 
 ### Using reads
@@ -132,7 +141,7 @@ _In the VM_
 screen -S rematch_mlst_Bb
 
 rematch.py \
-    --workdir ~/typing/rematch_mlst_Bb_example/ \
+    --workdir /media/volume/typing/rematch_mlst_Bb_example/ \
     --mlst "Bartonella bacilliformis" \
     --mlstReference \
     --doubleRun \
@@ -163,8 +172,8 @@ _In the VM_
 screen -S rematch_ARgenes_download
 
 rematch.py \
-    --workdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_download/ \
-    --reference ~/DBs/resfinder_db/resfinder_db.fasta \
+    --workdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_download/ \
+    --reference /media/volume/DBs/resfinder_db/resfinder_db.fasta \
     --reportSequenceCoverage \
     --notWriteConsensus \
     --summary \
@@ -186,7 +195,7 @@ Using already downloaded reads data
 
 ```bash
 # Create a ReMatCh working directory
-mkdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples
+mkdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples
 
 # Set ReMatCh working directory
 ## Using a bash for-loop for that
@@ -195,19 +204,19 @@ mkdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples
 #### Create sample directory by obtaining only last directory name instead of directory path using basename
 #### Create symbolic links to sample's reads inside newly created sample's directory
 for sample_dir in $(ls -d ~/reads/streptococcus_agalactiae_example/*/); do
-  mkdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)
-  ln -s $(ls ${sample_dir}*_1.fq.gz) ~/
+  mkdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)
+  ln -s $(ls ${sample_dir}*_1.fq.gz) /media/volume/
   typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_1.fq.gz))
-  ln -s $(ls ${sample_dir}*_2.fq.gz) ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
+  ln -s $(ls ${sample_dir}*_2.fq.gz) /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/$(basename $sample_dir)/$(basename $(ls ${sample_dir}*_2.fq.gz))
 done
 
 # ReMatCh command example
-# Not necessary to run
+# Not necessary to run because the output will exactly the same as the previous command
 # Added fake option to avoid ReMatCh to run
 # Don't forget use screen
 rematch.py \
-    --workdir ~/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/ \
-    --reference ~/DBs/resfinder_db/resfinder_db.fasta \
+    --workdir /media/volume/typing/streptococcus_agalactiae_example/rematch_ARgenes_localSamples/ \
+    --reference /media/volume/DBs/resfinder_db/resfinder_db.fasta \
     --reportSequenceCoverage \
     --notWriteConsensus \
     --summary \
@@ -233,7 +242,7 @@ _In the VM_
 
 ```bash
 # Create folder to store Abricate outputs
-mkdir ~/typing/streptococcus_agalactiae_example/abricate
+mkdir /media/volume/typing/streptococcus_agalactiae_example/abricate
 
 # Run Abricate for each sample
 ## List all produced assemblies and pass to parallel
@@ -242,15 +251,30 @@ mkdir ~/typing/streptococcus_agalactiae_example/abricate
 ### Redirect the Abricate output to a file named as the assembly but without the extension (using {/.})
 ### Note that the redirection should be done using filesystem paths outside the container
 ls ~/genomes/streptococcus_agalactiae_example/all_assemblies/* | \
-      parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > ~/typing/streptococcus_agalactiae_example/abricate/{/.}.abricate_out.tab'
+      parallel --jobs 8 'docker run --rm -u $(id -u):$(id -g) -v ~/genomes/streptococcus_agalactiae_example/all_assemblies/:/data/ -v /media/volume/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest abricate --db resfinder /data/{/} > /media/volume/typing/streptococcus_agalactiae_example/abricate/{/.}.abricate_out.tab'
 
 # Summarize all Abricate results into a single file
 ## With Docker, when using * to refer multiple files, the paths obtained refer to the filesystem outside the container
 ## Therefore, a shell script file is created containing the command to be run inside the container
 ## Note that the command inside the shell script only contains paths refering to mapped folder /data/
-echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > ~/typing/streptococcus_agalactiae_example/abricate/abricate_commands.sh
+echo 'abricate --summary /data/*.abricate_out.tab > /data/abricate_summary.resfinder.tab' > /media/volume/typing/streptococcus_agalactiae_example/abricate/abricate_commands.sh
 ## Run the summary Abricate command
-docker run --rm -u $(id -u):$(id -g) -it -v ~/typing/streptococcus_agalactiae_example/abricate/:/data/ -v ~/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
+docker run --rm -u $(id -u):$(id -g) -it -v /media/volume/typing/streptococcus_agalactiae_example/abricate/:/data/ -v /media/volume/DBs/abricate/:/NGStools/miniconda/db/ ummidock/abricate:latest \
       sh /data/abricate_commands.sh
 ```
 More informations on what TTY is [here](https://askubuntu.com/questions/481906/what-does-tty-stand-for "Google search: tty device")
+
+## Remove image
+
+To avoid VM space problems during the course, unused Docker images will be removed
+
+_In the VM_  
+
+```bash
+# List Docker images
+docker images
+# Remove Abricate image
+# Find the Abricate image line starting with ummidock/abricate
+# Get the Image ID, something like 1f467865b7f3
+docker rmi <Abricate_Image_ID>
+```
