@@ -284,7 +284,7 @@ PS: if you want, you can download the collection called `collection-TOM_only_MAG
 
 ## 10- Exploring the summary output
 
-Anvi'o produced a fast file for each MAG, along with various parameters regarding notably their environmental detection:
+Anvi'o produced a FASTA file for each MAG, along with various parameters regarding notably their environmental detection:
 
 Here are values for each MAG that are particularly useful:
 
@@ -295,4 +295,4 @@ Here are values for each MAG that are particularly useful:
 
 ## 11- What do we do with these genomes? The case of E. coli using tools introduced in the first days of the workshop
 
-So many things :)
+Taxonomy using CHeckM
