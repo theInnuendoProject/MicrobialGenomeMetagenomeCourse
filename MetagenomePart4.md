@@ -107,6 +107,10 @@ Here is what you should see:
 
 Here is the key part to remember: **the six grey layers correspond to the mean coverage values in the six metagenomes**. For each split, a black color means their is environmental signal. No black color means the split did not recruit any reads.
 
+To do:
+
+Inspection
+
 ## 05- Manipulating the inner tree
 
 Let's play with the different contig clustering options:
@@ -129,13 +133,31 @@ We are going to zoom in and out, and use the mouse to make selection of clusters
 
 The game is to find as many bins with high completion value, and low redundancy value. 
 
-To save some time, we will focus on a subset of the data (Tom has done the entire binning and found out that other part of the data did not allow the recovery of population genomes, yet anyone is welcome to perform the entire binning another day).
+To save some time, we will focus on a subset of the data (Tom has done the entire binning and found out that other parts did not allow the recovery of population genomes. That being said, anyone is welcome to perform the entire binning another day!).
 
-Please go to the "Bins" section of the interface and load the bin collection called `tom`. You should then see this after drawing the figure:
+Please close the windows of the interface, and kill the job in the terminal using `control + c`. Then, you are going to (1) download the collection called `collection-TOM_5_BINS.txt` from the Github and upload it in your working directory (reminder: this is the path where you have the CONTIGS.db), (2) import it into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface.
+
+Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
+
+Here is the command line for importing the collection:
+
+```
+anvi-import-collection -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS collection-TOM_5_BINS.txt```
+```
+
+Then please invoke the interface once again:
+
+```
+anvi-interactive -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
+```
+
+And go to the "Bins" section of the interface to load the bin collection called `TOM_5_BINS`. You should then see this after drawing the figure:
 
 ![alt text](Figure/Interface-first-binning-step.png "Interface-first-binning-step.png")
 
-These five bins exhibit different sizes and completion/redundancy values. For instance, the `Bin_01` is 8.69 Mpb with a completion of 100% and a redundancy of 171.9%. This bin is mostly detected in the sample `L4`, and slightly detected in the sample `L3`.
+Ok.
+
+These five bins exhibit different sizes and completion/redundancy values. For instance, the `Bin_01` has a length of 8.69 Mpb with a completion of 100% and a redundancy of 171.9%. This bin is mostly detected in the sample `L4`, and slightly detected in the sample `L3`.
 
 Wait, how do we assess the completion and redundancy values again?
 Good question folks.
@@ -144,11 +166,12 @@ This is thanks to the program called `anvi-run-hmms`, which searched for single 
 
 Ok.
 
-Now, let's refine each one of them using the program `anvi-refine`. 
+Now, let's refine each one of them using the program `anvi-refine` (this is the second way to invoke the interface; it is mostly used to work on a single bin within a collection).
+
 We shall start with the `Bin_01`:
 
 ```
-anvi-refine -c co-assembly.db  -p SAMPLES-MERGED/PROFILE.db -C tom -b Bin_01
+anvi-refine -c MEGAHIT_2500nt_CONTIGS.db  -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS -b Bin_01
 ```
 
 Which should load this figure:
@@ -161,15 +184,18 @@ It is actually a good example. Let's refine it together.
 When done, we will do the same for the bins 02, 03, 04 and 05, and finally summarize our results:
 
 ```
-anvi-summarize -c co-assembly.db -p SAMPLES-MERGED/PROFILE.db -C tom -o SUMMARY_tom
+anvi-summarize -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db -C TOM_5_BINS -o SUMMARY_BINNING
 ```
 
-If some of the bins remain with redundancy value >10%, please refine them again, and summarize once again (SUMMARY_tom2; SUMMARY_tom3, etc).
+This step create a folder called `SUMMARY_BINNING`. Please download this folder into your laptop using `scp`, open it to and double click on the file called `index.html`. This should open a windows in your browser.
+
+Ok.
+
+If some of the bins remain with redundancy value >10%, please refine them again, and summarize once again (SUMMARY_BINNING-2 as anvi'o does not want to overwrite the folder SUMMARY_BINNING). The game is to have all bins with redundancy <10%.
 
 OK! Now we have bins with low redundancy values, and some of them look like they represent population genomes!
 
-Cool.
-
+Cool. 
 
 ## 07- Rename the collection of bins and identify population genomes
 
@@ -222,8 +248,9 @@ And this is the perspective of these MAGs in the interface:
 
 ![alt text](Figure/Interface-Final-MAGs-tod.png "Interface-Final-MAGs-tod.png")
 
-PS: if you want, you can go to the "Bins" section and load the collection called "tom_only_MAGs_FINAL", then draw to refresh the display.
+We should discuss why contigs from each MAG are not next to each other. This is a key advantage of the manual binning, and explains well why automatic binning as it is developpeed today is noy working well (Tom's opinion, at least).
 
+PS: if you want, you can download the collection called `collection-TOM_only_MAGs_FINAL.txt` on the Github, import it into the PROFILE.db (program is called `anvi-import-collection`), and visualize it in the interface.
 
 ## 10- Exploring the summary output
 
