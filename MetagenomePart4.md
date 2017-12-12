@@ -6,7 +6,7 @@ tags: [anvi'o, binning, it always snows in Helsinki, snow is nice through]
 
 # Genome-resolved metagenomics
 
-* Tom Delmont, Antti Karkman, Jenni Hultman*
+* Tom Delmont, Antti Karkman, Jenni Hultman *
 
 This tutorial describes a way to extract and curate population genomes from millions of short metagenomic reads using a methodology called "genome-resolved metagenomics", or simply "binning".
 
