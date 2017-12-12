@@ -71,7 +71,11 @@ cd /data/test_chewbbaca/
 chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Streptococcus agalactiae"
 
 # when working with your own data:
-# create your own training file based on reference genome
+# make sure the genomes you will be using are on unix (assemblies made with innuca don't need this step)
+
+dos2unix my/genomes/folder/*
+
+# create your own training file based on the reference genome you want
 Prodigal -i reference_genome.fasta -t mytrainingFile.trn -p single
 
 #run the schema creation with your specific training file
