@@ -74,16 +74,19 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 8 -t "Strept
 ### Work assignment - Create a schema based on YOUR downloaded complete genomes
 
 ```
+# start a container with chewBBACA
+docker run -it -v ~/media/volume/mydata:/mydata/< mickaelsilva/chewbbaca bash
+
 # When working in your own data:
 # make sure the genomes you will be using are on unix (assemblies made with innuca don't need this step)
 
-dos2unix my/genomes/folder/*
+dos2unix /mydata/<my/genomes/folder/>*
 
 # create your own training file based on the reference genome you want
-prodigal -i reference_genome.fasta -t mytrainingFile.trn -p single
+prodigal -i /mydata/reference_genome.fasta -t mytrainingFile.trn -p single
 
 #run the schema creation with your specific training file
-chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 6 --ptf mytrainingFile.trn
+chewBBACA.py CreateSchema -i /mydata/complete_genomes/ -o schema_seed --cpu 6 --ptf mytrainingFile.trn
 
 
 ```
@@ -95,7 +98,7 @@ chewBBACA.py CreateSchema -i complete_genomes/ -o schema_seed --cpu 6 --ptf mytr
  
 find /data/test_chewbbaca/complete_genomes/* >listgenomes.txt
 find /data/test_chewbbaca/other_assemblies/* >>listgenomes.txt
-find /path/to/innuca/assemblies/*.fasta >>listgenomes.txt
+find </path/to/innuca/assemblies/*.fasta> >>listgenomes.txt
  
 # open listgenomes.txt and check if there are 20 lines with full paths for each assembly. Press "q" to exit less after the check
 less listgenomes.txt
@@ -121,7 +124,7 @@ chewBBACA.py TestGenomeQuality -i results/<results_20171207T150515>/results_alle
 ```
 # Extract a profile suitable to be used by phyloviz
 
-chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.tsv -o my_cgMLST -r results/results_20171207T150515/RepeatedLoci.txt -p 0.95
+chewBBACA.py ExtractCgMLST -i results/<results_20171207T150515>/results_alleles.tsv -o my_cgMLST -r results/<results_20171207T150515>/RepeatedLoci.txt -p 0.95
 
 # download cgMLST_all/cgMLST.tsv to your computer and use it later for phyloviz
 
