@@ -8,9 +8,9 @@
 | Time | Description |
 | --- | --- |
 | 08:00-10:00 | **Antti Karkman**: [Read based analysis for 16S rRNA (*Metaxa2*) and ARG (*ResFinder*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart2.md) |
-| 10:00-12:00 | **Jenni Hultman**: [Assembly check and mapping with (*BOWTIE2*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
-| 12:00-13:30 | **Working with your data** and **lunch** |
-| 14:00-17:00 | **Antti Karkman and Jenni Hultman**: [Prepping files for Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
+| 10:00-11:00 | **Jenni Hultman**: [Assembly check and mapping with (*BOWTIE2*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
+| 11:00-12:30 | **Working with your data** and **lunch** NOTE: Tähkä closes at 12 |
+| 12:30-17:00 | **Antti Karkman and Jenni Hultman**: [Prepping files for Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
 
 
 ## Friday - Viikki C building, lecture room 130 (Latokartanonkaari 5)
