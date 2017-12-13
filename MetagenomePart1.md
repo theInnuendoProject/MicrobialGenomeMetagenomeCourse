@@ -27,11 +27,11 @@ The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5
 
 ```
 md5sum filename
-
+```
+And then unpack the tar.gz file
+```
 tar -xzvf course_metagenomes.tar.gz
 ```
-
-The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5 um for the file you downloaded matches by typing
 
 Make a file containing the sample names to be used later in bash scripts.  
  `ls *.fastq.gz |awk -F "-" '{print $2}'|uniq > ../sample_names.txt`  
@@ -45,16 +45,22 @@ Can be done on the interactive nodes using `sinteractive`. In that case use only
 # allocate the computing resources and log in to the computing node. 
 salloc -n 1 --cpus-per-task=6 --mem=3000 --nodes=1 -t 00:30:00 -p serial
 srun --pty $SHELL
+
 # activate the QC environment
 source activate QC_env
+
 # Run fastqc 
 fastqc ./*.fastq.gz -o FASTQC/ -t 6
+
 # Then combine the reports with multiqc
 multiqc ./ --interactive
+
 # deactivate the virtual env
 source deactivate
+
 # log out from the computing node 
 exit
+
 # and free the resources after the job is done
 exit
 ```
