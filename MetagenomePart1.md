@@ -38,7 +38,7 @@ Make a file containing the sample names to be used later in bash scripts.
 
 ## QC and trimming
 QC for the raw data (takes few min, depending on the allocation).  
-Go to the folder that contains the raw data, load the biokit module and make a folder called e.g. `FASTQC` for the QC reports.  
+Go to the folder that contains the raw data and make a folder called e.g. `FASTQC` for the QC reports.  
 Then run the QC for the raw data and combine the results to one report using `multiqc`.  
 Can be done on the interactive nodes using `sinteractive`. In that case use only 4 threads in the `fastqc` step.  
 ```
