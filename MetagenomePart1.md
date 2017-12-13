@@ -123,6 +123,7 @@ Allocate some resources and then run FASTQC and MultiQC again.
 salloc -n 1 --cpus-per-task=6 --mem=3000 --nodes=1 -t 00:30:00 -p serial
 srun --pty $SHELL
 # activate the QC environment
+module load bioconda/3
 source activate QC_env
 # run QC on the trimmed reads
 fastqc ./*.fastq -o FASTQC/ -t 6
