@@ -11,7 +11,7 @@
 | 10:00-11:00 | **Jenni Hultman**: [Assembly check and mapping with (*BOWTIE2*)](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
 | 11:00-12:30 | **Working with your data** and **lunch** NOTE: Tähkä closes at 12 |
 | 12:30-17:00 | **Antti Karkman and Jenni Hultman**: [Prepping files for Anvio](https://github.com/INNUENDOCON/MicrobialGenomeMetagenomeCourse/blob/master/MetagenomePart3.md) |
-| 17:00-18:00 | **All**: [ISME](https://isme17.isme-microbes.org) social gathering |
+| 17:00-18:00 | **All**: [International Society for Microbial Ecology (ISME)](https://isme17.isme-microbes.org) social gathering |
 
 
 ## Friday - Viikki C building, lecture room 130 (Latokartanonkaari 5)
