@@ -171,6 +171,8 @@ module purge
 module load intel/16.0.0
 module load megahit
 
+cd $WRKDIR/BioInfo_course/
+
 megahit -1 trimmed_data/all_R1_trimmed.fastq -2 trimmed_data/all_R2_trimmed.fastq \
          -o co-assembly -t $SLURM_CPUS_PER_TASK --min-contig-len 1000
 
