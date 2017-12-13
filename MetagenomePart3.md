@@ -11,13 +11,15 @@ Go to your course folder and make a new folder called ANVIO. All task on this se
 mkdir ANVIO
 cd ANVIO
 ```
-We need to do some tricks for the contigs from assembly before we can use them on Friday. You'll need to load bioconda and activate Anvio
+We need to do some tricks for the contigs from assembly before we can use them on Friday. You'll need to load bioconda and activate Anvio.  
+Open a screen for Anvi'o workflow. `screen -S anvio`
 
 ```
-module load bioconda/3
-# allocate resources
+# allocate resources and log in to a computing node
 salloc -n 1 --mem=10000 -t 00:20:00 -p serial
 srun --pty $SHELL
+# load bioconda and activate Anvi'o environment
+module load bioconda/3
 source activate anvio3
 ```
 ## Rename the scaffolds and select those >2,500nt.
@@ -27,12 +29,8 @@ Anvio wants sequence IDs in your FASTA file as simple as possible. Therefore we 
 ```
 anvi-script-reformat-fasta ../co-assembly/final.contigs.fa -l 2500 --simplify-names --prefix MEGAHIT_co_assembly -r REPORT -o MEGAHIT_co-assembly_2500nt.fa
 ````
-Deactivate virtual env, log out and free the resources before going to the mapping step.  
-```
-source deactivate
-exit
-exit
-```
+Deattach from the screen with `Ctrl a+d`  
+
 
 ## Mapping the reads back to the assembly
 Next thing to do is mapping all the reads back to the assembly. We use the renamed >2,500 nt contigs and do it sample-wise, so each sample is mapped separately using the trimmed R1 & R2 reads.  
@@ -99,12 +97,10 @@ samtools index
 
 ## Back to Anvi'o
 
-Again allocate some resources and activate the anvio virtul environment.
+Reattach to your Anvi'o screen 
 
 ```
-salloc -n 1 --cpus-per-task=6 --mem=10000 --nodes=1 -t 04:00:00 -p serial
-srun --pty $SHELL
-source activate anvio3
+screen -r anvio
 ```
 
 
@@ -119,14 +115,48 @@ anvi-gen-contigs-database -f MEGAHIT_co-assembly_2500nt.fa -o MEGAHIT_co-assembl
 ```
 anvi-run-hmms -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 6
 ```
+
+While the HMM identification is running, deattach from the screen and check if the mapping has been done.  
+```
+squeue -l -u $USER
+```
+
+When the mapping is done for all samples and the contigs database is ready, we can profile the samples using the DB and the mapping output. Write an array script for the profiling and submit it to the queue.
+
+```
+#!/bin/bash -l
+#SBATCH -J array_profiling
+#SBATCH -o array_profiling_out_%A_%a.txt
+#SBATCH -e array_profiling_err_%A_%a.txt
+#SBATCH -t 00:30:00
+#SBATCH --mem-per-cpu=1000
+#SBATCH --array=1-6
+#SBATCH -n 1
+#SBATCH --cpus-per-task=6
+#SBATCH -p serial
+
+cd $WRKDIR/BioInfo_course/co-assembly
+# we need to load Bioconda
+module load bioconda/3
+# then activate Anvi'o
+source activate anvio3
+# and also load the biokit, since Anvi'o uses samtools in the profiling
+module load biokit
+# each job will get one sample from the sample names file
+name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
+# then the actual profiling
+anvi-profile -c ../MEGAHIT_co-assembly_2500nt_CONTIGS.db  -M 2500 -T $SLURM_CPUS_PER_TASK -i $name.bam -o $name 
+```
+Submit the job with `sbatch` as previously.  
+
 ## Run COGs
 
 Next we annotate genes in  contigs database with functions from the NCBI’s Clusters of Orthologus Groups (COGs). 
+Again first reattach to your Anvio'o screen.  
 
 ```
 anvi-run-ncbi-cogs -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -T 6
 ```
-# If mapping is done (squeue -u "yourusername") detach "Anvio" screen and open a new screen titled profiling (screen -S profiling).
 
 ## Export GENES
 With this command we export the genecalls from Prodigal to gene-calls.fa and do taxonomic annotation against centrifuge database you installed on Wednesday
@@ -160,27 +190,25 @@ awk '{print $1"\tCARD\t\t"$2"\t"$11}' CARD.out >> CARD_functions.txt
 anvi-import-functions -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -i CARD_functions.txt
 ```
 
-## Profiling 
-Write a bash script that profiles each sample and finally merges all the profiles.  
-These are the two commands. First needs to be done for each sample and the second one only once to merge all 6 samples.
+## Merging the profiles
+When the profiling is done, you can merge them with one command.
 
 ```
-anvi-profile -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -M 2500 -i SAMPLE1.bam -o SAMPLE1 
-anvi-merge SAMPLE1/PROFILE.db SAMPLE2/PROFILE.db SAMPLE3/PROFILE.db -o SAMPLES-MERGED -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
+anvi-merge */PROFILE.db -o SAMPLES-MERGED -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
 ```
 
 ## Visualization in the interface (On Friday)
 
 Open a new ssh window. In mac:
 ```
-ssh -L 8080:localhost:8080 hultman@taito.csc.fi
+ssh -L 8080:localhost:8080 YOUR_USERNAME@taito.csc.fi
 ```
 
 in Windows with Putty:
-In SSH tab select "tunnels". Add
+In SSH tab select "tunnels". Add  
 
-Source port: 8080 
-Destination: localhost:8080
+Source port: 8080  
+Destination: localhost:8080  
 
 Click add and log in to Taito.
 
