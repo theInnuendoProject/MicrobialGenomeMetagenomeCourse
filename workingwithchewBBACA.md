@@ -82,7 +82,7 @@ cd /mydata/
 
 # make sure the genomes you will be using are on unix (assemblies made with innuca don't need this step)
 
-dos2unix /mydata/<my/genomes/folder/>*
+dos2unix /mydata/my/genomes/folder/*
 
 # create your own training file based on the reference genome you want
 prodigal -i /mydata/reference_genome.fasta -t mytrainingFile.trn -p single
@@ -177,7 +177,7 @@ SRR5575010.contigs.length_GCcontent_kmerCov.mappingCov.polished.fasta	?	?	?
 ```
 chewBBACA.py SchemaEvaluator -i schema_seed/ -l rms/Myschema.html --cpu 8
 
-zip -r myschemaEval.zip testcq
+zip -r myschemaEval.zip rms/
 
 #download the myschemaEval.zip to your computer, unzip it and open the Myschema.html with firefox
 
