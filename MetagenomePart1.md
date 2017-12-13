@@ -83,7 +83,7 @@ Cutadapt [manual.](http://cutadapt.readthedocs.io)
 
 while read i
 do
-        cutadapt  -a ADAPTER -A ANOTHER_ADAPTER -q 28 -O 10 \
+        cutadapt  -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -q 28 -O 10 \
         -o ../trimmed_data/$i"_R1_trimmed.fastq" -p ../trimmed_data/$i"_R2_trimmed.fastq" \
         *$i*_R1*.fastq.gz *$i*_R2*.fastq.gz > ../trimmed_data/$i"_trim.log"
 done < $1
