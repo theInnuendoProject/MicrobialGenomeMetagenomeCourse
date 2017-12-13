@@ -20,7 +20,7 @@ mkdir trimmed_data
 Download the metagenomic data (takes few minutes)  
 ```
 cd raw_data
-/wrk/antkark/shared/course_metagenomes.tar.gz
+cp /wrk/antkark/shared/course_metagenomes.tar.gz .
 ```
 
 The md5 sum for the file is 531d74bfe7892356824b7c1ce236792e. Check that the md5 um for the file you downloaded matches by typing
