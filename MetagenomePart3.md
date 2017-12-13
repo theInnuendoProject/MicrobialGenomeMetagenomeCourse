@@ -81,6 +81,7 @@ cd $WRKDIR/BioInfo_course/co-assembly
 module load biokit
 # each job will get one sample from the sample names file
 name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
+# run mapping script for each sample
 bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
      ../trimmed_data/$name"_R2_trimmed.fastq" \
      $name co-assembly
