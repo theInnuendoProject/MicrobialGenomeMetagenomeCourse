@@ -16,7 +16,7 @@ Open a screen for Anvi'o workflow. `screen -S anvio`
 
 ```
 # allocate resources and log in to a computing node
-salloc -n 1 --mem=10000 -t 00:20:00 -p serial
+salloc -n 1 --mem=10000 -t 06:00:00 -p serial
 srun --pty $SHELL
 # load bioconda and activate Anvi'o environment
 module load bioconda/3
