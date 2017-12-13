@@ -78,7 +78,7 @@ The array job script:
 #SBATCH --cpus-per-task=6
 #SBATCH -p serial
 
-cd $WRKDIR/BioInfo_course/all_assembly_def_1000
+cd $WRKDIR/BioInfo_course/co-assembly
 # we need Bowtie2 from the biokit
 module load biokit
 # each job will get one sample from the sample names file
