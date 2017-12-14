@@ -14,6 +14,10 @@ This approach has led to major discoveries in the fields of evolutionary biology
 
 ![alt text](Figure/FIGURE_GENOME_RESOLVED_METAG.png "Genome-resolved metagenomics")
 
+And here is a world cloud of this tutorial, so you can see what we will speak about in a single look:
+
+![alt text](Figure/World_Cloud.png "World cloud")
+
 Here are a few definitions we came up with, so we can try to speak the same language today:
 
 -**A microbial species**: Is this a real thing?
