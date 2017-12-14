@@ -65,7 +65,7 @@ cd centrifuge
 git checkout 30e3f06ec35bc83e430b49a052f551a1e3edef42
 make
 # Test it, should be version 1.0.2-beta  
-`./centrifuge --version`  
+./centrifuge --version  
 ```
 Download the pre-computed indexes for centrifuge (Can take 10 min).  
 Since they are very big, it's better to put them in the `$WRKDIR`, since the home directory is quite small and not meant for storage for large file.  
