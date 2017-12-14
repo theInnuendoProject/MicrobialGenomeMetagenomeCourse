@@ -347,7 +347,8 @@ We also provide tutorials for these specific topics:
 
 - [x] [Working with (meta)transcriptomics data](http://merenlab.org/2015/06/10/combining-omics-data/)
 - [x] [Analysing single nucleotide variants](http://merenlab.org/2015/07/20/analyzing-variability/)
-- [x] [Describing the anvi'o metagenomic workflow tutorial](http://merenlab.org/2016/06/22/anvio-tutorial-v2/)
+- [x] [Describing the anvi'o metagenomic workflow](http://merenlab.org/2016/06/22/anvio-tutorial-v2/)
+- [x] [Describing the anvi'o pangenomic workflow for comparative genomics](http://merenlab.org/2016/11/08/pangenomics-v2/)
 - [x] [Editing figures anvi'o produces](http://merenlab.org/2016/10/27/high-resolution-figures/)
 
 And blogs using anvi'o:
