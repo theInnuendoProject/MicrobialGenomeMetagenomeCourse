@@ -19,6 +19,10 @@ When all R1 files have been converted to fasta and renamed, combine them to one 
 We will annotate the resistance genes using The Comprehensive Antibiotic Resistance Database, [CARD.](https://card.mcmaster.ca)  
 Go to the CARD website and download the latest CARD release to folder called CARD under your user applications (`$USERAPPL`) folder and unpack the file.  
 
+`mkdir CARD`
+
+`cd CARD`
+
 `bunzip2 broadstreet-v1.2.1.tar.bz2 && tar -xvf broadstreet-v1.2.1.tar `  
 
 Then make a DIAMOND database file form the protein homolog model. It is a fasta file with amino acid sequences.  
