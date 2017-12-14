@@ -80,7 +80,7 @@ unzip 00_MEGAHIT-Binning-v3.zip
 
 Well, I think that's it, right? **Now it is time for the fun part of visualizing and manipulating raw genome-resolved metagenomic results using the anvi'o interactive interface**.
 
-Ha, a last thing: Tom would like to congragulate you for beating Sueden in Sweden during the 1995 Men's World Ice Hockey Championships. Well done Finland!
+Ha, a last thing: Tom would like to congragulate you for beating Sweden in Sweden during the 1995 Men's World Ice Hockey Championships. Well done Finland!
 
 ![alt text](Figure/Finland.png "Finland")
 
