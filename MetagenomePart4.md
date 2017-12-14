@@ -82,7 +82,7 @@ Well, I think that's it, right? **Now it is time for the fun part of visualizing
 
 Ha, a last thing: Tom would like to congragulate you for beating Sueden in Sweden during the 1995 Men's World Ice Hockey Championships. Well done Finland!
 
-![alt text](Figure/FIGURE_GENOME_RESOLVED_METAG.png "Genome-resolved metagenomics")
+![alt text](Figure/Finland.png "Finland")
 
 
 ## 02- Describing the interface
@@ -115,6 +115,9 @@ Then open google chrome and go to address
 http://localhost:8080
 
 So far, so good?
+
+Note that if you work from your laptop, please do not add `--server-only -P 8080`, as it prevents the opening of the window in the browser. 
+
 
 ## 03- Describing the interface
 
@@ -195,7 +198,7 @@ And go to the "Bins" section of the interface to load the bin collection called 
 
 ![alt text](Figure/Interface-first-binning-step.png "Interface-first-binning-step.png")
 
-Note: Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
+{:.notice} Note: Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
 
 Ok.
 
