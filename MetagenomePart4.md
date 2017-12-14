@@ -305,7 +305,7 @@ Here are values for each MAG that are particularly useful:
 - [x] Table of genes and identified functions (tip: very useful when you have metatranscriptomes!)
 - [x] All identified rRNAs (do we have a 16S rRNA gene?)
 
-## 11- What do we do with these genomes? The case of E. coli using tools introduced in the first days of the workshop
+## 11- What do we do with these genomes?
 
 Let's create a new directory called `Population_genomes` and copy the MAGs there:
 
