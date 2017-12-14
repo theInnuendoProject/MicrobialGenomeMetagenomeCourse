@@ -30,9 +30,15 @@ Here are a few definitions we came up with, so we can try to speak the same lang
 
 -**The platform anvi'o**: this place where microbiologists can finally feel they are bioinformatics superheros!
 
+-**A CONTIGS.db**: anvi'o database storing various information regarding the metagenomic assembly output (the FASTA file)
+
+-**A PROFILE.db**: anvi'o database storing various information regarding metagenomic reads the FASTA file recruited (note: this is the same fasta file used to generated the CONTIGS.db)
+
 -**A split**: a section of a contig defined by length (for improved binning experience, we display multiple splits for very long contigs in the anvi'o interface).
 
--**The working environment**: Path in the server where you have all anvi'o files related to this project (contains the file `MEGAHIT_2500nt_CONTIGS.db` and the folder `SAMPLES-MERGED` )
+-**A collection**: collection of bins sotred in the PROFILE.db (this simply links splits in the CONTIGS.db to bins)
+
+-**The working environment**: Path in the server where you have all anvi'o files related to this project (it should contain the file `MEGAHIT_2500nt_CONTIGS.db` and the folder `SAMPLES-MERGED`)
 
 So, we hope you are in a good mood to discover and characterize new genomes!
 
@@ -73,6 +79,11 @@ unzip 00_MEGAHIT-Binning-v3.zip
 ```
 
 Well, I think that's it, right? **Now it is time for the fun part of visualizing and manipulating raw genome-resolved metagenomic results using the anvi'o interactive interface**.
+
+Ha, a last thing: Tom would like to congragulate you for beating Sueden in Sweden during the 1995 Men's World Ice Hockey Championships. Well done Finland!
+
+![alt text](Figure/FIGURE_GENOME_RESOLVED_METAG.png "Genome-resolved metagenomics")
+
 
 ## 02- Describing the interface
 
