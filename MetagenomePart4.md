@@ -58,17 +58,13 @@ Ok.
 
 As you may remember, we have already done all of this:
 
--Co-assembling six metagenomes corresponding to the gut of two species
-
--Creating a CONTIGS database to make sense of the assembly output (find genes, get GC-content and tetra-nucleotide frequency of contigs)
-
--Searching for single copy-core genes, and running COGs for functions / CARD for antibiotic resistance genes
-
--Exporting genes stored in the CONTIGS database, determining their taxonomy and importing the results into the CONTIGS database
-
--Recruiting short reads from each metagenome using the co-assembly output
-
--Creating PROFILE databases from the recruited reads, and merging them into a single PROFILE database
+- [x] Co-assembling six metagenomes corresponding to the gut of two species
+- [x] Creating a CONTIGS database to make sense of the assembly output (find genes, get GC-content and tetra-nucleotide frequency of contigs)
+- [x] Searching for single copy-core genes, and running COGs for functions / CARD for antibiotic resistance genes
+- [x] Exporting genes stored in the CONTIGS database, determining their taxonomy and importing the results into the CONTIGS database
+- [x] Recruiting short reads from each metagenome using the co-assembly output
+- [x] Creating PROFILE databases from the recruited reads, and merging them into a single PROFILE database
+- [x] beat Sweden in Sweden for the 
 
 In case someone is missing some of the steps, this command will allow you to download the entire directory of anvi'o files for this project (this is a back-up for the workshop, but also a good starting point for someone that just wants to practice binning with anvi'o):
 
