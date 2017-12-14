@@ -116,6 +116,7 @@ http://localhost:8080
 
 So far, so good?
 
+{:.notice}
 Note that if you work from your laptop, please do not add `--server-only -P 8080`, as it prevents the opening of the window in the browser. 
 
 
