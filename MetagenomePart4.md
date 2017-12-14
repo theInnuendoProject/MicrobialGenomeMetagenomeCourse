@@ -112,7 +112,7 @@ http://localhost:8080
 
 So far, so good?
 
-Please note that if you work from your laptop, please do not add `--server-only -P 8080`, as it prevents the opening of the window in the browser.
+>Please note that if you work from your laptop, please do not add `--server-only -P 8080`, as it prevents the opening of the window in the browser.
 
 ## 03- Describing the interface
 
@@ -247,6 +247,8 @@ anvi-rename-bins -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --col
 
 Bins >2 Mbp and those with a completion >70% will be renamed as MAGs (i.e., as population genomes).
 
+>Note that these parameters can be modified by playing with parameters of the program (see `anvi-rename-bins -h`) 
+
 And summarize the collection:
 
 ```
@@ -298,10 +300,10 @@ Anvi'o produced a FASTA file for each MAG, along with various parameters regardi
 
 Here are values for each MAG that are particularly useful:
 
--Mean coverage across metagenomes (how abundant a MAG is in a given metagenome)
--Detection across genomes (percentage of the nucleotides covered by the recruited reads)
--Table of genes and identified functions (tip: very useful when you have metatranscriptomes!)
--All identified rRNAs (do we have a 16S rRNA gene?)
+- [x] Mean coverage across metagenomes (how abundant a MAG is in a given metagenome)
+- [x] Detection across genomes (percentage of the nucleotides covered by the recruited reads)
+- [x] Table of genes and identified functions (tip: very useful when you have metatranscriptomes!)
+- [x] All identified rRNAs (do we have a 16S rRNA gene?)
 
 ## 11- What do we do with these genomes? The case of E. coli using tools introduced in the first days of the workshop
 
@@ -321,14 +323,19 @@ Let's run CheckM from this directory now, and learn about the taxonomy of each M
 ```
 # Deactivate the anvio environment
 source deactive anvio3
-# And activate the CheckM environment
+# Activate the CheckM environment
 source activate checkm
-
-...checkM commands here...
-
+# Find the marker genes and place them in a pre-computed phylogenetic tree (please modify `PATH` accordingly to your working environment)
+checkm tree PATH -x .fa -t 40 PATH/TREE
+# Parsing marker genes and get taxonomy (again, please modify `PATH` accordingly to your working environment)
+checkm tree_qa TREE -f OUTPUT.txt
 ```
 
-Nice.
+Nice. let's look at the results:
+
+```
+cat OUTPUT.txt
+```
 
 Perspectives:
 
@@ -336,3 +343,15 @@ Combining taxonomy, phylogeny and functions, like here:
 
 ![alt text](Figure/Delmont_et_al_2017_HBDs.png "Delmont_et_al_2017_HBDs.png")
 
+We also provide tutorials for these specific topics:
+
+- [x] [Working with (meta)transcriptomics data](http://merenlab.org/2015/06/10/combining-omics-data/)
+- [x] [Analysing single nucleotide variants](http://merenlab.org/2015/07/20/analyzing-variability/)
+- [x] [Describing the anvi'o metagenomic workflow tutorial](http://merenlab.org/2016/06/22/anvio-tutorial-v2/)
+- [x] [Editing figures anvi'o produces](http://merenlab.org/2016/10/27/high-resolution-figures/)
+
+And blogs using anvi'o:
+- [x] [Bacteria in the DeepWater Horizon oil plume](http://merenlab.org/2017/10/16/reply-to-probst-et-al/)
+- [x] [Candidate Phyla Radiation in Human Blood](http://merenlab.org/2017/08/23/CPR-in-blood/)
+- [x] [A thousand microbial genomes from the surface ocean](http://merenlab.org/2017/05/21/thousand-genomes-from-tara/)
+- [x] [Inspecting the genomic link between Archaea and Eukarya](http://merenlab.org/2017/01/03/loki-the-link-archaea-eukaryota/)
