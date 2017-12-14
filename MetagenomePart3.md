@@ -84,7 +84,7 @@ name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
 # run mapping script for each sample
 bash ../scripts/bowtie2-map-batch.sh ../trimmed_data/$name"_R1_trimmed.fastq" \
      ../trimmed_data/$name"_R2_trimmed.fastq" \
-     $name co-assembly
+     $name ../ANVIO/co-assembly
 ```
 Then again submit the array job with `sbatch`.  
 
