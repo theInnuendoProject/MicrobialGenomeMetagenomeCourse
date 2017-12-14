@@ -146,7 +146,7 @@ module load biokit
 # each job will get one sample from the sample names file
 name=$(sed -n "$SLURM_ARRAY_TASK_ID"p ../sample_names.txt)
 # then the actual profiling
-anvi-profile -c ../MEGAHIT_co-assembly_2500nt_CONTIGS.db  -M 2500 -T $SLURM_CPUS_PER_TASK -i $name.bam -o $name 
+anvi-profile -c ../ANVIO/MEGAHIT_co-assembly_2500nt_CONTIGS.db  -M 2500 -T $SLURM_CPUS_PER_TASK -i $name.bam -o $name 
 ```
 Submit the job with `sbatch` as previously.  
 
