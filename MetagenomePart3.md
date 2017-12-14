@@ -195,7 +195,7 @@ anvi-import-functions -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -i CARD_functions
 When the profiling is done, you can merge them with one command.
 
 ```
-anvi-merge co-assembly/*/PROFILE.db -o SAMPLES-MERGED -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
+anvi-merge ../co-assembly/*/PROFILE.db -o SAMPLES-MERGED -c MEGAHIT_co-assembly_2500nt_CONTIGS.db
 ```
 
 ## Visualization in the interface (On Friday)
