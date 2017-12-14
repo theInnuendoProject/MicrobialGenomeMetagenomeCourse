@@ -1,0 +1,701 @@
+Taxa	Metaxa2/H1	Metaxa2/H2	Metaxa2/H3	Metaxa2/L2	Metaxa2/L3	Metaxa2/L4
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Unclassified Halobacteriaceae	0	0	0	1	0	0
+Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanobacterium	0	0	1	0	0	0
+Archaea;Euryarchaeota;Methanomicrobia;Methanocellales;Methanocellaceae;Methanocella	4	0	0	0	0	0
+Archaea;Euryarchaeota;Methanomicrobia;Methanomicrobiales;Methanomicrobiaceae;Methanoculleus	1	0	0	0	0	0
+Archaea;Euryarchaeota;Methanomicrobia;Methanomicrobiales;Unclassified Methanomicrobiales;	1	0	0	0	0	0
+Archaea;Euryarchaeota;Methanomicrobia;Methanosarcinales;Methanosarcinaceae;Methanosarcina	4	0	5	0	0	0
+Archaea;Euryarchaeota;Methanomicrobia;Unclassified Methanomicrobia;;	0	0	1	0	0	0
+Archaea;Euryarchaeota;Thermoplasmata;Thermoplasmatales;Methanomassiliicoccus;Methanomassiliicoccus	1	0	1	0	0	0
+Archaea;Euryarchaeota;Unclassified Euryarchaeota;;;	1	0	0	0	0	0
+Archaea;Thaumarchaeota;Unclassified Thaumarchaeota;;;	1	0	0	0	0	0
+Archaea;Unclassified Archaea;;;;	2	0	0	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;11-24;Acidobacteria bacterium Ellin7246;Unclassified Acidobacteria bacterium Ellin7246	2	0	1	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Candidatus Koribacter	1	0	0	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Terriglobus	1	0	0	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Unclassified Acidobacteriaceae	2	2	2	0	1	13
+Bacteria;Acidobacteria;Acidobacteria;Candidatus Chloracidobacterium;Acidobacteriaceae bacterium Gsoil 1619;Unclassified Acidobacteriaceae bacterium Gsoil 1619	0	0	0	1	0	0
+Bacteria;Acidobacteria;Acidobacteria;Order Incertae Sedis;Family Incertae Sedis;Bryobacter	0	0	1	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;RB41;Acidobacteriaceae bacterium K22;Unclassified Acidobacteriaceae bacterium K22	1	0	0	0	0	0
+Bacteria;Acidobacteria;Acidobacteria;Unclassified Acidobacteria;;	3	0	2	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;Acidimicrobium	2	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;CL500-29 marine group	0	0	5	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;Ferrithrix	1	0	0	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;Ilumatobacter	1	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;Unclassified Acidimicrobiaceae	2	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Iamiaceae;Iamia	5	0	6	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;TM214;Aciditerrimonas	0	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;TM214;Unclassified TM214	0	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;TM214;actinobacterium	0	0	1	0	0	0
+Bacteria;Actinobacteria;Acidimicrobiia;Acidimicrobiales;Unclassified Acidimicrobiales;	13	3	9	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Unclassified Actinomycetaceae	0	1	1	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Actinomycetales;Actinomycetaceae;Varibaculum	0	2	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Bifidobacterium	223	677	4	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Unclassified Bifidobacteriaceae	10	30	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Catenulisporales;Catenulisporaceae;Catenulispora	1	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Corynebacteriaceae;Corynebacterium	1	1	1	1	1	6
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Mycobacteriaceae;Amycolicicoccus	2	1	0	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Mycobacteriaceae;Mycobacterium	125	19	55	0	0	17
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Mycobacteriaceae;Unclassified Mycobacteriaceae	1	0	0	0	0	4
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Gordonia	1	4	2	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Nocardia	1	1	6	3	0	0
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Rhodococcus	102	15	221	0	0	4
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Unclassified Nocardiaceae	60	10	45	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Williamsia	31	10	20	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Unclassified Corynebacteriales;	39	5	35	0	0	4
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Cryptosporangiaceae;Unclassified Cryptosporangiaceae	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Frankiaceae;Frankia	17	5	13	0	1	2
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Geodermatophilaceae;Blastococcus	6	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Geodermatophilaceae;Geodermatophilus	2	1	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Geodermatophilaceae;Modestobacter	4	0	5	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Geodermatophilaceae;Unclassified Geodermatophilaceae	12	8	19	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Nakamurellaceae;Humicoccus	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Nakamurellaceae;Nakamurella	2	0	5	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Nakamurellaceae;Saxeibacter	12	1	15	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Nakamurellaceae;Unclassified Nakamurellaceae	10	1	15	0	2	12
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Sporichthyaceae;Sporichthya	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Frankiales;Unclassified Frankiales;	9	1	5	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Kineococcus	23	7	53	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Kineosporia	2	2	2	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Pseudokineococcus	0	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Quadrisphaera	0	0	5	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Unclassified Kineosporiaceae	6	0	16	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;bacterium Ellin5024	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Unclassified Kineosporiales;	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Beutenbergiaceae;Unclassified Beutenbergiaceae	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Cellulomonadaceae;Actinotalea	0	0	10	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Cellulomonadaceae;Cellulomonas	5	1	14	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Cellulomonadaceae;Oerskovia	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Cellulomonadaceae;Unclassified Cellulomonadaceae	3	0	18	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermacoccaceae;Demetria	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermacoccaceae;Dermacoccus	0	0	1	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermacoccaceae;Kytococcus	0	0	0	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermacoccaceae;Luteipulveratus	0	0	0	0	0	7
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermacoccaceae;Unclassified Dermacoccaceae	2	1	1	0	2	16
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Dermatophilaceae;Dermatophilus	0	0	0	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Fodinibacter	2	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Humibacillus	1	0	0	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Janibacter	1	1	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Knoellia	11	1	4	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Lapillicoccus	3	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Ornithinimicrobium	1	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Phycicoccus	4	0	11	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Terrabacter	3	1	5	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Terracoccus	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Tetrasphaera	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Intrasporangiaceae;Unclassified Intrasporangiaceae	59	6	70	0	5	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Agreia	19	7	17	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Agrococcus	5	0	8	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Agromyces	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Clavibacter	25	5	234	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Cryobacterium	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Cryocola	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Curtobacterium	75	32	68	0	1	51
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Frigoribacterium	5	1	32	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Frondihabitans	4	1	2	0	1	3
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Leifsonia	1	0	3	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Leucobacter	0	1	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Marisediminicola	1	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Microbacterium	38	9	134	0	0	4
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Mycetocola	3	0	5	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Plantibacter	6	2	8	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Rathayibacter	5	1	19	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Rhodoglobus	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Salinibacterium	2	0	0	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Schumannella	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Subtercola	2	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Unclassified Microbacteriaceae	219	59	545	0	0	32
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Micrococcaceae;Arthrobacter	602	42	447	0	8	11
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Micrococcaceae;Kocuria	2	1	1	0	2	3
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Micrococcaceae;Micrococcus	0	0	1	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Micrococcaceae;Rothia	29	2	5	0	0	9
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Micrococcaceae;Unclassified Micrococcaceae	75	5	58	0	5	6
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Promicromonosporaceae;Cellulosimicrobium 	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Promicromonosporaceae;Promicromonospora	1	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Promicromonosporaceae;Xylanibacterium	0	0	0	0	1	0
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Sanguibacteraceae;Sanguibacter	27	13	74	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Unclassified Micrococcales;	133	25	133	0	7	40
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;actinobacterium ss-Acetyl-04PA2-28e;Unclassified actinobacterium ss-Acetyl-04PA2-28e	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Actinocatenispora	1	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Actinoplanes	16	1	8	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Catellatospora	6	1	0	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Dactylosporangium	4	1	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Luedemannella	2	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora	10	2	13	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Plantactinospora	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Salinispora	1	1	6	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Unclassified Micromonosporaceae	93	7	57	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Unclassified Micromonosporales;	5	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;PeM15;bacterium rJ7;Unclassified bacterium rJ7	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Actinopolymorpha	3	0	4	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Aeromicrobium	42	25	102	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Kribbella	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Marmoricola	31	7	59	1	0	1
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Nocardioides	211	44	427	0	0	3
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Unclassified Nocardioidaceae	64	11	116	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Aestuariimicrobium	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Friedmanniella	77	18	67	0	3	7
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Microlunatus	23	2	25	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Propionibacterium	2	2	3	2	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Propionicicella	2	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Unclassified Propionibacteriaceae	52	8	64	0	3	1
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Unclassified Propionibacteriales;	22	3	21	0	0	2
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Actinoalloteichus	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Actinomycetospora	3	0	3	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Amycolatopsis	1	1	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Pseudonocardia	4	0	5	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Saccharopolyspora	4	0	8	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Thermocrispum	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Unclassified Pseudonocardiaceae	4	0	7	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Unclassified Pseudonocardiales;	2	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptomycetales;Streptomycetaceae;Kitasatospora	3	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptomycetales;Streptomycetaceae;Streptomyces	40	3	27	1	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptomycetales;Streptomycetaceae;Unclassified Streptomycetaceae	3	1	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptomycetales;Unclassified Streptomycetales;	1	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Nocardiopsaceae;Thermobifida	2	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Nocardiopsaceae;Unclassified Nocardiopsaceae	0	0	1	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Microbispora	7	0	3	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Nonomuraea	2	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Sphaerisporangium	2	0	0	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Streptosporangium	0	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Thermopolyspora	8	0	4	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Unclassified Streptosporangiaceae	16	0	8	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Actinoallomurus	2	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Actinocorallia	3	0	2	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Actinomadura	23	4	8	0	0	1
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Thermobispora	35	1	9	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Thermomonospora	14	0	4	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Thermomonosporaceae;Unclassified Thermomonosporaceae	10	3	3	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Unclassified Streptosporangiales;	11	1	3	0	0	0
+Bacteria;Actinobacteria;Actinobacteria;Unclassified Actinobacteria;;	141	34	169	11	2	21
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Adlercreutzia	0	1	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Atopobium	22	29	3	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Collinsella	103	179	1	0	1	2
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Coriobacterium	9	11	0	1	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Cryptobacterium	3	3	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Denitrobacterium	2	2	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Eggerthella	2	3	1	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Enterorhabdus	0	3	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Gordonibacter	5	3	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Olsenella	88	93	1	0	0	1
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Slackia	20	22	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Coriobacteriaceae;Unclassified Coriobacteriaceae	413	485	0	2	2	1
+Bacteria;Actinobacteria;Coriobacteriia;Coriobacteriales;Unclassified Coriobacteriales;	2	6	0	0	0	0
+Bacteria;Actinobacteria;Coriobacteriia;Unclassified Coriobacteriia;;	0	1	0	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Gaiellales;Gaiellaceae;Gaiella	6	0	4	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Gaiellales;Gaiellaceae;Unclassified Gaiellaceae	1	0	0	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;480-2;Rubrobacterineae	3	0	0	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;Conexibacteraceae;Conexibacter	3	2	6	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;Patulibacteraceae;Patulibacter	40	2	42	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;Solirubrobacteraceae;Solirubrobacter	5	0	8	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;Unclassified Solirubrobacterales;	31	4	33	0	0	1
+Bacteria;Actinobacteria;Thermoleophilia;Solirubrobacterales;YNPFFP1;bacterium Ellin5025	1	0	1	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Thermophilales;Unclassified Thermophilales;	1	0	0	0	0	0
+Bacteria;Actinobacteria;Thermoleophilia;Unclassified Thermoleophilia;;	7	2	4	0	0	0
+Bacteria;Actinobacteria;Unclassified Actinobacteria;;;	10	2	14	0	0	0
+Bacteria;Aquificae;Aquificae;Aquificales;Family Incertae Sedis;Thermosulfidibacter	1	0	0	0	0	0
+Bacteria;Armatimonadetes;Armatimonadia;Armatimonadales;Armatimonadaceae;Armatimonas	0	0	0	0	0	2
+Bacteria;Armatimonadetes;Armatimonadia;Armatimonadales;Armatimonadaceae;Unclassified Armatimonadaceae	0	0	0	0	0	1
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides	41	315	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Unclassified Bacteroidaceae	4	12	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Marinilabiaceae;Anaerophaga	1	0	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Barnesiella	2	1	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Candidatus Armantifilum	1	1	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Odoribacter	1	0	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Parabacteroides	0	5	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas	0	1	2	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Unclassified Porphyromonadaceae	2	3	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Paraprevotella	0	4	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Prevotella	784	1628	3	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Unclassified Prevotellaceae	94	212	0	0	1	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Prevotellaceae;Xylanibacter	2	0	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Rikenellaceae;Alistipes	8	5	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Rikenellaceae;RC9 gut group	5	1	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Rikenellaceae;Unclassified Rikenellaceae	1	3	0	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Unclassified Bacteroidales;	66	129	1	0	0	0
+Bacteria;Bacteroidetes;Bacteroidia;Unclassified Bacteroidia;;	1	0	0	0	0	0
+Bacteria;Bacteroidetes;Cytophagia;Cytophagales;Cyclobacteriaceae;Algoriphagus	0	0	0	0	0	1
+Bacteria;Bacteroidetes;Cytophagia;Cytophagales;Cytophagaceae;Hymenobacter	1	0	0	0	18	211
+Bacteria;Bacteroidetes;Cytophagia;Cytophagales;Cytophagaceae;Unclassified Cytophagaceae	0	0	0	0	0	9
+Bacteria;Bacteroidetes;Cytophagia;Cytophagales;Flammeovirgaceae;Unclassified Flammeovirgaceae	1	1	0	0	0	0
+Bacteria;Bacteroidetes;Cytophagia;Order II Incertae Sedis;Rhodothermaceae;Salinibacter	1	0	0	0	0	0
+Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae;Chryseobacterium	0	0	0	0	9	4
+Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae;Flavobacterium	0	0	2	0	0	0
+Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae;Polaribacter	1	0	1	0	0	0
+Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae;Unclassified Flavobacteriaceae	2	0	0	0	0	3
+Bacteria;Bacteroidetes;Sphingobacteriia;Sphingobacteriales;Sphingobacteriaceae;Mucilaginibacter	0	0	0	0	0	17
+Bacteria;Bacteroidetes;Sphingobacteriia;Sphingobacteriales;Sphingobacteriaceae;Pedobacter	0	0	0	0	0	4
+Bacteria;Bacteroidetes;Sphingobacteriia;Sphingobacteriales;Sphingobacteriaceae;Unclassified Sphingobacteriaceae	0	1	0	0	1	17
+Bacteria;Bacteroidetes;Unclassified Bacteroidetes;;;	1	4	0	0	0	2
+Bacteria;Candidate division TM7;TM7 phylum sp. canine oral taxon 250;Unclassified TM7 phylum sp. canine oral taxon 250;;	3	0	0	0	0	0
+Bacteria;Candidate division TM7;TM7 phylum sp. canine oral taxon 308;Unclassified TM7 phylum sp. canine oral taxon 308;;	1	0	0	0	0	0
+Bacteria;Candidate division TM7;Unclassified Candidate division TM7;;;	7	0	15	0	0	0
+Bacteria;Chlamydiae;Chlamydiae;Chlamydiales;Parachlamydiaceae;Neochlamydia	1	0	0	0	0	0
+Bacteria;Chlamydiae;Chlamydiae;Chlamydiales;Parachlamydiaceae;Parachlamydia	1	0	0	0	0	0
+Bacteria;Chlamydiae;Chlamydiae;Chlamydiales;Parachlamydiaceae;Unclassified Parachlamydiaceae	1	0	3	0	0	1
+Bacteria;Chlamydiae;Chlamydiae;Chlamydiales;Unclassified Chlamydiales;	0	0	2	0	0	0
+Bacteria;Chloroflexi;Anaerolineae;Anaerolineales;Anaerolineaceae;Anaerolinea	1	0	0	0	0	0
+Bacteria;Chloroflexi;Caldilineae;Caldilineales;Caldilineaceae;Caldilinea	1	0	0	0	0	0
+Bacteria;Chloroflexi;Chloroflexi;Chloroflexales;Chloroflexaceae;Roseiflexus	1	0	0	0	0	0
+Bacteria;Chloroflexi;Dehalococcoidetes;Order Incertae Sedis;Family Incertae Sedis;Dehalococcoides	1	0	0	0	0	0
+Bacteria;Chloroflexi;Dehalococcoidetes;Order Incertae Sedis;Family Incertae Sedis;Unclassified Family Incertae Sedis	0	1	0	0	0	0
+Bacteria;Chloroflexi;Dehalococcoidetes;Unclassified Dehalococcoidetes;;	1	0	0	0	0	0
+Bacteria;Chloroflexi;KD4-96;bacterium Ellin6529;Unclassified bacterium Ellin6529;	2	0	7	0	0	0
+Bacteria;Chloroflexi;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;Ktedonobacter	3	0	0	0	0	0
+Bacteria;Chloroflexi;Ktedonobacteria;Ktedonobacterales;Unclassified Ktedonobacterales;	6	0	0	0	0	0
+Bacteria;Chloroflexi;Ktedonobacteria;Unclassified Ktedonobacteria;;	1	0	0	0	0	0
+Bacteria;Chloroflexi;TK10;bacterium Ellin6543;Unclassified bacterium Ellin6543;	0	1	0	0	0	0
+Bacteria;Chloroflexi;Thermomicrobia;JG30-KF-CM45;bacterium Ellin6537;Unclassified bacterium Ellin6537	1	0	0	0	0	0
+Bacteria;Chloroflexi;Thermomicrobia;Sphaerobacterales;Sphaerobacteraceae;Sphaerobacter	4	1	3	0	0	0
+Bacteria;Chloroflexi;Thermomicrobia;Sphaerobacterales;Sphaerobacteraceae;Unclassified Sphaerobacteraceae	1	0	1	0	0	0
+Bacteria;Chloroflexi;Thermomicrobia;Sphaerobacterales;Unclassified Sphaerobacterales;	0	0	1	0	0	0
+Bacteria;Chloroflexi;Thermomicrobia;Unclassified Thermomicrobia;;	4	0	1	0	0	0
+Bacteria;Chloroflexi;Unclassified Chloroflexi;;;	3	2	7	0	0	0
+Bacteria;Cyanobacteria;4C0d-2;rumen bacterium YS2;Unclassified rumen bacterium YS2;	3	12	1	0	0	0
+Bacteria;Cyanobacteria;Cyanobacteria;SubsectionI;FamilyI;Synechococcus	0	0	0	0	0	2
+Bacteria;Cyanobacteria;Cyanobacteria;SubsectionI;Unclassified SubsectionI;	1	0	0	0	0	0
+Bacteria;Cyanobacteria;Cyanobacteria;Unclassified Cyanobacteria;;	1	1	0	0	0	0
+Bacteria;Cyanobacteria;Unclassified Cyanobacteria;;;	0	3	3	0	0	0
+Bacteria;Deinococcus-Thermus;Deinococci;Deinococcales;Deinococcaceae;Deinococcus	0	0	0	0	3	0
+Bacteria;Deinococcus-Thermus;Deinococci;Thermales;Thermaceae;Thermus	1	0	0	0	0	0
+Bacteria;Deinococcus-Thermus;Deinococci;Thermales;Thermaceae;Unclassified Thermaceae	1	0	0	0	0	0
+Bacteria;Deinococcus-Thermus;Deinococci;Unclassified Deinococci;;	0	0	0	0	0	1
+Bacteria;Firmicutes;Bacilli;Bacillales;Alicyclobacillaceae;Alicyclobacillus	12	2	3	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Alicyclobacillaceae;Incertae Sedis	1	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Alicyclobacillaceae;Tumebacillus	1	0	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Aeribacillus	3	1	2	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Anoxybacillus	3	1	3	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Bacillus	129	21	69	279	3	522
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Calditerricola	1	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Geobacillus	24	4	9	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Unclassified Bacillaceae	21	4	12	57	2	98
+Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Ureibacillus	21	4	11	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Family XI Incertae Sedis;Gemella	0	0	0	0	0	2
+Bacteria;Firmicutes;Bacilli;Bacillales;Family XII Incertae Sedis;Exiguobacterium	46	1	29	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Listeriaceae;Brochothrix	0	0	0	0	0	1
+Bacteria;Firmicutes;Bacilli;Bacillales;Listeriaceae;Listeria	15	8	9	26	0	41
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Aneurinibacillus	11	1	3	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Brevibacillus	34	5	23	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Cohnella	13	0	7	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Paenibacillus	68	11	53	0	0	1
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Thermobacillus	1	0	3	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Paenibacillaceae;Unclassified Paenibacillaceae	30	4	21	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Incertae Sedis	1	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Kurthia	1	0	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Lysinibacillus	16	0	7	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Paenisporosarcina	2	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Planomicrobium	4	0	1	28	0	50
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Rummeliibacillus	6	0	2	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Solibacillus	1	0	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Sporosarcina	7	2	4	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Unclassified Planococcaceae	17	4	8	6	0	8
+Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Viridibacillus	0	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Sporolactobacillaceae;Sporolactobacillus	0	0	2	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Sporolactobacillaceae;Tuberibacillus	3	0	2	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Sporolactobacillaceae;Unclassified Sporolactobacillaceae	0	0	2	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Macrococcus	1	0	0	0	0	2
+Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Staphylococcus	0	0	0	0	2	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Unclassified Staphylococcaceae	1	0	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Thermoactinomycetaceae;Laceyella	18	8	19	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Thermoactinomycetaceae;Planifilum	18	1	5	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Thermoactinomycetaceae;Seinonella	0	0	1	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Thermoactinomycetaceae;Thermoactinomyces	63	2	30	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Thermoactinomycetaceae;Unclassified Thermoactinomycetaceae	18	4	10	0	0	0
+Bacteria;Firmicutes;Bacilli;Bacillales;Unclassified Bacillales;	79	13	29	56	4	101
+Bacteria;Firmicutes;Bacilli;IC-BH;anaerobic thermophile IC-BH;Unclassified anaerobic thermophile IC-BH	4	0	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Aerococcaceae;Aerococcus	0	0	0	0	13	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Aerococcaceae;Unclassified Aerococcaceae	0	0	0	11	0	3
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Carnobacteriaceae;Alkalibacterium	0	0	0	0	2	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Carnobacteriaceae;Carnobacterium	0	0	0	11	2	42
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Carnobacteriaceae;Granulicatella	0	0	0	1	0	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Enterococcaceae;Catellicoccus	3	1	1	1416	39	4824
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Enterococcaceae;Enterococcus	2	3	3	466	13	997
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Enterococcaceae;Unclassified Enterococcaceae	2	1	3	1079	23	2502
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Enterococcaceae;Vagococcus	0	0	0	18	0	36
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Lactobacillaceae;Lactobacillus	463	9	42	10414	71	2058
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Lactobacillaceae;Pediococcus	2	0	0	40	0	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Lactobacillaceae;Unclassified Lactobacillaceae	35	1	2	350	2	13
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Leuconostocaceae;Leuconostoc	0	0	0	0	0	5
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Leuconostocaceae;Unclassified Leuconostocaceae	1	0	0	0	0	1
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Leuconostocaceae;Weissella	0	0	0	17	0	122
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Lactococcus	0	0	0	12	0	2
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	14	4	9	6	326	17
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Unclassified Streptococcaceae	1	2	0	0	0	0
+Bacteria;Firmicutes;Bacilli;Lactobacillales;Unclassified Lactobacillales;	9	8	3	1356	24	2585
+Bacteria;Firmicutes;Bacilli;Unclassified Bacilli;;	14	10	10	759	17	1469
+Bacteria;Firmicutes;Clostridia;Clostridiales;Caldicoprobacteraceae;Caldicoprobacter	1	0	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Christensenellaceae;Christensenella	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Alkaliphilus	0	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Anaerobacter	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Caloramator	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Candidatus Arthromitus	0	0	1	2	0	10
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Clostridium	39	16	18	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Clostridiaceae;Unclassified Clostridiaceae	9	6	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Eubacteriaceae;Unclassified Eubacteriaceae	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Finegoldia	0	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Incertae Sedis	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Parvimonas	0	0	0	0	1	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Peptoniphilus	1	3	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Sedimentibacter	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Tepidimicrobium	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Tissierella	0	1	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XI Incertae Sedis;Unclassified Family XI Incertae Sedis	0	3	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XIII Incertae Sedis;Incertae Sedis	2	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XIII Incertae Sedis;Unclassified Family XIII Incertae Sedis	6	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XVII Incertae Sedis;Thermaerobacter	3	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XVII Incertae Sedis;Unclassified Family XVII Incertae Sedis	2	0	2	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XVIII Incertae Sedis;Symbiobacterium	23	3	11	0	0	2
+Bacteria;Firmicutes;Clostridia;Clostridiales;Family XVIII Incertae Sedis;Unclassified Family XVIII Incertae Sedis	1	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Gracilibacteraceae;Gracilibacter	8	4	7	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Gracilibacteraceae;Lutispora	0	0	2	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Gracilibacteraceae;Unclassified Gracilibacteraceae	1	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Heliobacteriaceae;Heliobacterium	1	1	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Anaerosporobacter	3	2	2	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Anaerostipes	30	85	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Blautia	39	30	4	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Coprococcus	5	26	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Dorea	2	6	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Hespellia	0	5	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Incertae Sedis	289	946	11	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Johnsonella	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Oribacterium	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Pseudobutyrivibrio	2	4	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Robinsoniella	3	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Roseburia	20	20	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Syntrophococcus	5	7	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Unclassified Lachnospiraceae	352	875	20	1	2	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;OPB54;Firmicutes	12	2	5	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;OPB54;Unclassified OPB54	2	0	0	0	0	1
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Cryptanaerobacter	0	0	2	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Dehalobacter	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Dehalobacterium	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Desulfitobacterium	6	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Desulfosporosinus	3	1	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Desulfotomaculum	6	3	4	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Pelotomaculum	7	0	7	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Peptococcus	57	24	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Sporotomaculum	2	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Syntrophobotulus	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptococcaceae;Unclassified Peptococcaceae	24	12	5	0	0	2
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Filifactor	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Incertae Sedis	426	87	29	0	1	2
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Peptostreptococcus	1	0	0	0	0	1
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Proteocatella	0	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Sporacetigenium	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Peptostreptococcaceae;Unclassified Peptostreptococcaceae	2	0	0	0	1	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Acetanaerobacterium	3	2	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Acetivibrio	3	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Anaerofilum	1	2	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Anaerotruncus	3	5	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Butyricicoccus	5	2	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Ethanoligenens	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Faecalibacterium	151	264	2	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Fastidiosipila	1	6	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Flavonifractor	15	32	0	0	1	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Incertae Sedis	80	61	27	1	0	3
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Oscillibacter	5	18	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Pseudoflavonifractor	1	3	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Ruminococcus	8	14	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Saccharofermentans	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Sporobacter	1	4	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Subdoligranulum	483	1081	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Ruminococcaceae;Unclassified Ruminococcaceae	427	836	13	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Syntrophomonadaceae;Syntrophomonas	5	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Syntrophomonadaceae;Unclassified Syntrophomonadaceae	5	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Unclassified Clostridiales;	165	146	21	2	1	6
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Allisonella	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Dialister	47	205	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Megamonas	334	409	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Megasphaera	5	13	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Pelosinus	0	0	4	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Sporomusa	4	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Clostridiales;Veillonellaceae;Unclassified Veillonellaceae	82	117	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Halanaerobiales;Halanaerobiaceae;Halothermothrix	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Natranaerobiales;Natranaerobiaceae;Natranaerobius	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Family III Incertae Sedis;Caldicellulosiruptor	0	0	0	7	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Family III Incertae Sedis;Tepidanaerobacter	2	0	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Family III Incertae Sedis;Thermoanaerobacterium	0	2	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Family III Incertae Sedis;Unclassified Family III Incertae Sedis	0	0	3	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Family IV Incertae Sedis;Unclassified Family IV Incertae Sedis	1	1	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Thermoanaerobacteraceae;Moorella	1	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Thermoanaerobacteraceae;Thermoanaerobacter	1	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Thermoanaerobacteraceae;Unclassified Thermoanaerobacteraceae	2	0	0	0	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanaerobacterales;Unclassified Thermoanaerobacterales;	1	0	1	51	0	0
+Bacteria;Firmicutes;Clostridia;Thermoanerobacterales;Thermoanaerobacteraceae;Ammonifex	0	0	1	0	0	0
+Bacteria;Firmicutes;Clostridia;Unclassified Clostridia;;	26	9	11	6	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Asteroleplasma	1	0	0	0	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Bulleidia	0	2	0	0	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Erysipelothrix	1	0	0	0	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Incertae Sedis	21	21	0	0	0	1
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Solobacterium	174	331	1	0	0	3
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Turicibacter	75	9	7	0	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Erysipelotrichaceae;Unclassified Erysipelotrichaceae	160	314	2	0	0	2
+Bacteria;Firmicutes;Erysipelotrichi;Erysipelotrichales;Unclassified Erysipelotrichales;	2	16	0	0	0	0
+Bacteria;Firmicutes;Erysipelotrichi;Unclassified Erysipelotrichi;;	5	15	0	0	0	0
+Bacteria;Firmicutes;Unclassified Firmicutes;;;	74	55	15	95	0	52
+Bacteria;Fusobacteria;Fusobacteria;Fusobacteriales;Fusobacteriaceae;Fusobacterium	0	0	3	0	0	0
+Bacteria;Gemmatimonadetes;Gemmatimonadetes;Gemmatimonadales;Gemmatimonadaceae;Gemmatimonas	1	2	1	0	0	0
+Bacteria;Gemmatimonadetes;Gemmatimonadetes;Gemmatimonadales;Gemmatimonadaceae;Unclassified Gemmatimonadaceae	1	0	1	0	0	0
+Bacteria;Gemmatimonadetes;Unclassified Gemmatimonadetes;;;	1	0	1	0	0	0
+Bacteria;Planctomycetes;Planctomycetacia;Planctomycetales;Planctomycetaceae;Singulisphaera	0	0	0	0	0	1
+Bacteria;Planctomycetes;Planctomycetacia;Planctomycetales;Planctomycetaceae;Unclassified Planctomycetaceae	0	0	1	0	0	1
+Bacteria;Planctomycetes;Unclassified Planctomycetes;;;	2	0	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Caulobacterales;Caulobacteraceae;Brevundimonas	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Caulobacterales;Caulobacteraceae;Unclassified Caulobacteraceae	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Aurantimonadaceae;Aurantimonas	1	1	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Aurantimonadaceae;Aureimonas	0	4	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Aurantimonadaceae;Unclassified Aurantimonadaceae	1	0	2	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bartonellaceae;Bartonella	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Beijerinckiaceae;Beijerinckia	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Bosea	1	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Bradyrhizobium	2	0	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Nitrobacter	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Rhodopseudomonas	1	1	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Unclassified Bradyrhizobiaceae	4	1	2	0	0	2
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Family Incertae Sedis;Bauldia	1	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Devosia	9	0	27	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Filomicrobium	1	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Hyphomicrobium	5	1	4	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Pedomicrobium	4	0	4	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Rhodoplanes	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Hyphomicrobiaceae;Unclassified Hyphomicrobiaceae	3	2	10	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylobacteriaceae;Methylobacterium	34	11	23	0	2	35
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylobacteriaceae;Microvirga	7	0	8	0	0	6
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylobacteriaceae;Unclassified Methylobacteriaceae	1	0	2	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylocystaceae;Hansschlegelia	0	0	2	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylocystaceae;Methylocystis	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylocystaceae;Methylosinus	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Methylocystaceae;Unclassified Methylocystaceae	4	0	5	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Phyllobacteriaceae;Hoeflea	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Phyllobacteriaceae;Mesorhizobium	8	0	2	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Phyllobacteriaceae;Unclassified Phyllobacteriaceae	0	0	2	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Ensifer	2	0	3	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Kaistia	0	0	4	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Rhizobium	59	20	73	0	0	6
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Shinella	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Unclassified Rhizobiaceae	5	2	10	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Unclassified Rhizobiales;	30	4	32	1	0	22
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Ancylobacter	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Unclassified Xanthobacteraceae	0	0	0	0	0	2
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Xanthobacter	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Amaricoccus	0	0	1	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Marinovum	1	0	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Pseudorhodobacter	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Unclassified Rhodobacteraceae	2	1	1	1	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Acetobacteraceae;Acetobacter	0	1	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Acetobacteraceae;Asaia	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Acetobacteraceae;Gluconacetobacter	0	0	0	0	0	3
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Acetobacteraceae;Tanticharoenia	0	0	0	0	0	2
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Acetobacteraceae;Unclassified Acetobacteraceae	0	0	0	0	0	3
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Rhodospirillaceae;Azospirillum	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Rhodospirillaceae;Thalassospira	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Rhodospirillaceae;Unclassified Rhodospirillaceae	1	0	1	1	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Anaplasmataceae;Unclassified Anaplasmataceae	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Holosporaceae;Holospora	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Unclassified Rickettsiales;	0	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;SAR11 clade;Surface 1;Candidatus Pelagibacter	1	0	0	0	0	0
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Novosphingobium	1	0	0	0	0	1
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingomonas	2	2	1	0	1	77
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Unclassified Sphingomonadaceae	3	0	1	0	0	6
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Unclassified Sphingomonadales;	0	0	0	0	1	13
+Bacteria;Proteobacteria;Alphaproteobacteria;Unclassified Alphaproteobacteria;;	4	1	8	9	0	19
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Sutterella	0	1	0	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Unclassified Alcaligenaceae	0	1	0	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Burkholderiaceae;Burkholderia	0	0	0	0	0	37
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Burkholderiaceae;Unclassified Burkholderiaceae	0	0	0	0	0	3
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Acidovorax	0	0	0	0	1	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Limnohabitans	0	0	0	0	1	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Unclassified Comamonadaceae	1	1	2	0	18	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Variovorax	0	0	1	0	2	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Comamonadaceae;Xylophilus	0	0	0	0	1	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Oxalobacteraceae;Unclassified Oxalobacteraceae	0	0	1	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Unclassified Burkholderiales;	0	0	1	0	2	0
+Bacteria;Proteobacteria;Betaproteobacteria;Methylophilales;Methylophilaceae;Unclassified Methylophilaceae	1	0	0	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Nitrosomonadales;Nitrosomonadaceae;Nitrosospira	1	0	0	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Rhodocyclales;Rhodocyclaceae;Azoarcus	1	0	0	0	0	0
+Bacteria;Proteobacteria;Betaproteobacteria;Unclassified Betaproteobacteria;;	2	1	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Bdellovibrionales;Bacteriovoracaceae;Deferrisoma	2	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Bdellovibrionales;Bacteriovoracaceae;Peredibacter	0	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Bdellovibrionales;Bacteriovoracaceae;Unclassified Bacteriovoracaceae	3	0	3	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Bdellovibrionales;Bdellovibrionaceae;Bdellovibrio	0	1	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfovibrionales;Desulfovibrionaceae;Desulfovibrio	2	6	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfovibrionales;Unclassified Desulfovibrionales;	1	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfuromonadales;Desulfuromonadaceae;Desulfuromonas	1	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfuromonadales;Desulfuromonadaceae;Pelobacter	1	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfuromonadales;Geobacteraceae;Geobacter	2	0	2	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Desulfuromonadales;Unclassified Desulfuromonadales;	2	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Cystobacteraceae;Anaeromyxobacter	1	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Cystobacteraceae;Unclassified Cystobacteraceae	0	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Haliangiaceae;Haliangium	2	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Myxococcaceae;Myxococcus	1	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Myxococcaceae;Unclassified Myxococcaceae	1	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Nannocystaceae;Nannocystis	2	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Nannocystaceae;Unclassified Nannocystaceae	1	0	0	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Phaselicystidaceae;Phaselicystis	1	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Polyangiaceae;Byssovorax	0	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Polyangiaceae;Sorangium	1	0	2	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Polyangiaceae;Unclassified Polyangiaceae	7	0	2	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Sandaracinaceae;Sandaracinus	1	0	1	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Unclassified Myxococcales;	10	0	10	0	0	0
+Bacteria;Proteobacteria;Deltaproteobacteria;Unclassified Deltaproteobacteria;;	3	0	6	0	0	1
+Bacteria;Proteobacteria;Epsilonproteobacteria;Campylobacterales;Campylobacteraceae;Campylobacter	3	0	1	1	0	31
+Bacteria;Proteobacteria;Epsilonproteobacteria;Campylobacterales;Helicobacteraceae;Helicobacter	0	0	4	0	0	0
+Bacteria;Proteobacteria;Epsilonproteobacteria;Campylobacterales;Unclassified Campylobacterales;	0	0	2	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Acidithiobacillales;Acidithiobacillaceae;Acidithiobacillus	0	0	0	1	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Acidithiobacillales;Unclassified Acidithiobacillales;	0	0	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Alteromonadaceae;Marinobacter	1	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Alteromonadaceae;Unclassified Alteromonadaceae	0	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Colwelliaceae;Colwellia	2	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Unclassified Alteromonadales;	2	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Chromatiales;Chromatiaceae;Unclassified Chromatiaceae	1	0	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Chromatiales;Unclassified Chromatiales;	0	0	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Cronobacter	0	0	0	0	0	3
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Edwardsiella	0	1	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Escherichia-Shigella	0	1	0	4	1	546
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Klebsiella	0	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Pantoea	0	1	3	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Sodalis	0	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Unclassified Enterobacteriaceae	2	1	5	8	2	189
+Bacteria;Proteobacteria;Gammaproteobacteria;Legionellales;Coxiellaceae;Aquicella	0	0	0	0	0	2
+Bacteria;Proteobacteria;Gammaproteobacteria;Legionellales;Legionellaceae;Legionella	3	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Methylococcales;Methylococcaceae;Methylobacter	1	0	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Methylococcales;Methylococcaceae;Methylocaldum	4	0	10	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Methylococcales;Methylococcaceae;Unclassified Methylococcaceae	1	1	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Methylococcales;Unclassified Methylococcales;	0	0	1	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Oceanospirillales;Oceanospirillaceae;Oleispira	1	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Oceanospirillales;Unclassified Oceanospirillales;	0	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Pasteurellales;Pasteurellaceae;Pasteurella	0	0	0	0	0	3
+Bacteria;Proteobacteria;Gammaproteobacteria;Pasteurellales;Pasteurellaceae;Unclassified Pasteurellaceae	0	1	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Acinetobacter	0	0	1	0	1	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Enhydrobacter	0	0	0	1	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Psychrobacter	0	1	0	0	221	2
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Pseudomonadaceae;Pseudomonas	0	0	0	5	0	2
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Pseudomonadaceae;Unclassified Pseudomonadaceae	1	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Unclassified Pseudomonadales;	0	0	0	0	1	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Unclassified Gammaproteobacteria;;	4	1	0	0	1	12
+Bacteria;Proteobacteria;Gammaproteobacteria;Vibrionales;Vibrionaceae;Unclassified Vibrionaceae	0	0	0	0	0	4
+Bacteria;Proteobacteria;Gammaproteobacteria;Vibrionales;Vibrionaceae;Vibrio	0	0	0	0	0	2
+Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Sinobacteraceae;Unclassified Sinobacteraceae	1	0	0	0	0	0
+Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Unclassified Xanthomonadales;	1	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Luteibacter	0	0	0	0	0	1
+Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Rhodanobacter	0	0	0	0	0	3
+Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Unclassified Xanthomonadaceae	0	0	0	0	0	6
+Bacteria;Proteobacteria;Unclassified Proteobacteria;;;	6	2	6	4	0	4
+Bacteria;Spirochaetes;Spirochaetes;Spirochaetales;Spirochaetaceae;Spirochaeta	0	1	0	0	0	0
+Bacteria;Spirochaetes;Spirochaetes;Spirochaetales;Spirochaetaceae;Treponema	0	0	1	0	0	0
+Bacteria;Synergistetes;Synergistia;Synergistales;Synergistaceae;Aminiphilus	0	2	0	0	0	0
+Bacteria;Synergistetes;Synergistia;Synergistales;Synergistaceae;Thermanaerovibrio	1	0	2	0	0	0
+Bacteria;Tenericutes;Mollicutes;Acholeplasmatales;Acholeplasmataceae;Unclassified Acholeplasmataceae	1	0	0	0	0	0
+Bacteria;Tenericutes;Mollicutes;Candidatus Phytoplasma;Unclassified Candidatus Phytoplasma;	0	1	0	0	0	0
+Bacteria;Tenericutes;Mollicutes;Entomoplasmatales;Entomoplasmataceae;Incertae Sedis	0	0	0	0	0	3
+Bacteria;Tenericutes;Mollicutes;Entomoplasmatales;Spiroplasmataceae;Spiroplasma	1	0	0	0	0	0
+Bacteria;Tenericutes;Mollicutes;Entomoplasmatales;Unclassified Entomoplasmatales;	1	1	0	0	0	3
+Bacteria;Tenericutes;Mollicutes;Mycoplasmatales;Mycoplasmataceae;Candidatus Lumbricincola	0	0	0	0	0	17
+Bacteria;Tenericutes;Mollicutes;Mycoplasmatales;Mycoplasmataceae;Mycoplasma	0	0	0	0	0	1
+Bacteria;Tenericutes;Mollicutes;Mycoplasmatales;Mycoplasmataceae;Unclassified Mycoplasmataceae	0	0	0	0	1	24
+Bacteria;Tenericutes;Mollicutes;Mycoplasmatales;Unclassified Mycoplasmatales;	0	0	1	0	1	3
+Bacteria;Tenericutes;Mollicutes;RF9;Acholeplasmatales bacterium canine oral taxon 316;Unclassified Acholeplasmatales bacterium canine oral taxon 316	9	40	0	0	0	0
+Bacteria;Tenericutes;Mollicutes;RF9;Acholeplasmatales bacterium canine oral taxon 375;Unclassified Acholeplasmatales bacterium canine oral taxon 375	1	1	0	0	0	0
+Bacteria;Tenericutes;Mollicutes;Unclassified Mollicutes;;	4	6	0	0	0	1
+Bacteria;Unclassified Bacteria;;;;	146	85	60	53	2	89
+Bacteria;Verrucomicrobia;Spartobacteria;Chthoniobacterales;Chthoniobacteraceae;Chthoniobacter	0	1	0	0	0	0
+Bacteria;Verrucomicrobia;Spartobacteria;Chthoniobacterales;Chthoniobacteraceae;Unclassified Chthoniobacteraceae	1	0	0	0	0	0
+Bacteria;Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Unclassified Verrucomicrobiaceae	0	0	0	0	0	1
+Chloroplast;;;;;	4	2	6	0	0	8
+Chloroplast;Unclassified Chloroplast;;;;	15	17	39	2	8	211
+Eukaryota;Alveolata;Apicomplexa;Conoidasida;Coccidia;Eimeriorina	0	0	2	0	0	0
+Eukaryota;Alveolata;Apicomplexa;Conoidasida;Cryptosporida;Cryptosporidium	0	0	1	0	0	0
+Eukaryota;Alveolata;Apicomplexa;Conoidasida;Gregarinasina;Eugregarinorida	0	0	0	0	0	2
+Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Klebsormidiales;Klebsormidium	0	0	0	1	0	0
+Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Chlorophyceae;Chlorophyceae	4	0	0	0	0	4
+Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Prasinophytae;Unclassified Prasinophytae	1	0	1	0	0	0
+Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Trebouxiophyceae;Trebouxiophyceae	3	1	0	0	28	205
+Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Trebouxiophyceae;Unclassified Trebouxiophyceae	0	0	0	0	0	1
+Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Unclassified Chlorophyta;	2	0	4	0	1	22
+Eukaryota;Archaeplastida;Unclassified Archaeplastida;;;	0	0	0	0	0	1
+Eukaryota;Chromalveolata;Stramenopiles;Chrysophyceae;Chromulinales;Chrysophyceae	0	0	0	0	0	1
+Eukaryota;Chromalveolata;Stramenopiles;Diatomea;Bacillariophytina;Mediophyceae	0	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Capnodiales;Davidiellaceae	9	4	28	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Capnodiales;Teratosphaeriaceae	0	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Capnodiales;Unclassified Capnodiales	1	0	5	0	0	0
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Chaetothyriales;Herpotrichiellaceae	0	0	0	0	2	39
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Chaetothyriales;Incertae Sedis	1	1	0	0	1	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Chaetothyriales;Unclassified Chaetothyriales	1	0	1	0	0	6
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Dothideomycetes;Incertae Sedis	0	0	0	0	0	2
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Dothideomycetes;Unclassified Dothideomycetes	12	2	7	0	1	232
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Eurotiales;Trichocomaceae	1	0	0	1	0	113
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Eurotiales;Unclassified Eurotiales	1	0	0	0	0	5
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Lecanoromycetes;Unclassified Lecanoromycetes	0	0	0	0	0	8
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Leotiomycetes;Geomyces destructans	0	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Leotiomycetes;Mitrula elegans	0	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Leotiomycetes;Thelebolus stercoreus	0	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Leotiomycetes;Unclassified Leotiomycetes	1	0	1	0	1	63
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Onygenales;Onygenaceae	0	0	0	0	0	2
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Pezizales;Unclassified Pezizales	0	0	0	0	0	5
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Sordariomycetes;Unclassified Sordariomycetes	4	0	0	0	0	1
+Eukaryota;Fungi;Ascomycota;Pezizomycotina;Unclassified Pezizomycotina;	6	0	21	0	2	98
+Eukaryota;Fungi;Ascomycota;Saccharomycotina;Saccharomycetales;Metschnikowiaceae	0	0	0	0	0	3
+Eukaryota;Fungi;Ascomycota;Saccharomycotina;Saccharomycetales;Pichiaceae	0	0	0	0	0	110
+Eukaryota;Fungi;Ascomycota;Saccharomycotina;Saccharomycetales;Saccharomycetaceae	0	0	0	0	0	84
+Eukaryota;Fungi;Ascomycota;Saccharomycotina;Saccharomycetales;Unclassified Saccharomycetales	0	0	0	0	0	23
+Eukaryota;Fungi;Ascomycota;Saccharomycotina;Unclassified Saccharomycotina;	0	0	0	0	0	2
+Eukaryota;Fungi;Ascomycota;Unclassified Ascomycota;;	0	0	1	0	0	9
+Eukaryota;Fungi;Basal fungi;Basal fungi;Glomeromycota;Unclassified Glomeromycota	1	0	0	0	0	0
+Eukaryota;Fungi;Basal fungi;Basal fungi;Mucoromycotina;Unclassified Mucoromycotina	0	0	1	1	0	3
+Eukaryota;Fungi;Basal fungi;Basal fungi;Unclassified Basal fungi;	0	0	0	0	0	1
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Agaricomycetes;Unclassified Agaricomycetes	0	0	3	0	0	7
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Tremellomycetes;Cryptococcus	4	0	0	0	0	6
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Tremellomycetes;Dioszegia	0	0	1	0	0	0
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Tremellomycetes;Filobasidium	0	0	0	0	0	1
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Tremellomycetes;Taphrina	0	0	1	0	0	0
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Tremellomycetes;Unclassified Tremellomycetes	6	3	29	0	0	3
+Eukaryota;Fungi;Basidiomycota;Agaricomycotina;Unclassified Agaricomycotina;	1	0	0	0	0	0
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Cystobasidiomycetes;Rhodotorula	0	0	0	0	0	6
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Cystobasidiomycetes;Sporobolomyces sp. JCM 2963	1	0	0	0	0	0
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Cystobasidiomycetes;Unclassified Cystobasidiomycetes	2	0	1	0	0	4
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Microbotryomycetes;Rhodotorula	0	0	4	0	0	0
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Microbotryomycetes;Unclassified Microbotryomycetes	1	0	2	0	0	3
+Eukaryota;Fungi;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Unclassified Pucciniomycetes	0	0	0	0	0	2
+Eukaryota;Fungi;Basidiomycota;Unclassified Basidiomycota;;	0	0	0	0	0	2
+Eukaryota;Fungi;Basidiomycota;Ustilaginomycotina;Exobasidiomycetes;Rhodotorula	1	0	2	0	0	0
+Eukaryota;Fungi;Basidiomycota;Ustilaginomycotina;Exobasidiomycetes;Unclassified Exobasidiomycetes	2	0	5	0	0	1
+Eukaryota;Fungi;Basidiomycota;Ustilaginomycotina;Ustilaginomycetes;Unclassified Ustilaginomycetes	1	1	1	0	0	0
+Eukaryota;Fungi;Unclassified Fungi;;;	1	0	2	0	0	11
+Eukaryota;Metazoa;Arthropoda;Chelicerata;Arachnida;Unclassified Arachnida	0	0	63	0	0	1
+Eukaryota;Metazoa;Arthropoda;Chelicerata;Unclassified Chelicerata;	0	0	0	0	0	2
+Eukaryota;Metazoa;Arthropoda;Hexapoda;Insecta;Unclassified Insecta	0	1	3	0	0	0
+Eukaryota;Metazoa;Arthropoda;Unclassified Arthropoda;;	0	0	2	0	0	0
+Eukaryota;Metazoa;Chordata;Craniata;Craniata;Archosauria	0	0	0	0	0	4
+Eukaryota;Metazoa;Chordata;Craniata;Craniata;Teleostei	0	0	0	1	0	1
+Eukaryota;Metazoa;Chordata;Craniata;Craniata;Unclassified Craniata	0	0	0	2	0	16
+Eukaryota;Metazoa;Cnidaria;Cnidaria;Unclassified Cnidaria;	0	0	0	0	0	2
+Eukaryota;Metazoa;Hemichordata;Hemichordata;Ptychoderidae;Unclassified Ptychoderidae	0	0	0	1	0	0
+Eukaryota;Metazoa;Mollusca;Gastropoda;Heterobranchia;Unclassified Heterobranchia	0	0	0	0	0	2
+Eukaryota;Metazoa;Mollusca;Gastropoda;Unclassified Gastropoda;	0	0	0	0	0	1
+Eukaryota;Metazoa;Mollusca;Unclassified Mollusca;;	0	0	0	0	0	1
+Eukaryota;Metazoa;Nematoda;Enoplea;Trichuridae;Eucoleus dispar	0	0	0	2	0	0
+Eukaryota;Metazoa;Nemertea;Nemertea;Family Incertae Sedis;Unclassified Family Incertae Sedis	0	0	0	0	0	1
+Eukaryota;Metazoa;Platyhelminthes;Cestoda;Eucestoda;Hymenolepis diminuta	0	0	0	0	0	1
+Eukaryota;Metazoa;Platyhelminthes;Cestoda;Eucestoda;Unclassified Eucestoda	0	0	0	0	4	2
+Eukaryota;Metazoa;Platyhelminthes;Trematoda;Digenea;Unclassified Digenea	0	0	0	0	8	0
+Eukaryota;Metazoa;Unclassified Metazoa;;;	0	0	3	0	0	5
+Eukaryota;Rhizaria;Cercozoa;Glissomonadida;Heteromita;Unclassified Heteromita	1	0	0	0	0	0
+Eukaryota;Rhizaria;Cercozoa;Glissomonadida;Unclassified Glissomonadida;	0	0	1	0	0	0
+Eukaryota;Rhizaria;Cercozoa;Unclassified Cercozoa;;	0	0	0	0	0	1
+Eukaryota;Unclassified Eukaryota;;;;	11	4	12	0	2	30
+Eukaryota;Unikonta;Amoebozoa;Conosa;Unclassified Conosa;	1	0	0	0	0	0
+Eukaryota;Unikonta;Amoebozoa;Discosea;Longamoebia;Centramoebida	1	0	1	0	0	0
+Eukaryota;Unikonta;Amoebozoa;Unclassified Amoebozoa;;	2	0	0	0	0	0
+Eukaryota;Unikonta;Unclassified Unikonta;;;	0	0	0	0	0	1
+Eukaryota;Viridiplantae;Chlorophyta;Trebouxiophyceae;Chlorella;Trebouxiophyceae	2	3	3	1	0	0
+Eukaryota;Viridiplantae;Chlorophyta;Trebouxiophyceae;Chlorella;Unclassified Chlorella	0	0	2	0	0	0
+Eukaryota;Viridiplantae;Chlorophyta;Trebouxiophyceae;Unclassified Trebouxiophyceae;	5	2	1	0	0	1
+Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Asterales;Unclassified Asterales	0	1	0	0	0	0
+Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Ericales;Unclassified Ericales	0	0	1	0	0	0
+Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Fabales;Unclassified Fabales	0	1	0	0	5	0
+Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta	58	31	47	1	0	0
+Eukaryota;Viridiplantae;Streptophyta;Embryophyta;Unclassified Embryophyta;	14	13	21	1	2	0
+Eukaryota;Viridiplantae;Unclassified Viridiplantae;;;	0	0	1	0	0	0
+Mitochondria;;;;;	0	0	2	10	40	24
+Mitochondria;Unclassified Mitochondria;;;;	9	4	13	2	10	122
+Unknown;;;;;	14	16	9	20	2	71
