@@ -112,10 +112,7 @@ http://localhost:8080
 
 So far, so good?
 
-```ruby
-     Note that if you work from your laptop, please do not add `--server-only -P 8080`, /
-     as it prevents the opening of the window in the browser.
-```
+Please note that if you work from your laptop, please do not add `--server-only -P 8080`, as it prevents the opening of the window in the browser.
 
 ## 03- Describing the interface
 
@@ -135,7 +132,7 @@ Here is what you should see:
 
 ![alt text](Figure/Interface-RAW.png "Interface-RAW.png")
 
-Here is the key part to remember: **the six grey layers correspond to the mean coverage values in the six metagenomes**. For each split, a black color means their is environmental signal. No black color means the split did not recruit any reads.
+Here is the key part to remember: **the six grey layers correspond to the mean coverage values in the six metagenomes**. For each split, a black color means there is environmental signal. No black color means the split did not recruit any reads.
 
 In addition to the main display, there is a second layer of information describing high-resolution coverage values of contigs across metagenomes. To see it, please put your mouse on a split in the display, and right click to select the `inspection` mode, which should open a new window. Let's do it for a few splits, and discuss the observations.
 
@@ -196,7 +193,7 @@ And go to the "Bins" section of the interface to load the bin collection called 
 
 ![alt text](Figure/Interface-first-binning-step.png "Interface-first-binning-step.png")
 
-{:.notice} Note: Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
+>Note: Feel free to take a look at the `collection-TOM_5_BINS.txt` file to understand what it is (e.g., using `head collection-TOM_5_BINS.txt -n 10`). It simply links splits to Bins. Easy.
 
 Ok.
 
