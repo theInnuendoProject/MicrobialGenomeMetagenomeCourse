@@ -94,6 +94,14 @@ Open a new ssh window. In mac:
 ```
 ssh -L 8080:localhost:8080 YOUR_USERNAME@taito.csc.fi
 ```
+```
+# allocate resources and log in to a computing node
+salloc -n 1 --mem=10000 -t 06:00:00 -p serial
+srun --pty $SHELL
+# load bioconda and activate Anvi'o environment
+module load bioconda/3
+source activate anvio3
+```
 
 in Windows with Putty:
 In SSH category [+] select "tunnels". Add
