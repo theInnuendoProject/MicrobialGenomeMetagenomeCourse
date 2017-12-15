@@ -334,7 +334,7 @@ Let's run CheckM from this directory now, and learn about the taxonomy of each M
 
 ```
 # Deactivate the anvio environment
-source deactive anvio3
+source deactivate anvio3
 # Activate the CheckM environment
 source activate checkm
 # Find the marker genes and place them in a pre-computed phylogenetic tree (please modify `PATH` accordingly to your working environment)
