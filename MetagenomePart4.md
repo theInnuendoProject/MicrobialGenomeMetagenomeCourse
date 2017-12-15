@@ -337,7 +337,8 @@ Let's run CheckM from this directory now, and learn about the taxonomy of each M
 source deactivate anvio3
 # Activate the CheckM environment
 source activate checkm
-# Find the marker genes and place them in a pre-computed phylogenetic tree (please modify `PATH` accordingly to your working environment)
+module load biokit
+# Find the marker genes and place them in a pre-computed phylogenetic tree (please modify `PATH` accordingly to your `pwd` response)
 checkm tree PATH -x .fa -t 40 PATH/TREE
 # Parsing marker genes and get taxonomy (again, please modify `PATH` accordingly to your working environment)
 checkm tree_qa TREE -f OUTPUT.txt
