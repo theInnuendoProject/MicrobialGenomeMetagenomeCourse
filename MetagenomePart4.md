@@ -115,7 +115,7 @@ Activate anvio virtual environemnt `source activate anvio3`
 and go to the Anvi'o folder in the course folder at `$WRKDIR`.  
 
 ```
-anvi-interactive -c MEGAHIT_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
+anvi-interactive -c MEGAHIT_co-assembly_2500nt_CONTIGS.db -p SAMPLES-MERGED/PROFILE.db --server-only -P 8080
 ```
 
 Then open google chrome and go to address 
