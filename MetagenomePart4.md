@@ -339,7 +339,7 @@ source deactivate anvio3
 source activate checkm
 module load biokit
 # Find the marker genes and place them in a pre-computed phylogenetic tree (please modify `PATH` accordingly to your `pwd` response)
-checkm tree PATH -x .fa -t 40 PATH/TREE
+checkm tree PATH -x .fa -t 1 PATH/TREE
 # Parsing marker genes and get taxonomy (again, please modify `PATH` accordingly to your working environment)
 checkm tree_qa TREE -f OUTPUT.txt
 ```
