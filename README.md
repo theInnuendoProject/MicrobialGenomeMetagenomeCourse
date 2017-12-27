@@ -1,4 +1,8 @@
 # From microbial genomics to metagenomics
+
+# FEEDBACK
+The summary of the feedback questionnaire is available from this [link](). All the answers can be downloaded from this [link](). Response rate was **67%** and **> 91%** of the students rate the course **good or very good**. Thanks to the teachers and the students for this nice intense week.  
+
 ## General introduction
 Microbial community structure and diversity, and population structure are fundamental aspects to understand evolution, niche adaptation and demographic history of bacterial species. As NGS sequencing has become cost effective and accessible, sequencing populations of bacteria across the whole genome provides unprecedented resolution to investigate within-host evolution, transmission history, and population structure. Moreover, analysis of genetic content of microbial communities through metagenomics has become the mainstream methodology. During the one week course the students will learn and apply bioinformatic techniques to perform population genetics and study microbial communities with metagenomic approaches. The goal is to become familiar with the bioinformatic analysis tools and to be able to utilize them in own research after the course.
 
